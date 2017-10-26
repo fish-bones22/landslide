@@ -267,6 +267,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
+			"settings":
+			{
+				"buffer_size": 431,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -308,10 +317,14 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/landslide"
+		"/C/xampp/htdocs/landslide",
+		"/C/xampp/htdocs/landslide/vendors",
+		"/C/xampp/htdocs/landslide/vendors/bootstrap",
+		"/C/xampp/htdocs/landslide/vendors/bootstrap/js"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/dashboard/index.html",
 		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.h",
 		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.cpp",
 		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/src/PaperFeeder.h",
@@ -466,8 +479,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -548,7 +590,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_width": 263.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
