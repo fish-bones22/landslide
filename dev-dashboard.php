@@ -3,7 +3,7 @@
 	require 'php/dbconnect.php';
 
 	$conn = connectToDb("db_avalanche_store");
-	
+
 
 ?>
 
@@ -11,6 +11,7 @@
 <html>
 <head>
 	<title>Dashboard</title>
+	
 </head>
 <body>
 

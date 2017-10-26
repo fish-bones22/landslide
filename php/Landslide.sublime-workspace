@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Boot",
+				"BootState\tfn "
+			],
+			[
+				"enc",
+				"enc1"
+			],
+			[
+				"sol",
+				"solenoidLow"
+			],
+			[
+				"solen",
+				"solenoidHigh"
+			],
+			[
+				"has",
+				"hasPaperReserve"
+			],
+			[
+				"curre",
+				"currentTime"
+			],
+			[
+				"time",
+				"timeOutDuration"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"left",
+				"leftSensor"
+			],
+			[
+				"stop",
+				"stopDuration"
+			],
+			[
+				"Print",
+				"PrintHead"
+			],
+			[
+				"sp",
+				"spinSpeed"
+			],
+			[
+				"session",
+				"session_destroy"
+			],
+			[
+				"conso",
+				"console"
+			],
+			[
+				"cha",
+				"chatboxHtml\t(str)"
+			],
+			[
+				"fr",
+				"friendName\t? "
+			],
+			[
+				"rece",
+				"receiverName\t(?)"
+			],
+			[
+				"rec",
+				"receiver\t(?)"
+			],
+			[
+				"frie",
+				"friendId\t(?)"
+			],
+			[
+				"res",
+				"response\t? "
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"_REQ",
+				"_REQUEST"
+			],
+			[
+				"user",
+				"userid"
+			],
+			[
+				"for",
+				"form\tTag"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"friendna",
+				"friendname"
+			],
+			[
+				"friend",
+				"friendid"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"co",
+				"conn"
+			],
+			[
+				"fun",
+				"fun\tfunction …"
+			],
+			[
+				"spr",
+				"spritePaddle"
+			],
+			[
+				"padd",
+				"paddle"
+			],
+			[
+				"paddleHitP",
+				"paddleHitPaddle"
+			],
+			[
+				"te",
+				"textScore"
+			],
+			[
+				"hi",
+				"highscore"
+			],
+			[
+				"Hi",
+				"hiscore"
+			],
+			[
+				"text",
+				"textStart"
+			],
+			[
+				"textS",
+				"textSubtitle"
+			],
+			[
+				"h",
+				"Highscore"
+			],
+			[
+				"ce",
+				"centerX"
+			],
+			[
+				"po",
+				"powerUpSpacerCounter"
+			],
+			[
+				"power",
+				"powerUpSpacer"
+			],
+			[
+				"pad",
+				"paddle"
+			],
+			[
+				"rese",
+				"resetPaddle"
+			],
+			[
+				"paddl",
+				"paddle"
+			],
+			[
+				"spri",
+				"spritePower"
+			],
+			[
+				"spriteP",
+				"spritePower"
+			],
+			[
+				"gam",
+				"gameWidth\tnum "
+			],
+			[
+				"textLiv",
+				"textLives\t{} "
+			],
+			[
+				"tex",
+				"textLives"
+			],
+			[
+				"sprit",
+				"spriteBall"
+			],
+			[
+				"bric",
+				"brickPrefabs"
+			],
+			[
+				"ballHit",
+				"ballHitBrick"
+			],
+			[
+				"brick",
+				"brickPrefabs"
+			],
+			[
+				"phys",
+				"Physics"
+			],
+			[
+				"spre",
+				"spriteBall\t{} "
+			],
+			[
+				"p",
+				"paddle"
+			],
+			[
+				"ini",
+				"initialBounce\tnum "
+			],
+			[
+				"sprite",
+				"spriteBall\t(?)"
+			],
+			[
+				"ball",
+				"ballHasLaunched\t(bool)"
+			],
+			[
+				"bal",
+				"ballHasLaunched\t(bool)"
+			],
+			[
+				"P",
+				"Physics"
+			],
+			[
+				"w",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 272.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 414.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/landslide"
+	],
+	"file_history":
+	[
+		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.h",
+		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/src/PaperFeeder.h",
+		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/src/PaperFeeder.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/Motor/src/Motor.h",
+		"/C/Program Files (x86)/Arduino/libraries/Motor/src/Motor.cpp",
+		"/F/THESIS/Researchables/CMO-No.09-s2013.pdf",
+		"/F/cmdline.txt",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/main.js",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/states/BootState.js",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/states/LoadingState.js",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/states/TiledState.js",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/prefabs/Player.js",
+		"/C/Users/Sammy/Downloads/jaerm.rar/Siopao.html",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/js/phaser.js",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/assets/maps/level1.tmx",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/assets/maps/level1_map.json",
+		"/C/xampp/htdocs/phaser-tutorial-renan-oliveira/index.html",
+		"/C/Users/Sammy/Desktop/hosts",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/I1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/Text.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/Subtitle.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/H1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/G1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/F1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/E1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/D1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/C2.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/B1.txz",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/A1.nf2",
+		"/F/Sam/BackUp/OldFiles/1_Sam's Downloads/Export this/Sound Effects/BackUp/BackUp/Backup/Backup/eBook/asdf.lts",
+		"/C/Users/Sammy/Desktop/bluetooth_content_shared.html",
+		"/C/Users/Sammy/Downloads/doc2jpg_B1rVgDUB.zip",
+		"/D/Projects/School_Kiosk_System/Kiosk/Kiosk.sln",
+		"/D/Projects/School_Kiosk_System/Kiosk/.vs/Kiosk/v15/.suo",
+		"/D/Projects/School_Kiosk_System/Kiosk/Kiosk/Kiosk.csproj.vspscc",
+		"/D/Projects/School_Kiosk_System/Kiosk/Kiosk/Kiosk.csproj.user",
+		"/D/Projects/School_Kiosk_System/Kiosk/Kiosk/Kiosk.csproj",
+		"/D/Projects/School_Kiosk_System/Kiosk/Kiosk.vssscc",
+		"/D/Projects/School_Kiosk_System/Kiosk/SMS_RFID.sln",
+		"/F/config.txt",
+		"/C/Users/Sammy/Downloads/Levinux-master/Levinux.app/Contents/MacOS/qemu32.bat",
+		"/F/issue.txt",
+		"/C/Program Files (x86)/Tesseract-OCR/doc/README",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinter/BraillePrinter.ino",
+		"/C/Program Files (x86)/Arduino/libraries/Motor/keywords.txt",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/PaperFeeder.h",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/PaperFeeder.cpp",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/Motor.cpp",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/Motor.h",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/PrintHead.cpp",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinterLibraries/PrintHead.h",
+		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/src/PrintHead.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/keywords.txt",
+		"/C/Program Files (x86)/Arduino/libraries/PaperFeeder/library.properties",
+		"/C/Program Files (x86)/Arduino/libraries/PrintHead/keywords.txt",
+		"/C/Program Files (x86)/Arduino/libraries/Stepper/src/Stepper.h",
+		"/C/Program Files (x86)/Arduino/libraries/Stepper/src/Stepper.cpp",
+		"/C/Users/Sammy/Desktop/library.properties",
+		"/C/Users/Sammy/Desktop/keywords.txt",
+		"/C/Program Files (x86)/Arduino/examples/06.Sensors/Memsic2125/Memsic2125.ino",
+		"/C/Program Files (x86)/Arduino/examples/04.Communication/Dimmer/Dimmer.ino",
+		"/C/Program Files (x86)/Arduino/examples/01.Basics/BareMinimum/BareMinimum.ino",
+		"/C/Program Files (x86)/Arduino/examples/10.StarterKit_BasicKit/p15_HackingButtons/p15_HackingButtons.ino",
+		"/C/Program Files (x86)/Arduino/examples/05.Control/WhileStatementConditional/WhileStatementConditional.ino",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinter/Motor.h",
+		"/C/Users/Sammy/Documents/Arduino/BraillePrinter/Motor.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/Firmata/Firmata.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/Firmata/Firmata.h",
+		"/C/Program Files (x86)/Arduino/libraries/Mouse/src/Mouse.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/Mouse/src/Mouse.h",
+		"/C/Program Files (x86)/Arduino/libraries/Mouse/README.adoc",
+		"/C/Program Files (x86)/Arduino/libraries/Stepper/examples/stepper_oneRevolution/stepper_oneRevolution.ino",
+		"/C/Program Files (x86)/Arduino/libraries/Stepper/keywords.txt",
+		"/C/Program Files (x86)/Arduino/libraries/Servo/README.adoc",
+		"/C/Program Files (x86)/Arduino/libraries/Servo/library.properties",
+		"/C/Program Files (x86)/Arduino/libraries/Servo/keywords.txt",
+		"/C/Program Files (x86)/Arduino/libraries/Servo/src/Servo.h",
+		"/C/Program Files (x86)/Arduino/libraries/Servo/src/sam/Servo.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/Keyboard/src/Keyboard.h",
+		"/C/Program Files (x86)/Arduino/libraries/Keyboard/src/Keyboard.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM.h",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3ShieldV1.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3ShieldV1MultiServerProvider.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3MobileAccessProvider.cpp",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.h",
+		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.cpp",
+		"/C/xampp/htdocs/chatroom/friend.php",
+		"/C/xampp/htdocs/chatroom/js/chatbox.js",
+		"/C/xampp/htdocs/chatroom/php/fetch_chat.php",
+		"/C/Users/Sammy/Source/Workspaces/CFMMCD/.vs/config/applicationhost.config",
+		"/C/Users/Sammy/Source/Workspaces/CFMMCD/CFMMCD/Web.config",
+		"/C/Users/Sammy/Downloads/Lee Seul-Rin/Lee Seul-Rin .html",
+		"/C/Users/Sammy/Downloads/boyfriend/boyfriend .html",
+		"/C/xampp/htdocs/chatroom/index.html",
+		"/C/xampp/htdocs/chatroom/start.php",
+		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/EncryptionGenerator.cs",
+		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/AccountManager.cs",
+		"/C/Users/Sammy/VirtualBox VMs/Win7_NET/Win7_NET.vbox",
+		"/C/xampp/htdocs/chatroom/php/send.php",
+		"/C/xampp/htdocs/chatroom/php/logout.php",
+		"/C/xampp/htdocs/chatroom/php/authentication.php",
+		"/C/xampp/htdocs/chatroom/php/add.php",
+		"/C/xampp/htdocs/chatroom/php/dbconnect.php",
+		"/C/xampp/htdocs/chatroom/php/login.php",
+		"/C/xampp/htdocs/chatroom/search-result.php",
+		"/C/xampp/htdocs/chatroom/php/register.php",
+		"/C/xampp/htdocs/chatroom/register.html",
+		"/C/xampp/htdocs/PhaserProject/breakout/.tern-project",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/tern_for_sublime/Tern.sublime-settings",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/Tern.sublime-settings",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/TernJS.sublime-settings",
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/TernJS/TernJS.sublime-settings",
+		"/D/Projects/CONVEYORV1/CONVEYORV1/Form1.vb",
+		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/ReportGenerationManager.cs",
+		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/LogGenerator.cs",
+		"/D/Projects/SMS_RFID_System/SMS_RFID/SMS_RFID/SMS_RFID/Registration.cs"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 67.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Landslide.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 194.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
