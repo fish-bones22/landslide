@@ -1,7 +1,15 @@
 
 .product_thumbnail {
 
-	width:64px;
+  width: 64px; 
+
+}
+
+.product_thumbnail_container {
+
+	vertical-align: center;
+	height: 64px;
+	object-fit: contain;
 
 }
 

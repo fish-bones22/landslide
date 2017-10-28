@@ -52,7 +52,7 @@
 
 							echo "
 								<a href='product.php?id=$product->id' class='row'>
-									<div class=''>
+									<div class='product_thumbnail_container'>
 										<img class='product_thumbnail' src='".$product->icon_location."' />
 									</div>
 									<div class='col-xs-11'>
@@ -91,7 +91,7 @@
 
 							echo "
 								<a href='product.php?id=$product->id' class='row'>
-									<div class=''>
+									<div class='product_thumbnail_container'>
 										<img class='product_thumbnail' src='".$product->icon_location."' />
 									</div>
 									<div class='col-xs-11'>

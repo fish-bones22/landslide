@@ -82,24 +82,25 @@
 						}
 
 						echo "
-					<div class='row'>
-						<div class=''>
-							<a href='product.php?id=$prod->id'><img class='product_thumbnail' src='".$prod->icon_location."' /></a>
-						</div>
-						<div class='col'>
-							<div>
-								<strong><a href='product.php?id=$prod->id' class=''>".$prod->name."</a></strong>
-								<a href='dev-dashboard-add.php?id=$prod->id' class='small'>Edit</a>
-								<a href='#' class='small'>Delete</a>
-							</div>
-							<div class='row'>
-								<div class='col-auto small ".$approval_class."'>".$approval."</div>
-								<div class='col-auto text-muted small'>Downloads: ".$prod->downloads."</div>
-								<div class='col-auto text-muted small'>".$prod->timestamp."</div>
-							</div>
-						</div>
-					</div>
-						";
+								<div class='row'>
+									<a href='product.php?id=$prod->id'>
+										<div class='product_thumbnail_container'>
+											<img class='product_thumbnail' src='".$prod->icon_location."' />
+										</div>
+									</a>
+									<div class='col'>
+										<div>
+											<strong><a href='product.php?id=$prod->id'>".$prod->name."</a></strong>
+											<a href='dev-dashboard-add.php?id=$prod->id' class='small'>Edit</a>
+											<a href='#' class='small'>Delete</a>
+										</div>
+										<div class='row'>
+											<div class='col-auto small ".$approval_class."'>".$approval."</div>
+											<div class='col-auto text-muted small'>Downloads: ".$prod->downloads."</div>
+											<div class='col-auto text-muted small'>".$prod->timestamp."</div>
+										</div>
+									</div>
+								</div>";
 
 					}
 

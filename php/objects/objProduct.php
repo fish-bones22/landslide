@@ -51,7 +51,7 @@
 		 	$this->downloads = $prod_array["downloads"];
 		 	$this->price = $prod_array["price"];
 		 	$this->approval = $prod_array["approval"];
-		 	$this->timestamp = $prod_array["timestamp"];
+		 	$this->timestamp = $prod_array["tmstmp"];
 	}
 
 		function addToDatabase()
@@ -139,7 +139,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_product
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			 FROM tbl_product
 			 JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
 			 WHERE tbl_product.prod_id = $id AND status = $status;";
 
@@ -164,7 +165,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_product, tbl_dev_info WHERE owner = $user_id AND status = $status
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			 FROM tbl_product, tbl_dev_info WHERE owner = $user_id AND status = $status
 			 AND tbl_dev_info.user_id = tbl_product.owner;";
 
 			$result = $conn->query($select_query);
@@ -193,7 +195,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_product
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
 			ORDER BY downloads DESC LIMIT $count;";
 
@@ -224,7 +227,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_product
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id 
 			ORDER BY `timestamp` DESC LIMIT $count;";
 
@@ -254,7 +258,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_product
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
 			WHERE name LIKE '%$search%';";
 
