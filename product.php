@@ -62,13 +62,13 @@
 
                 <!--  Other information -->
                 <div class="row">
-                    <div class="form-group col-4">
+                    <div class="form-group col-md-4 col-xs-12">
                         A$<?php echo $prod->price ?>
                         <br>
                         <button class="btn btn-primary">Add to Cart</button>
                     </div>
                    
-                    <div class="form-group col-4">
+                    <div class="form-group col-md-4 col-xs-12">
                         <div class="text-muted small">File size: <?php echo round($prod->file_size/1024)."KB"; ?></div>
                         <div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
                         <div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
@@ -78,7 +78,7 @@
                         To EJ: Gawa ka ng JS function na ang magiging laman ng 'selected-rating'
                         ay depende sa ni-select na rating. -Sam
                     -->
-                    <div class="form-group col-4">
+                    <div class="form-group col-md-4 col-xs-12">
                         <div class="">Rating: 4.3</div>
                         <input type="hidden" name="selected-rating">
                         <button class="btn btn-warning">1</button>
