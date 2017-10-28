@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 10:25 AM
+-- Generation Time: Oct 28, 2017 at 04:26 PM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -83,9 +83,9 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`prod_id`, `name`, `description`, `downloads`, `owner`, `icon_location`, `file_location`, `file_size`, `price`, `approval`, `status`, `timestamp`) VALUES
-(39, 'Sample Product', 'Description Sample product. Description Sample product. Description Sample product. Description Sample product. Description Sample product.Description Sample product. Description Sample product. Description Sample product. Description Sample product.Descr', 0, 1, '/landslide/product-files/icons/Sample Product_Dev Name', '/landslide/product-files/zip/Sample Product_Dev Name.zip', 83921, 23, 1, 1, '2017-10-28 12:39:53'),
+(39, 'Sample Product', 'Description Sample product. Description Sample product. Description Sample product. Description Sample product. Description Sample product.Description Sample product. Description Sample product. Description Sample product. Description Sample product.Descr', 54, 1, '/landslide/product-files/icons/Sample Product_Dev Name', '/landslide/product-files/zip/Sample Product_Dev Name.zip', 83921, 23, 1, 1, '2017-10-28 12:39:53'),
 (40, 'Product 2', 'Description', 0, 1, '/landslide/product-files/icons/Product 2_Dev Name', '/landslide/product-files/zip/Product 2_Dev Name.zip', 305447, 230, 1, 1, '2017-10-28 12:41:57'),
-(41, 'Another Sample Product', 'Description of another product', 0, 1, '/landslide/product-files/icons/Another Sample Product_Dev Name', '/landslide/product-files/zip/Another Sample Product_Dev Name.zip', 335944, 231, 0, 1, '2017-10-28 14:12:31'),
+(41, 'Another Sample Product', 'Description of another product', 23, 1, '/landslide/product-files/icons/Another Sample Product_Dev Name', '/landslide/product-files/zip/Another Sample Product_Dev Name.zip', 335944, 231, 0, 1, '2017-10-28 14:12:31'),
 (42, 'Yet Another Sample', 'Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Anothe', 0, 2, '/landslide/product-files/icons/Yet Another Sample_Dev Name', '/landslide/product-files/zip/Yet Another Sample_Dev Name.zip', 954845, 231, 0, 1, '2017-10-28 16:12:10');
 
 -- --------------------------------------------------------
@@ -130,6 +130,7 @@ CREATE TABLE `tbl_user` (
   `type` int(11) NOT NULL,
   `fname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
+  `sex` tinyint(1) NOT NULL,
   `currency_amount` float DEFAULT NULL,
   `timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -138,8 +139,8 @@ CREATE TABLE `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `email`, `password`, `type`, `fname`, `lname`, `currency_amount`, `timestamp`) VALUES
-(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 230000, '2017-10-28 13:14:10');
+INSERT INTO `tbl_user` (`user_id`, `email`, `password`, `type`, `fname`, `lname`, `sex`, `currency_amount`, `timestamp`) VALUES
+(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 1, 230000, '2017-10-28 13:14:10');
 
 --
 -- Indexes for dumped tables
