@@ -15,38 +15,38 @@
 		session_start();
 		$_SESSION["userid"] = 1;
 		$_SESSION["isdev"] = true;
+	
+		$search_term = $_REQUEST["search"];
 
 	?>
 
 	<div class="container">
 
-		<h1>Landslide</h1>
-		<div class="display-3">Online Store</div>
+		<h1>Search Results</h1>
 
 		<div class="form-group">
 			<form action="product-drawer.php" method="get">
-				<input type="text" name="search" />
+				<input type="text" name="search" value="<?php echo($search_term)?>" />
 				<input type="submit" class="btn btn-primary" value="Search">
 			</form>
 		</div>
 
 		<div class="row">
 
-			<!-- Top Products -->
+			<!-- Search results -->
 			<div class="col-md-6">
 
-				<div class="display-4">Top Products</div>
 				<?php
-					
-					$top_prod = Product::getTopProducts(5);
 
-					if (!$top_prod) {
+					$prod = Product::getProducts($search_term);
 
-						echo "<div>No Products in this category</div>";
+					if (!$prod) {
+
+						echo "<div>No products found</div>";
 
 					} else {
 						
-						foreach ($top_prod as $product) {
+						foreach ($prod as $product) {
 
 							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
@@ -70,46 +70,7 @@
 
 				?>
 			</div>
-			<!-- End of Top -->
-
-			<!-- Newest -->
-			<div class="col-md-6">
-				<div class="display-4">New Products</div>
-				<?php
-					
-					$new_prod = Product::getNewProducts(5);
-
-					if (!$new_prod) {
-
-						echo "<div>No Products in this category</div>";
-
-					} else {
-						
-						foreach ($new_prod as $product) {
-
-							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
-
-							echo "
-								<a href='product.php?id=$product->id' class='row'>
-									<div class=''>
-										<img class='product_thumbnail' src='".$product->icon_location."' />
-									</div>
-									<div class='col-xs-11'>
-										<div><strong>$product->name</strong></div>
-										<div class=''>$product->owner_name</div>
-										<div class='row'>
-											<div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-											<div class='col-auto text-muted small'>$product->timestamp</div>
-										</div>
-									</div>
-								</a>
-							";
-						}
-					}
-
-				?>
-			</div>
-			<!-- End of Newest -->
+			<!-- End of Search results -->
 
 		</div>
 
