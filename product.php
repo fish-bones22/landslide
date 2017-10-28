@@ -4,7 +4,7 @@
 <head>
 	<?php 
 
-		require "php/objects/objProduct.php";
+		require_once "php/objects/objProduct.php";
 				
 		// Temporary.
 		session_start();
@@ -25,7 +25,7 @@
 			
 	  <!-- TODO: 
 
-			-Create PHP script to display product information	
+			-Create PHP script to display product information	- IN PROGRESS
 
 	  -->
 

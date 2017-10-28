@@ -9,9 +9,22 @@
 <body>
 
 	<div class="container">
-		
-		<div class="display-4">Developer</div>
+		<?php 
 
+				require_once "php/objects/objDeveloper.php";
+
+				// Temporary.
+				session_start();
+				$_SESSION["userid"] = 1;
+				$_SESSION["isdev"] = true;
+
+				$dev = Developer::getDeveloperById($_SESSION["userid"]);
+
+		 ?>
+		
+		<div class="display-3">Developer</div>
+		<div class="display-4"><?php echo $dev->dev_name;?></div>
+		<div><?php echo $dev->dev_description;?></div>
 		<!-- First Section -->
 		<div class="">
 
@@ -22,6 +35,18 @@
 				</div>
 			</div>
 			<hr />
+
+			<div class="row">
+				<div class="col-auto">Filter:</div>
+				<div class="col-sm-9">
+					<select class="form-control" id="status-filter">
+						<option value="-1">All</option>
+						<option value="0">Pending</option>
+						<option value="1">Approved</option>
+						<option value="2">Denied</option>
+					</select>
+				</div>
+			</div>
 			
 		  <!-- TODO: 
 
@@ -33,12 +58,7 @@
 			<!-- Products List - alphabetical order -->
 			<?php
 				
-				require "php/objects/objProduct.php";
-
-				// Temporary.
-				session_start();
-				$_SESSION["userid"] = 1;
-				$_SESSION["isdev"] = true;
+				require_once "php/objects/objProduct.php";
 
 				$prod_array = Product::getProductsByOwner($_SESSION["userid"], 1);
 

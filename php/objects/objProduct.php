@@ -3,7 +3,7 @@
 	/**
 	* Product Object
 	*/
-	require $_SERVER["DOCUMENT_ROOT"].'/landslide/php/helper-functions/dbconnect.php';
+	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/helper-functions/dbconnect.php';
 
 	class Product
 	{
@@ -185,8 +185,66 @@
 
 			return $prod_array;
 
+		}
+
+		static function getTopProducts($count) {
+
+			if ($count == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT * FROM tbl_product, tbl_dev_info ORDER BY downloads DESC LIMIT $count;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$prod_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$prod = new Product();
+				$prod->setValuesByArray($row);
+				$prod_array[$index] = $prod;
+				$index++;
+			}
+
+			return $prod_array;
 
 		}
+
+
+		static function getNewProducts($count) {
+
+			if ($count == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT * FROM tbl_product, tbl_dev_info ORDER BY timestamp DESC LIMIT $count;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$prod_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$prod = new Product();
+				$prod->setValuesByArray($row);
+				$prod_array[$index] = $prod;
+				$index++;
+			}
+
+			return $prod_array;
+
+		}
+
+
 	}
 
  ?>

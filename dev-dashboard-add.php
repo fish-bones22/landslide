@@ -12,7 +12,7 @@
 					
 		<?php
 		
-		require "php/objects/objProduct.php";
+		require_once "php/objects/objProduct.php";
 		
 		// Temporary.
 		session_start();

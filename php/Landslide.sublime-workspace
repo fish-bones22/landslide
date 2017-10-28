@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"tbl_",
+				"tbl_dev_info"
+			],
+			[
+				"tbl",
+				"tbl_user"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"file",
+				"file_size"
+			],
+			[
+				"user_",
+				"user_id"
+			],
+			[
+				"prod",
+				"prod_id"
+			],
+			[
+				"has",
+				"has_upload"
+			],
+			[
+				"pro",
+				"prod-icon"
+			],
+			[
+				"produ",
+				"product"
+			],
+			[
+				"tble",
+				"tbl_dev_info"
+			],
+			[
+				"app",
+				"approval_class"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
 				"file_",
 				"file_loc"
 			],
@@ -52,16 +104,8 @@
 				"solenoidHigh"
 			],
 			[
-				"has",
-				"hasPaperReserve"
-			],
-			[
 				"curre",
 				"currentTime"
-			],
-			[
-				"time",
-				"timeOutDuration"
 			],
 			[
 				"pr",
@@ -299,7 +343,7 @@
 			"file": "objects/objProduct.php",
 			"settings":
 			{
-				"buffer_size": 1835,
+				"buffer_size": 6190,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -308,25 +352,35 @@
 			"file": "/C/xampp/htdocs/landslide/dev-dashboard-add.php",
 			"settings":
 			{
-				"buffer_size": 2560,
+				"buffer_size": 3556,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "helper-functions/dev-add-product.php",
+			"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
 			"settings":
 			{
-				"buffer_size": 2322,
+				"buffer_size": 3278,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/xampp/htdocs/chatroom/start.php",
+			"file": "/C/xampp/htdocs/landslide/index.php",
 			"settings":
 			{
-				"buffer_size": 2064,
+				"buffer_size": 2969,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/landslide/product.php",
+			"settings":
+			{
+				"buffer_size": 3724,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -372,22 +426,27 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/landslide",
-		"/C/xampp/htdocs/landslide/product-files",
-		"/C/xampp/htdocs/landslide/res",
-		"/C/xampp/htdocs/landslide/res/web-img"
+		"/C/xampp/htdocs/landslide/php",
+		"/C/xampp/htdocs/landslide/php/objects"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/landslide/product-files/zip/dfsdf_Dev Name.zip",
-		"/C/xampp/htdocs/chatroom/php/login.php",
+		"/C/xampp/htdocs/landslide/php/objects/objDeveloper.php",
+		"/C/xampp/htdocs/landslide/php/objects/objUser.php",
+		"/C/xampp/htdocs/landslide/php/dbconnect.php",
+		"/C/xampp/htdocs/landslide/php/helper-functions/dev-add-product.php",
 		"/C/xampp/htdocs/chatroom/php/add.php",
 		"/C/xampp/htdocs/chatroom/php/authentication.php",
+		"/C/xampp/htdocs/chatroom/php/dbconnect.php",
+		"/C/xampp/htdocs/chatroom/php/fetch_chat.php",
+		"/C/xampp/htdocs/chatroom/php/send.php",
 		"/C/xampp/htdocs/chatroom/start.php",
+		"/C/xampp/htdocs/landslide/product-files/zip/dfsdf_Dev Name.zip",
+		"/C/xampp/htdocs/chatroom/php/login.php",
 		"/C/xampp/htdocs/chatroom/search-result.php",
 		"/C/xampp/htdocs/landslide/dev-dashboard-add.php",
 		"/C/xampp/htdocs/landslide/php/dev-add-product.php",
 		"/C/xampp/htdocs/chatroom/friend.php",
-		"/C/xampp/htdocs/landslide/php/dbconnect.php",
 		"/C/xampp/htdocs/landslide/dev-dashboard.php",
 		"/C/xampp/htdocs/landslide/product.php",
 		"/C/xampp/htdocs/landslide/css/style.css",
@@ -482,7 +541,6 @@
 		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.h",
 		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.cpp",
 		"/C/xampp/htdocs/chatroom/js/chatbox.js",
-		"/C/xampp/htdocs/chatroom/php/fetch_chat.php",
 		"/C/Users/Sammy/Source/Workspaces/CFMMCD/.vs/config/applicationhost.config",
 		"/C/Users/Sammy/Source/Workspaces/CFMMCD/CFMMCD/Web.config",
 		"/C/Users/Sammy/Downloads/Lee Seul-Rin/Lee Seul-Rin .html",
@@ -491,9 +549,7 @@
 		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/EncryptionGenerator.cs",
 		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/AccountManager.cs",
 		"/C/Users/Sammy/VirtualBox VMs/Win7_NET/Win7_NET.vbox",
-		"/C/xampp/htdocs/chatroom/php/send.php",
 		"/C/xampp/htdocs/chatroom/php/logout.php",
-		"/C/xampp/htdocs/chatroom/php/dbconnect.php",
 		"/C/xampp/htdocs/chatroom/php/register.php",
 		"/C/xampp/htdocs/chatroom/register.html",
 		"/C/xampp/htdocs/PhaserProject/breakout/.tern-project",
@@ -502,10 +558,7 @@
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/TernJS.sublime-settings",
-		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/TernJS/TernJS.sublime-settings",
-		"/D/Projects/CONVEYORV1/CONVEYORV1/Form1.vb",
-		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/ReportGenerationManager.cs",
-		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/LogGenerator.cs"
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/TernJS/TernJS.sublime-settings"
 	],
 	"find":
 	{
@@ -523,6 +576,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this",
+			"\"",
+			"conn",
+			"private",
+			"$row",
+			"\"",
 			"//\t",
 			"SESSION",
 			"\t$",
@@ -539,6 +598,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"prod",
+			"'",
+			"public",
+			"$prod_array",
+			"'",
 			"REQUEST",
 			"$this->",
 			"",
@@ -553,7 +617,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -562,15 +626,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1835,
+						"buffer_size": 6190,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								368,
-								368
+								5885,
+								5886
 							]
 						],
 						"settings":
@@ -578,10 +642,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 106.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -590,15 +654,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2560,
+						"buffer_size": 3556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								493,
-								493
+								267,
+								267
 							]
 						],
 						"settings":
@@ -607,27 +671,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1200.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "helper-functions/dev-add-product.php",
+					"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2322,
+						"buffer_size": 3278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1087,
-								1087
+								420,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 50.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/xampp/htdocs/landslide/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
 							]
 						],
 						"settings":
@@ -635,27 +728,27 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1020.0,
+						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/xampp/htdocs/chatroom/start.php",
+					"buffer": 4,
+					"file": "/C/xampp/htdocs/landslide/product.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2064,
+						"buffer_size": 3724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2715,
+								3446
 							]
 						],
 						"settings":
@@ -664,10 +757,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1501.0,
+						"translation.y": 2040.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
