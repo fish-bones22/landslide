@@ -30,10 +30,13 @@
 	  -->
 
 		<div class="row">
-			<div class="">
+			<div class="col-3">
 				<img class="product_thumbnail_lg" src='<?php echo $prod->icon_location; ?>' />
 			</div>
-			<div class="col-8">
+            <div class="col-2">
+            
+            </div>
+			<div class="col-7">
 				<div class="display-4"><?php echo $prod->name; ?></div>		
 				<h3><?php echo $prod->owner_name; ?></h3>
 				<?php 
@@ -46,43 +49,56 @@
 		</div>
 		<hr />
 
-		<div class="">
+		<div class="row">
+            <div class="col-5">
+                <!-- Spacing -->
+            </div>
+                
+            <div class="col-7">
+                <!-- Description -->
+                <div>
+                    <p><?php echo $prod->description; ?></p>
+                </div>
 
-			<!-- Description -->
-			<div class="">
-				<p><?php echo $prod->description; ?></p>
-			</div>
+                <!--  Other information -->
+                <div class="row">
+                    <div class="form-group col-4">
+                        A$<?php echo $prod->price ?>
+                        <br>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                   
+                    <div class="form-group col-4">
+                        <div class="text-muted small">File size: <?php echo round($prod->file_size/1024)."KB"; ?></div>
+                        <div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
+                        <div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
+                    </div>
+                    
+                    <!-- 
+                        To EJ: Gawa ka ng JS function na ang magiging laman ng 'selected-rating'
+                        ay depende sa ni-select na rating. -Sam
+                    -->
+                    <div class="form-group col-4">
+                        <div class="">Rating: 4.3</div>
+                        <input type="hidden" name="selected-rating">
+                        <button class="btn btn-warning">1</button>
+                        <button class="btn btn-warning">2</button>
+                        <button class="btn btn-warning">3</button>
+                        <button class="btn btn-warning">4</button>
+                        <button class="btn btn-warning">5</button>
+                    </div>
+                </div>
 
-			<!--  Other information -->
-			<div class="form-group">
-				<div class="text-muted small">File size: <?php echo round($prod->file_size/1024)."KB"; ?></div>
-				<div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
-				<div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
-			</div>
+            </div>
 
-			<div class="form-group">
-				A$<?php echo $prod->price ?>
-				<button class="btn btn-primary">Add to Cart</button>
-			</div>
+
 
 		  <!-- TODO: 
 
 				-Create JS script to improve rating mechanism
 
 		  -->
-		  <!-- 
-				To EJ: Gawa ka ng JS function na ang magiging laman ng 'selected-rating'
-				ay depende sa ni-select na rating. -Sam
-		  -->
-			<div class="form-group">
-				<div class="">Rating: 4.3</div>
-				<input type="hidden" name="selected-rating">
-				<button class="btn btn-warning">1</button>
-				<button class="btn btn-warning">2</button>
-				<button class="btn btn-warning">3</button>
-				<button class="btn btn-warning">4</button>
-				<button class="btn btn-warning">5</button>
-			</div>
+
 
 		</div>
 
@@ -110,7 +126,7 @@
 
 					echo "
 						<a href='product.php?id=$product->id' class='row'>
-							<div class='product_thumbnail_container'>
+							<div class=''>
 								<img class='product_thumbnail' src='".$product->icon_location."' />
 							</div>
 							<div class='col-11'>
