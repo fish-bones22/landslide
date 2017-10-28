@@ -30,13 +30,13 @@
 	  -->
 
 		<div class="row">
-			<div class="col-3">
+			<div class="col-md-3 col-xs-12">
 				<img class="product_thumbnail_lg" src='<?php echo $prod->icon_location; ?>' />
 			</div>
-            <div class="col-2">
+            <div class="col-md-2 col-xs-12">
             
             </div>
-			<div class="col-7">
+			<div class="col-md-7 col-xs-12">
 				<div class="display-4"><?php echo $prod->name; ?></div>		
 				<h3><?php echo $prod->owner_name; ?></h3>
 				<?php 
@@ -50,11 +50,11 @@
 		<hr />
 
 		<div class="row">
-            <div class="col-5">
+            <div class="col-md-5 col-xs-12">
                 <!-- Spacing -->
             </div>
                 
-            <div class="col-7">
+            <div class="col-md-7 col-xs-12">
                 <!-- Description -->
                 <div>
                     <p><?php echo $prod->description; ?></p>
@@ -80,12 +80,12 @@
                     -->
                     <div class="form-group col-md-4 col-xs-12">
                         <div class="">Rating: 4.3</div>
-                        <input type="hidden" name="selected-rating">
-                        <button class="btn btn-warning">1</button>
-                        <button class="btn btn-warning">2</button>
-                        <button class="btn btn-warning">3</button>
-                        <button class="btn btn-warning">4</button>
-                        <button class="btn btn-warning">5</button>
+                            <input type="hidden" name="selected-rating">
+                            <button class="btn btn-warning">1</button>
+                            <button class="btn btn-warning">2</button>
+                            <button class="btn btn-warning">3</button>
+                            <button class="btn btn-warning">4</button>
+                            <button class="btn btn-warning">5</button>
                     </div>
                 </div>
 
