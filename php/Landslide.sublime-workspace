@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"file_",
+				"file_loc"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"inpu",
+				"input\tTag"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"icon",
+				"icon_location"
+			],
+			[
+				"gl",
+				"glob"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"for",
+				"form-control"
+			],
+			[
 				"Boot",
 				"BootState\tfn "
 			],
@@ -94,10 +126,6 @@
 			[
 				"user",
 				"userid"
-			],
-			[
-				"for",
-				"form\tTag"
 			],
 			[
 				"stat",
@@ -268,11 +296,37 @@
 	"buffers":
 	[
 		{
-			"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
+			"file": "objects/objProduct.php",
 			"settings":
 			{
-				"buffer_size": 431,
+				"buffer_size": 1835,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/landslide/dev-dashboard-add.php",
+			"settings":
+			{
+				"buffer_size": 2560,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "helper-functions/dev-add-product.php",
+			"settings":
+			{
+				"buffer_size": 2322,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/chatroom/start.php",
+			"settings":
+			{
+				"buffer_size": 2064,
 				"line_ending": "Windows"
 			}
 		}
@@ -318,12 +372,26 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/landslide",
-		"/C/xampp/htdocs/landslide/vendors",
-		"/C/xampp/htdocs/landslide/vendors/bootstrap",
-		"/C/xampp/htdocs/landslide/vendors/bootstrap/js"
+		"/C/xampp/htdocs/landslide/product-files",
+		"/C/xampp/htdocs/landslide/res",
+		"/C/xampp/htdocs/landslide/res/web-img"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/landslide/product-files/zip/dfsdf_Dev Name.zip",
+		"/C/xampp/htdocs/chatroom/php/login.php",
+		"/C/xampp/htdocs/chatroom/php/add.php",
+		"/C/xampp/htdocs/chatroom/php/authentication.php",
+		"/C/xampp/htdocs/chatroom/start.php",
+		"/C/xampp/htdocs/chatroom/search-result.php",
+		"/C/xampp/htdocs/landslide/dev-dashboard-add.php",
+		"/C/xampp/htdocs/landslide/php/dev-add-product.php",
+		"/C/xampp/htdocs/chatroom/friend.php",
+		"/C/xampp/htdocs/landslide/php/dbconnect.php",
+		"/C/xampp/htdocs/landslide/dev-dashboard.php",
+		"/C/xampp/htdocs/landslide/product.php",
+		"/C/xampp/htdocs/landslide/css/style.css",
+		"/C/xampp/htdocs/landslide/vendors/bootstrap/js/popper.min.js",
 		"/C/xampp/htdocs/dashboard/index.html",
 		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.h",
 		"/C/Program Files (x86)/Arduino/libraries/PrintHead/src/PrintHead.cpp",
@@ -413,7 +481,6 @@
 		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3MobileAccessProvider.cpp",
 		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.h",
 		"/C/Program Files (x86)/Arduino/libraries/GSM/src/GSM3CircularBuffer.cpp",
-		"/C/xampp/htdocs/chatroom/friend.php",
 		"/C/xampp/htdocs/chatroom/js/chatbox.js",
 		"/C/xampp/htdocs/chatroom/php/fetch_chat.php",
 		"/C/Users/Sammy/Source/Workspaces/CFMMCD/.vs/config/applicationhost.config",
@@ -421,17 +488,12 @@
 		"/C/Users/Sammy/Downloads/Lee Seul-Rin/Lee Seul-Rin .html",
 		"/C/Users/Sammy/Downloads/boyfriend/boyfriend .html",
 		"/C/xampp/htdocs/chatroom/index.html",
-		"/C/xampp/htdocs/chatroom/start.php",
 		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/EncryptionGenerator.cs",
 		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/AccountManager.cs",
 		"/C/Users/Sammy/VirtualBox VMs/Win7_NET/Win7_NET.vbox",
 		"/C/xampp/htdocs/chatroom/php/send.php",
 		"/C/xampp/htdocs/chatroom/php/logout.php",
-		"/C/xampp/htdocs/chatroom/php/authentication.php",
-		"/C/xampp/htdocs/chatroom/php/add.php",
 		"/C/xampp/htdocs/chatroom/php/dbconnect.php",
-		"/C/xampp/htdocs/chatroom/php/login.php",
-		"/C/xampp/htdocs/chatroom/search-result.php",
 		"/C/xampp/htdocs/chatroom/php/register.php",
 		"/C/xampp/htdocs/chatroom/register.html",
 		"/C/xampp/htdocs/PhaserProject/breakout/.tern-project",
@@ -443,12 +505,11 @@
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/TernJS/TernJS.sublime-settings",
 		"/D/Projects/CONVEYORV1/CONVEYORV1/Form1.vb",
 		"/D/Projects/CFM/CFMMCD/CFMMCD/Models/EntityManager/ReportGenerationManager.cs",
-		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/LogGenerator.cs",
-		"/D/Projects/SMS_RFID_System/SMS_RFID/SMS_RFID/SMS_RFID/Registration.cs"
+		"/D/Projects/CFM/CFMMCD/CFMMCD/Generators/LogGenerator.cs"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -462,6 +523,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"//\t",
+			"SESSION",
+			"\t$",
+			"price",
+			"$",
+			"public",
+			"$",
+			"private",
+			"public"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -469,34 +539,38 @@
 		"regex": false,
 		"replace_history":
 		[
+			"REQUEST",
+			"$this->",
+			"",
+			"private"
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/xampp/htdocs/landslide/dev-dashboard.php",
+					"file": "objects/objProduct.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 431,
+						"buffer_size": 1835,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								368,
+								368
 							]
 						],
 						"settings":
@@ -507,7 +581,93 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/xampp/htdocs/landslide/dev-dashboard-add.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "helper-functions/dev-add-product.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1087,
+								1087
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1020.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/xampp/htdocs/chatroom/start.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1501.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -519,7 +679,7 @@
 	},
 	"input":
 	{
-		"height": 67.0
+		"height": 70.0
 	},
 	"layout":
 	{
@@ -552,7 +712,7 @@
 	"project": "Landslide.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 114.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -590,7 +750,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 263.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

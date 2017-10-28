@@ -1,66 +1,82 @@
-<? php
-	
-	require 'php/dbconnect.php';
-
-	$conn = connectToDb("db_avalanche_store");
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Product Name</title>
+	<?php 
+
+		require "php/objects/objProduct.php";
+				
+		// Temporary.
+		session_start();
+		$_SESSION["userid"] = 1;
+		$_SESSION["isdev"] = true;
+
+		$id = $_REQUEST["id"];
+		$prod = Product::getProductById($id, 1);
+
+		if (!$prod) header("Location: dev-dashboard.php");
+	 ?>
+	<title><?php echo $prod->name; ?></title>
 	<link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
 	<div class="container">
 			
 	  <!-- TODO: 
 
-			-Create PHP script to display product information
+			-Create PHP script to display product information	
 
 	  -->
 
 		<div class="row">
 			<div class="">
-				<img class="product_thumbnail_lg" src="res/web-img/thumbnail_default.png" />
+				<img class="product_thumbnail_lg" src='<?php echo $prod->icon_location; ?>' />
 			</div>
 			<div class="col-8">
-				<div class="display-4">Product Name</div>		
-				<h3>Developer Name</h3>
+				<div class="display-4"><?php echo $prod->name; ?></div>		
+				<h3><?php echo $prod->owner_name; ?></h3>
+				<?php 
+					if ($_SESSION["userid"] == $prod->owner) {
+						echo "<a href='dev-dashboard-add.php?id=$prod->id'>Edit</a>";
+					}
+				?>
+				<div class="text-danger"><?php if ($prod->approval != 1) echo "<strong>This product is not yet approved by the admin.</strong> You are able to view this because you are a developer. Normal users will not be able to view this product." ?></div>
 			</div>
 		</div>
-
 		<hr />
 
 		<div class="">
 
 			<!-- Description -->
 			<div class="">
-				<p>Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p><?php echo $prod->description; ?></p>
 			</div>
 
 			<!--  Other information -->
 			<div class="form-group">
-				<div class="text-muted small">File size: 2.1MB</div>
-				<div class="text-muted small">Downloads: 5525</div>
-				<div class="text-muted small">Date Uploaded: July 5, 2015</div>
+				<div class="text-muted small">File size: <?php echo round($prod->file_size/1024)."KB"; ?></div>
+				<div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
+				<div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
 			</div>
 
 			<div class="form-group">
+				A$<?php echo $prod->price ?>
 				<button class="btn btn-primary">Add to Cart</button>
 			</div>
 
+		  <!-- TODO: 
+
+				-Create JS script to improve rating mechanism
+
+		  -->
+		  <!-- 
+				To EJ: Gawa ka ng JS function na ang magiging laman ng 'selected-rating'
+				ay depende sa ni-select na rating. -Sam
+		  -->
 			<div class="form-group">
 				<div class="">Rating: 4.3</div>
+				<input type="hidden" name="selected-rating">
 				<button class="btn btn-warning">1</button>
 				<button class="btn btn-warning">2</button>
 				<button class="btn btn-warning">3</button>
@@ -73,21 +89,42 @@
 
 		<!-- Other products by developer -->
 		<div class="">
-			<h5>Other products by Developer Name</h5>
+			<h5>Other products by <?php echo $prod->owner_name ?></h5>
 		</div>
 
-		<a href="#" class="row">
-			<div class="">
-				<img class="product_thumbnail" src="res/web-img/thumbnail_default.png" />
-			</div>
-			<div class="col-11">
-				<div><strong>Title of Product</strong></div>
-				<div class="row">
-					<div class="col-auto text-muted small">Downloads: 0</div>
-					<div class="col-auto text-muted small">Sept 21, 2017</div>
-				</div>
-			</div>
-		</a>
+
+		<?php 
+
+			$prod_array = Product::getProductsByOwner($_SESSION["userid"], 1);
+
+			if (!$prod_array) {
+
+				echo "<div>No Uploads</div>";
+
+			} else {
+				
+				foreach ($prod_array as $product) {
+
+					if ($product->id == $prod->id) continue;
+					if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+
+					echo "
+						<a href='product.php?id=$product->id' class='row'>
+							<div class=''>
+								<img class='product_thumbnail' src='".$product->icon_location."' />
+							</div>
+							<div class='col-11'>
+								<div><strong>$product->name</strong></div>
+								<div class='row'>
+									<div class='col-auto text-muted small'>Downloads: $product->downloads</div>
+									<div class='col-auto text-muted small'>$product->timestamp</div>
+								</div>
+							</div>
+						</a>
+					";
+				}
+			}
+		?>
 
 
 	</div>
