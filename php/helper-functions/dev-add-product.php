@@ -6,7 +6,6 @@
   
 	//if (!isset($_SESSION["userid"])) return; // TODO: Change to redirect to login.
 	//if (!isset($_SESSION["isdev"])) return;
-
 	$errors = "";
 
 	if ($_REQUEST["prod_name"] == "") $errors = join("", array($errors, "n"));

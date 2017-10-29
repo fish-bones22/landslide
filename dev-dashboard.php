@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 	<title>Dashboard</title>
-	<link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap/css/bootstrap3/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
+	<?php include 'navbar.php';?>
 <body>
-
 	<div class="container">
 		<?php 
 
