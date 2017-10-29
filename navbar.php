@@ -1,4 +1,4 @@
-<link href="vendors/bootstrap/css/bootstrap3/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="vendors/bootstrap3/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 <nav class="navbar bg-black no-pad" style="margin-top: 60px;">
