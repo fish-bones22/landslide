@@ -1,15 +1,147 @@
-
-.product_thumbnail {
-
-  width: 64px; 
-
+@font-face{
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+/*position of icons*/
+@media screen and (max-width:460px){
+    .icon-pos{
+        margin-top: -200px;
+        margin-left: -30px;
+    }
+}
+@media screen and (max-width:960px){
+    .icon-pos{
+        margin-top: -200px;
+        margin-left: -30px;
+    }
+}
+/*End icon-position*/
+/*Search*/
+.search-form .form-group {
+    float: right !important;
+    transition: all 0.35s, border-radius 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin: -10px 0 0 0;
+}
+.search-form .form-group input.form-control {
+    padding-right: 20px;
+    border: 0 none;
+    background: transparent;
+    box-shadow: none;
+    display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+    display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+    display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+    width: 100%;
+    border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group i {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #bdbec0;
+    left: initial;
+    font-size: 14px;
+}
+/*End Search*/
+/*Custom Classes*/
+.no-pad{
+    padding: 0;
+}
+.bg-black{
+    background-color: #252525;
+    color: #fff;
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.bg-gray{
+    background-color: #bdbec0;
+}
+.f-7{
+    font-size: 7px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-9{
+    font-size: 9px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-12{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-14{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-18{
+    font-size: 18px;
+    font-weight: Semibold;
+    font-family: Segoe UI;  
+    color: #ffffff;
+}
+.f-21{
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #252525;
+}
+.f-24{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
 }
 
-.product_thumbnail_container {
+.f-36{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #252525;
+}
+a.f-18:hover,i.fa.fa-user:hover{
+    background-color: #252525 !important;
+    color: #2b87ad;
+}
+/*End Custom Classes*/
+.product_thumbnail {
 
-	vertical-align: center;
-	height: 64px;
-	object-fit: contain;
+	width:64px;
 
 }
 
