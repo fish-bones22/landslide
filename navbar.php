@@ -21,8 +21,9 @@
         <ul class="nav navbar-nav">
             <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user icon-x3" style="font-size: 1.5em;"></i>Name</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="#" class="f-18">Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="f-18">Log out</a></li>
 
                 </ul>
             </li>

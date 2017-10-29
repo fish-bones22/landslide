@@ -50,7 +50,7 @@
     font-size: 18px;
     font-weight: Semibold;
     font-family: Segoe UI;  
-    color: #ffffff;
+    color: #ffffff !important;
 }
 .f-21{
     font-size: 21px;
@@ -71,9 +71,16 @@
     font-family: Proxima Nova;
     color: #252525;
 }
-a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover{
+a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
     background-color: #252525 !important;
-    color: #2b87ad;
+    color: #2b87ad !important;
+}
+a.dropdown-toggle.bg-black:active{
+    background-color: #252525 !important;
+}
+ul.dropdown-menu.show{
+    background-color: #252525;
+    color: #fff;
 }
 /*End Custom Classes*/
 .product_thumbnail {
