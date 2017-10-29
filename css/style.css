@@ -94,3 +94,13 @@ ul.dropdown-menu.show{
 	width:128px;
 
 }
+
+/* Homepage Product Boxes */
+.product-box {
+    border-radius: 25px;
+    border: 2px solid #bdbec0;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+}

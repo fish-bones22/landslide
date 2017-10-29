@@ -33,9 +33,8 @@
 		<div class="row">
 
 			<!-- Top Products -->
-			<div class="col-md-6">
-
-				<div class="display-4">Top Products</div>
+			<div class="row">
+				<div class="display-4 col-md-12">Top Products</div>
 				<?php
 					
 					$top_prod = Product::getTopProducts(5);
@@ -51,19 +50,19 @@
 							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
 							echo "
-								<a href='product.php?id=$product->id' class='row'>
-									<div class='product_thumbnail_container'>
-										<img class='product_thumbnail' src='".$product->icon_location."' />
-									</div>
-									<div class='col-xs-11'>
-										<div><strong>$product->name</strong></div>
-										<div class=''>$product->owner_name</div>
-										<div class='row'>
-											<div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-											<div class='col-auto text-muted small'>$product->timestamp</div>
-										</div>
-									</div>
-								</a>
+                                        <a href='product.php?id=$product->id' class='row product-box'>
+                                        <div class='product_thumbnail_container'>
+                                            <img class='product_thumbnail' src='".$product->icon_location."' />
+                                        </div>
+                                        <div class='col-xs-2'>
+                                            <div><strong>$product->name</strong></div>
+                                            <div class=''>$product->owner_name</div>
+                                            <div class='row'>
+                                                <div class='col-auto text-muted small'>Downloads: $product->downloads</div>
+                                                <div class='col-auto text-muted small'>$product->timestamp</div>
+                                            </div>
+                                        </div>
+                                    </a>
 							";
 						}
 					}
@@ -73,42 +72,41 @@
 			<!-- End of Top -->
 
 			<!-- Newest -->
-			<div class="col-md-6">
-				<div class="display-4">New Products</div>
-				<?php
-					
-					$new_prod = Product::getNewProducts(5);
+                <div class="row">
+                    <div class="display-4 col-md-12">New Products</div>
+                    <?php
 
-					if (!$new_prod) {
+                        $new_prod = Product::getNewProducts(5);
 
-						echo "<div>No Products in this category</div>";
+                        if (!$new_prod) {
 
-					} else {
-						
-						foreach ($new_prod as $product) {
+                            echo "<div>No Products in this category</div>";
 
-							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+                        } else {
 
-							echo "
-								<a href='product.php?id=$product->id' class='row'>
-									<div class='product_thumbnail_container'>
-										<img class='product_thumbnail' src='".$product->icon_location."' />
-									</div>
-									<div class='col-xs-11'>
-										<div><strong>$product->name</strong></div>
-										<div class=''>$product->owner_name</div>
-										<div class='row'>
-											<div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-											<div class='col-auto text-muted small'>$product->timestamp</div>
-										</div>
-									</div>
-								</a>
-							";
-						}
-					}
+                            foreach ($new_prod as $product) {
 
-				?>
-			</div>
+                                if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+
+                                echo "
+                                        <a href='product.php?id=$product->id' class='row product-box'>
+                                            <div class='product_thumbnail_container'>
+                                                <img class='product_thumbnail' src='".$product->icon_location."' />
+                                            </div>
+                                            <div class='col-xs-2'>
+                                                <div><strong>$product->name</strong></div>
+                                                <div class=''>$product->owner_name</div>
+                                                <div class='row'>
+                                                    <div class='col-auto text-muted small'>Downloads: $product->downloads</div>
+                                                    <div class='col-auto text-muted small'>$product->timestamp</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                ";
+                            }
+                        }
+                    ?>
+                </div>
 			<!-- End of Newest -->
 
 		</div>
