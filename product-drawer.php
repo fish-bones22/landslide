@@ -50,25 +50,28 @@
 
 							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
-							echo "
-								<a href='product.php?id=$product->id' class='row'>
-									<div class=''>
-										<img class='product_thumbnail' src='".$product->icon_location."' />
-									</div>
-									<div class='col-xs-11'>
-										<div><strong>$product->name</strong></div>
-										<div class=''>$product->owner_name</div>
-										<div class='row'>
-											<div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-											<div class='col-auto text-muted small'>$product->timestamp</div>
-										</div>
-									</div>
-								</a>
-							";
-						}
-					}
+					?>
+				<div class='row'>
+					<a href='product.php?id=$product->id'>
+						<div class='product_thumbnail_container'>
+							<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+						</div>
+						<div class='col-xs-11'>
+							<div><strong><?php echo $product->name ?></strong></div>
+							<div class=''><?php $product->owner_name ?></div>
+							<div class='row'>
+								<div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
+								<div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
+							</div>
+						</div>
+					</a>
+				</div>
+					
+					<?php
+						} // end foreach
+					} // end if-else
 
-				?>
+					?>
 			</div>
 			<!-- End of Search results -->
 

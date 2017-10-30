@@ -6,9 +6,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="bg-gray2">
-	<?php include'navbar.php'; ?>
 	<?php 
-
 		require_once 'php/objects/objProduct.php';
 
 		// Temporary.
@@ -16,68 +14,89 @@
 		$_SESSION["userid"] = 1;
 		$_SESSION["isdev"] = true;
 
+		include'navbar.php';
+
 	?>
 	<div class="container">
 
-		<h1 class="f-40"><strong>Landslide</strong></h1><br>
-		
-		<p class="f-24">Top Products</p>
+		<?php 
+
+		$rated_prod = Product::getMostRatedProducts(3);
+
+		if (!$rated_prod) {
+
+			echo "<div>No Products in this category</div>";
+
+		} else {
+
+		?>
+
 		<!--Carousel-->
 		<div id="thumbnail-preview-indicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#thumbnail-preview-indicators" data-slide-to="0" class="active">
 						<div class="thumbnail">
-							<img class="img-responsive" src='img/job11.jpg' />
+							<img class="img-responsive" src='<?php echo $rated_prod[0]->icon_location ?>' />
 						</div>
 					</li>
 					<li data-target="#thumbnail-preview-indicators" data-slide-to="1">
 						<div class="thumbnail">
-							<img class="img-responsive" src='img/job11.jpg' />
+							<img class="img-responsive" src='<?php echo $rated_prod[1]->icon_location ?>' />
 						</div>
 					</li>
 					<li data-target="#thumbnail-preview-indicators" data-slide-to="2">
 						<div class="thumbnail">
-							<img class="img-responsive" src='img/job11.jpg' />
+							<img class="img-responsive" src='<?php echo $rated_prod[2]->icon_location ?>' />
 						</div>
 					</li>
 				</ol>
+
 				<div class="carousel-inner">
 				<div class="item slides active">
-				<div class="slide-1"></div>
+				<div class="slide-1" style="background-image:url('<?php echo $rated_prod[0]->icon_location ?>')"></div>
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>THESIS DEFENSE IS COMING</h1>
-							<p>Wala pa ring chapter 4 at 5</p>
+							<h1><?php echo $rated_prod[0]->name ?></h1>
+							<p><?php echo $rated_prod[0]->description ?></p>
 						</div>
 					</div>
 				</div>
 				<div class="item slides">
-					<div class="slide-2"></div>
+					<div class="slide-2" style="background-image:url('<?php echo $rated_prod[1]->icon_location ?>')"></div>
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>THESIS DEFENSE IS COMING</h1>
-							<p>Wala pa ring chapter 4 at 5</p>
+							<h1><?php echo $rated_prod[1]->name ?></h1>
+							<p><?php echo $rated_prod[1]->description ?></p>
 						</div>
 					</div>
 				</div>
 				<div class="item slides">
-					<div class="slide-3"></div>
+					<div class="slide-3"  style="background-image:url('<?php echo $rated_prod[2]->icon_location ?>')"></div>
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>THESIS DEFENSE IS COMING</h1>
-							<p>Wala pa ring chapter 4 at 5</p>
+							<h1><?php echo $rated_prod[2]->name ?></h1>
+							<p><?php echo $rated_prod[2]->description ?></p>
 						</div>
 					</div>
 				</div>
+
 			</div>
-		<a class="left carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="prev"><i class="fa fa-chevron-left chevron-pos" style="font-size:2.5em;"></i></a>
-		<a class="right carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="next"><i class="fa fa-chevron-right chevron-pos" style="font-size:2.5em;"></i></a>
-	</div> 
+			<a class="left carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="prev"><i class="fa fa-chevron-left chevron-pos" style="font-size:2.5em;"></i></a>
+			<a class="right carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="next"><i class="fa fa-chevron-right chevron-pos" style="font-size:2.5em;"></i></a>
+		</div> 
+
+	<?php 
+
+	} // End if-else
+
+	?>
+
 		<div class="row">
 
 			<!-- Top Products -->
 			<div class="row">
-				<div class="display-4 col-md-12">Top Products</div>
+				<div class="row">Top Products</div>
+				<div class="row">
 				<?php
 
 				$top_prod = Product::getTopProducts(5);
@@ -87,36 +106,41 @@
 					echo "<div>No Products in this category</div>";
 
 				} else {
-
+					// Foreach
 					foreach ($top_prod as $product) {
 
 						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
-						echo "
-                                        <a href='product.php?id=$product->id' class='row product-box'>
-                                        <div class='product_thumbnail_container'>
-                                            <img class='product_thumbnail' src='".$product->icon_location."' />
-                                        </div>
-                                        <div class='col-xs-2'>
-                                            <div><strong>$product->name</strong></div>
-                                            <div class=''>$product->owner_name</div>
-                                            <div class='row'>
-                                                <div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-                                                <div class='col-auto text-muted small'>$product->timestamp</div>
-                                            </div>
-                                        </div>
-                                    </a>
-							";
-					}
-				}
-
 				?>
+					<div class="col-md-2">
+						<div  class='product-box'>
+			      	<a href='product.php?id=<?php echo $product->id ?>'>
+			          <div class='product_thumbnail_container'>
+			              <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+			          </div>
+			          <div class='prod_info'>
+			              <div><strong><?php echo $product->name ?></strong></div>
+			              <div class=''><?php echo $product->owner_name ?></div>
+			             <!--  <div class='row'>
+			              	<div class=' text-muted small'>Downloads:<?php echo $product->downloads ?></div>
+			                <div class='text-muted small'><?php echo $product->timestamp ?></div>
+			              </div> -->
+			          </div>
+			      	</a>
+			    	</div>
+			    </div>
+				<?php
+					} // End Foreach
+				} // End else if
+				?>
+		    </div>
 			</div>
 			<!-- End of Top -->
 
 			<!-- Newest -->
-			<div class="row">
-				<div class="display-4 col-md-12">New Products</div>
+			<div class="form-group">
+				<div class="row">New Products</div>
+				<div class="row">
 				<?php
 
 				$new_prod = Product::getNewProducts(5);
@@ -131,24 +155,30 @@
 
 						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
-						echo "
-                                        <a href='product.php?id=$product->id' class='row product-box'>
-                                            <div class='product_thumbnail_container'>
-                                                <img class='product_thumbnail' src='".$product->icon_location."' />
-                                            </div>
-                                            <div class='col-xs-2'>
-                                                <div><strong>$product->name</strong></div>
-                                                <div class=''>$product->owner_name</div>
-                                                <div class='row'>
-                                                    <div class='col-auto text-muted small'>Downloads: $product->downloads</div>
-                                                    <div class='col-auto text-muted small'>$product->timestamp</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                ";
-					}
-				}
 				?>
+					<div class="col-md-2">
+						<div class="product-box">
+			        <a href='product.php?id=<?php echo $product->id ?>'>
+			        	<div class='product_thumbnail_container'>
+			    	      <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+			          </div>
+			          <div class=''>
+			            <div><strong><?php echo $product->name ?></strong></div>
+			            <div class=''><?php echo $product->owner_name ?></div>
+			           <!--  <div class='row'>
+			              <div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
+			              <div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
+			            </div> -->
+				        </div>
+			        </a>
+			      </div>
+			    </div>
+
+        <?php
+					} // end foreach
+				} // end if-else
+				?>
+				</div>
 			</div>
 			<!-- End of Newest -->
 

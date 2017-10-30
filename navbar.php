@@ -9,12 +9,12 @@
             <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
         </ul>
         <div class="col-sm-3 col-md-3 col-md-offset-3">
-            <form class="navbar-form" role="search">
+            <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
                     <div class="input-group-btn">
                         <button class="btn bg-gray btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" name="search" placeholder="Search">
                 </div>
             </form>
         </div>

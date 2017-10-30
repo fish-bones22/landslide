@@ -111,7 +111,7 @@ ul.dropdown-menu.show{
     border-radius: 25px;
 
 }
-#thumbnail-preview-indicators .slides .slide-1 {
+/*#thumbnail-preview-indicators .slides .slide-1 {
     background-image: url(../img/job11.jpg); 
 }
 #thumbnail-preview-indicators .slides .slide-2 {
@@ -119,7 +119,7 @@ ul.dropdown-menu.show{
 }
 #thumbnail-preview-indicators .slides .slide-3 {
     background-image: url(../img/job14.jpg);
-}
+}*/
 #thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
     top: 20%;
     bottom: inherit;
@@ -144,7 +144,7 @@ ul.dropdown-menu.show{
 #thumbnail-preview-indicators .carousel-indicators li:hover > .thumbnail,
 #thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail {
     display: block;
-    opacity: .8;
+    opacity: .5;
 }
 #thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail:hover{
     opacity: 1;
@@ -166,17 +166,14 @@ ul.dropdown-menu.show{
 .chevron-pos{
     line-height: 270px;;
 }
+
 /*End Carousel*/
 .product_thumbnail {
-
-	width:64px;
-
+	width: 80%;
 }
 
 .product_thumbnail_lg {
-
 	width:128px;
-
 }
 
 /* Homepage Product Boxes */

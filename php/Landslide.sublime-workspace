@@ -378,7 +378,7 @@
 			"file": "/C/xampp/htdocs/landslide/css/style.css",
 			"settings":
 			{
-				"buffer_size": 182,
+				"buffer_size": 2916,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -405,7 +405,7 @@
 			"file": "/C/xampp/htdocs/landslide/product.php",
 			"settings":
 			{
-				"buffer_size": 3751,
+				"buffer_size": 4696,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -456,6 +456,7 @@
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/landslide/navbar.php",
 		"/C/xampp/htdocs/landslide/php/objects/objDeveloper.php",
 		"/C/xampp/htdocs/landslide/php/objects/objUser.php",
 		"/C/xampp/htdocs/landslide/php/dbconnect.php",
@@ -582,8 +583,7 @@
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/Tern.sublime-settings",
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
 		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/TernJS.sublime-settings",
-		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/TernJS/TernJS.sublime-settings"
+		"/C/Users/Sammy/AppData/Roaming/Sublime Text 3/Packages/User/TernJS.sublime-settings"
 	],
 	"find":
 	{
@@ -737,15 +737,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 182,
+						"buffer_size": 2916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								0,
+								0
 							]
 						],
 						"settings":
@@ -781,7 +781,7 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1670.0,
+						"translation.y": 1610.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -821,15 +821,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3751,
+						"buffer_size": 4696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3058,
-								3058
+								0,
+								0
 							]
 						],
 						"settings":
