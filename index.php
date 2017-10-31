@@ -18,6 +18,7 @@
 
 	?>
 	<div class="container">
+		<div class="lh-100">&nbsp;</div>
 		<div class="row">
 			<p class="f-24 col-md-3">Most Rated</p>
 		</div>
@@ -97,6 +98,7 @@
 
 			<!-- Top Products -->
 			<div class="row">
+				<div class="lh-100">&nbsp;</div>
 				<div class="row">
 					<p class="f-24 col-md-3">Top Products</p>
 				</div>
@@ -117,13 +119,13 @@
 
 				?>
 				<div class="col-md-2">
-					<div  class='product-box hvr-bob'>
+					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
 						<div class="ribbon-top"><span>Top Rated</span></div>
 			          	<div class='product_thumbnail_container'>
 			              <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
 			          	</div>
 			          	<div class='prod_info'>
-			              <div style="position:relative; top:0px;"><strong><?php echo $product->name ?></strong></div>
+			              <div><strong><?php echo $product->name ?></strong></div>
 			              <div class=''><?php echo $product->owner_name ?></div>
 			             	<!--  <div class='row'>
 			              	<div class=' text-muted small'>Downloads:<?php echo $product->downloads ?></div>
@@ -142,58 +144,58 @@
 			<!-- End of Top -->
 
 			<!-- Newest -->
-			<div class="form-group">
+			<div class="row">
+				<div class="lh-75">&nbsp;</div>
 				<div class="row">
 					<p class="f-24 col-md-3">New Products</p>
 				</div>
 				<div class="row">
-				<?php
+					<?php
 
-				$new_prod = Product::getNewProducts(5);
+					$new_prod = Product::getNewProducts(5);
 
-				if (!$new_prod) {
+					if (!$new_prod) {
 
-					echo "<div>No Products in this category</div>";
+						echo "<div>No Products in this category</div>";
 
-				} else {
+					} else {
 
-					foreach ($new_prod as $product) {
+						foreach ($new_prod as $product) {
 
-						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
-				?>
-				<div class="col-md-3">
-					<div class="product-box hvr-bob">
-						<div class="ribbon-new"><span>Newest</span></div>
-						<div class='product_thumbnail_container'>
-			    	      <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
-			            </div>
-			            <div class=''>
-			              <div><strong><?php echo $product->name ?></strong></div>
-			              <div class=''><?php echo $product->owner_name ?></div>
-			              <!--  <div class='row'>
-			                <div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
-			                <div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
-			              </div> -->
-				        </div>
-						<a href='product.php?id=<?php echo $product->id ?>' class="link-overlay"></a>
-			      </div>
-			    </div>
+					?>
+					<div class="col-md-2">
+						<div class="product-box hvr-bob" data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
+							<div class="ribbon-new"><span>Newest</span></div>
+							<div class='product_thumbnail_container'>
+								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+							</div>
+							<div class=''>
+								<div><strong><?php echo $product->name ?></strong></div>
+								<div class=''><?php echo $product->owner_name ?></div>
+							<!--  <div class='row'>
+									 <div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
+									 <div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
+								  </div> -->
+							</div>
+							<a href='product.php?id=<?php echo $product->id ?>' class="link-overlay"></a>
+						</div>
+					</div>
 
-        <?php
-					} // end foreach
-				} // end if-else
-				?>
+					<?php
+						} // end foreach
+					} // end if-else
+					?>
 				</div>
-			</div>
-			<!-- End of Newest -->
-
+			</div>	<!-- End of Newest -->
+			<div class="lh-75">&nbsp;</div>	
 		</div>
-
 	</div>
 <?php include 'footer.php';?>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

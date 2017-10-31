@@ -78,6 +78,12 @@
     font-family: Proxima Nova;
     color: #252525;
 }
+.lh-100{
+    line-height: 100px;
+}
+.lh-75{
+    line-height: 75px;
+}
 a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
     background-color: #252525 !important;
     color: #2b87ad !important;
@@ -348,3 +354,4 @@ ul.dropdown-menu.show{
     left:0;
 
 }
+.popover {min-width:400px;}
