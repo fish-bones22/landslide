@@ -63,7 +63,7 @@
                 <div class="row">
 					<div class="form-group col-md-4 col-xs-12" style="margin-top:10px;">
 						<div class="f-24">A$<?php echo $prod->price ?></div>
-						<button class="btn-add-cart" href="#">Add Cart</button>
+						<button class="btn-landslide" href="#">Add Cart</button>
                     </div>
                    
 					<div class="form-group col-md-4 col-xs-12" style="margin-top:20px;">
@@ -138,58 +138,6 @@
 	</div>
 	<div class="lh-75">&nbsp;</div>
 	<?php include 'footer.php'; ?>
-		<script>
-			/*Rating Mechanism*/
-			(function() {
-
-				'use strict';
-
-
-				var product = document.querySelector('#product');
-
-				// Data name for Product
-				var data = [
-					{
-						title: "<?php echo $product->name?>",
-						rating: 3
-					}
-				];
-
-				// Initialize
-				(function init() {
-					for (var i = 0; i < data.length; i++) {
-						addRatingWidget(buildShopItem(data[i]), data[i]);
-					}
-				})();
-
-				// Rendering data divs by js
-				function buildShopItem(data) {
-					var productItem = document.createElement('div');
-
-					var html =
-						'<h3>' + data.title + '</h3>' +
-						'<ul class="c-rating"></ul>' +
-						'</div>';
-
-					productItem.classList.add('c-shop-item');
-					productItem.innerHTML = html;
-					product.appendChild(productItem);
-
-					return productItem;
-				}
-
-				// rating callbacks
-				function addRatingWidget(productItem, data) {
-					var ratingElement = productItem.querySelector('.c-rating');
-					var currentRating = data.rating;
-					var maxRating = 5;
-					var callback = function(rating) { alert(rating); };
-					var r = rating(ratingElement, currentRating, maxRating, callback);
-				}
-
-			})();
-			/*End Rating Machanism*/
-		</script>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
