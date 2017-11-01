@@ -425,6 +425,16 @@ ul.dropdown-menu.show{
     top: -135px;
     left: 105px;
 }
+.btn-cart{
+    background-color: #252525;
+    position: relative;
+    top: 8px;
+    border: none;
+    left: 20px;
+}
+.btn-cart:hover{
+    color: #2b87ad;
+}
 .btn-close:hover{
     background-color: #bdbec0;
     color: red;
@@ -451,3 +461,12 @@ ul.dropdown-menu.show{
 
 }
 .popover {min-width:400px;}
+.popover-title{
+    color: #000;
+}
+.popover-content{
+    color: #000;
+}
+.popover-cart {
+    min-width:100px !important;
+}

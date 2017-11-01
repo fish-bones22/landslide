@@ -8,7 +8,7 @@
             <li class="col-md-4"><a href="#" class="f-18">About</a></li>
             <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
         </ul>
-        <div class="col-sm-3 col-md-3 col-md-offset-3">
+        <div class="col-sm-3 col-md-3 col-md-offset-2">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
                     <div class="input-group-btn">
@@ -24,8 +24,10 @@
                     <li><a href="#" class="f-18">Settings</a></li>
                     <li class="divider"></li>
                     <li><a href="#" class="f-18">Log out</a></li>
-
                 </ul>
+            </li>
+            <li class="popover-cart" >
+                <button type="button" class="btn-cart"  data-toggle="popover-cart" title=" Number of Items:" data-content="Total:"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"></i></button>
             </li>
         </ul>
     </div>

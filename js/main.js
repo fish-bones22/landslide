@@ -1,18 +1,24 @@
-/*Popover*/
+
 $(document).ready(function(){
+    /*Popover*/
     $('[data-toggle="popover"]').popover({
         placement : 'right',
         trigger : 'hover'
     });
-});
-/*End Popover*/
-/*Remove function*/
-$(document).ready(function(){
+    $('[data-toggle="popover-cart"]').popover({
+        placement : 'bottom',
+        trigger : 'hover'
+    });
+    /*End Popover*/
+    /*Remove function*/
     $(".btn-close").click(function(){
         $("#remove").remove();
     });
+    /*End Remove Function*/
 });
-/*End Remove Function*/
+
+
+
 /*Rating Mechanism*/
 (function() {
 

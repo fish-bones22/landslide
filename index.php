@@ -95,7 +95,6 @@
 	?>
 
 		<div class="row">
-
 			<!-- Top Products -->
 			<div class="row">
 				<div class="lh-100">&nbsp;</div>
