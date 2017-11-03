@@ -22,8 +22,8 @@
 
 		 ?>
 		
-		<div class="display-3">Developer</div>
-		<div class="display-4"><?php echo $dev->dev_name;?></div>
+		<div class="f-36">DEVELOPER'S DASHBOARD</div>
+		<div class="f-27"><?php echo $dev->dev_name;?></div>
 		<div><?php echo $dev->dev_description;?></div>
 		<!-- First Section -->
 		<div class="">
@@ -31,14 +31,14 @@
 			<div class="form-inline">				
 				<h3>Products </h3>
 				<div class="">
-					<a href="dev-dashboard-add.php" class="btn btn-secondary">+</a>
+					<a href="dev-dashboard-add.php" class="btn btn-primary">+ Add Products</a>
 				</div>
 			</div>
 			<hr />
 
 			<div class="row">
 				<div class="col-auto">Filter:</div>
-				<div class="col-sm-9">
+				<div class="col-sm-3">
 					<select class="form-control" id="status-filter">
 						<option value="-1">All</option>
 						<option value="0">Pending</option>
@@ -47,6 +47,7 @@
 					</select>
 				</div>
 			</div>
+			<br>
 			
 		  <!-- TODO: 
 
@@ -82,19 +83,19 @@
 						}
 
 						echo "
-								<div class='row'>
+								<div class='row dashboard-product-box bg-gray'>
 									<a href='product.php?id=$prod->id'>
-										<div class='product_thumbnail_container'>
+										<div class='col-md-2 col-xs-2'>
 											<img class='product_thumbnail' src='".$prod->icon_location."' />
 										</div>
 									</a>
-									<div class='col'>
+									<div class='col-md-10 col-xs-9'>
 										<div>
 											<strong><a href='product.php?id=$prod->id'>".$prod->name."</a></strong>
+											<br>	
 											<a href='dev-dashboard-add.php?id=$prod->id' class='small'>Edit</a>
 											<a href='#' class='small'>Delete</a>
-										</div>
-										<div class='row'>
+
 											<div class='col-auto small ".$approval_class."'>".$approval."</div>
 											<div class='col-auto text-muted small'>Downloads: ".$prod->downloads."</div>
 											<div class='col-auto text-muted small'>".$prod->timestamp."</div>
