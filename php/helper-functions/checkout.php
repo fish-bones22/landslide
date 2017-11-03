@@ -11,16 +11,17 @@
 	$user = User::getUserById($_SESSION["userid"]);
 	$trans_id = Transaction::generateTransactionId();
 
-	if ($cart->getTotalPrice() > $user->currency_amount)
+	if ($cart->getTotalPrice() > $user->currency_amount) {
 		header("Location: /landslide/checkout.php?insuff");
 		exit;
+	}
 
 	while ($item = each($cart->cart_items)) {
 
 		$prod_id =  $item[1]->product->id;
 		$price = $item[1]->product->price;
 
-		Transaction::saveTransaction($_SESSION["userid"], $prod_id, $price, $trans_id);
+		Transaction::saveTransaction($_SESSION["userid"], $prod_id, $price, $trans_id, $item[1]->rating);
 
 		Cart::removeCartItem($_SESSION["userid"], $prod_id);
 
