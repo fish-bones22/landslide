@@ -12,7 +12,21 @@ $(document).ready(function(){
     /*End Popover*/
     /*Remove function*/
     $(".btn-close").click(function(){
-        $("#remove").remove();
+        var loopDiv = this.closest(".loop");
+        var prodId = $(loopDiv).find(".prod-id").val();
+
+        var userId = $("#user-id").val();
+        $.ajax({  
+            type: 'GET',  
+            url: 'php/helper-functions/removetocart.php', 
+            data: { userid: userId, prodid: prodId },
+            dataType: 'json',
+            success: function(response) {
+                if (response == 1) {
+                    loopDiv.remove();
+                }
+            }
+        });
     });
     /*End Remove Function*/
 });
@@ -26,12 +40,13 @@ $(document).ready(function(){
 
 
     var product = document.querySelector('#product');
+    var currrating = $("#rating-value").val()
 
     // Data name for Product
     var data = [
         {
             title: "Rating",
-            rating: 3
+            rating: currrating
         }
     ];
 
@@ -63,7 +78,7 @@ $(document).ready(function(){
         var ratingElement = productItem.querySelector('.c-rating');
         var currentRating = data.rating;
         var maxRating = 5;
-        var callback = function(rating) { alert(rating); };
+        var callback = function(rating) { $("#rating-value").val(rating); };
         var r = rating(ratingElement, currentRating, maxRating, callback);
     }
 

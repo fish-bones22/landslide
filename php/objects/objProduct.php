@@ -314,6 +314,29 @@
 
 		}
 
+		static function getPriceOfProduct($id) {
+
+			if ($id == null || $id == 0) return -1;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT price FROM tbl_product WHERE prod_id = $id;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$price = -1;
+
+			while ($row = $result->fetch_assoc()) {
+				$price = $row["price"];
+			}
+
+			return $price;
+		}
+
 
 	}
 

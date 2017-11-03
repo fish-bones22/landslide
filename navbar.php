@@ -1,3 +1,16 @@
+<?php
+
+require_once "php/objects/objCart.php";
+require_once "php/objects/objUser.php";
+        
+// Temporary.
+$_SESSION["userid"] = 1;
+$_SESSION["isdev"] = true;
+
+$cart = Cart::getCartByUser($_SESSION["userid"]);
+$user = User::getUserById($_SESSION["userid"]);
+
+?>
 <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -19,7 +32,7 @@
             </form>
         </div>
         <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user icon-x3" style="font-size: 1.5em;"></i>--Name--</a>
+            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user icon-x3" style="font-size: 1.5em;"></i> <?php echo $user->name;?></a>
                 <ul class="dropdown-menu">
                     <li><a href="#" class="f-18">Settings</a></li>
                     <li class="divider"></li>
@@ -27,7 +40,13 @@
                 </ul>
             </li>
             <li class="popover-cart" >
-                <button type="button" class="btn-cart"  data-toggle="popover-cart" title=" Number of Items:" data-content="Total:"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"></i></button>
+                <button type="button" 
+                        class="btn-cart"  
+                        data-toggle="popover-cart" 
+                        title=" Number of Items: <?php echo count($cart->cart_items);?>" 
+                        data-content="Total: <?php echo $cart->getTotalPrice();?>">
+                    <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"></i>
+                </button>
             </li>
         </ul>
     </div>

@@ -5,6 +5,7 @@
 	<?php 
 
 		require_once "php/objects/objProduct.php";
+		require_once "php/objects/objCart.php";
 				
 		// Temporary.
 		session_start();
@@ -14,7 +15,9 @@
 		$id = $_REQUEST["id"];
 		$prod = Product::getProductById($id, 1);
 
-		if (!$prod) header("Location: dev-dashboard.php");
+		$cart = Cart::getCartByUser($_SESSION["userid"]);
+
+		if (!$prod) header("Location: index.php");
 	 ?>
 	 <?php include'navbar.php'; ?>
 	<title><?php echo $prod->name; ?></title>
@@ -63,7 +66,22 @@
                 <div class="row">
 					<div class="form-group col-md-4 col-xs-12" style="margin-top:10px;">
 						<div class="f-24">A$<?php echo $prod->price ?></div>
-						<button class="btn-landslide" href="#">Add Cart</button>
+
+						<?php
+							// If not yet added
+							if (!$cart->hasProduct($prod->id)) {
+						?>
+						<button class="btn-landslide" id="add-to-cart-btn" onclick="<?php echo "addToCart(".$_SESSION['userid'].",$prod->id)"; ?>">Add to Cart</button>
+						<?php 
+							} // end if
+							else {
+						?>
+						<button class="btn-landslide" id="add-to-cart-btn" disabled="">Added</button>
+
+						<?php
+						
+							} // end else
+						?>
                     </div>
                    
 					<div class="form-group col-md-4 col-xs-12" style="margin-top:20px;">
@@ -77,6 +95,16 @@
                         ay depende sa ni-select na rating. -Sam
                     -->
                     <div class="form-group col-md-4 col-xs-12">
+                    <?php
+                    	$rating = 0;
+						// If not yet rated
+						if ($cart->hasProduct($prod->id)) {
+							$rating = $cart->cart_items["".$prod->id]->rating;
+						}
+
+					?>
+                    	<input type="hidden" id="rating-value" value="<?php echo $rating; ?>" />
+
                         <div id="product"></div>
                     </div>
                 </div>
@@ -95,7 +123,7 @@
 		</div>
 
 
-<!--		 Other products by developer -->
+		<!-- Other products by developer -->
 		<div class="row">
 			<div class="lh-75">&nbsp;</div>
 			<p class="f-24">Other products by <?php echo $prod->owner_name ?></p>
@@ -142,6 +170,7 @@
 	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/addToCart.js"></script>
 
 </body>
 </html>

@@ -14,6 +14,7 @@
 		public $sex;
 		public $email;
 		public $type;
+		public $currency_amount;
 
 		function __construct()
 		{
@@ -29,6 +30,7 @@
 			$this->sex = $array["sex"];
 			$this->email = $array["email"];
 			$this->type = $array["type"];
+			$this->currency_amount = $array["currency_amount"];
 
 		}
 
@@ -56,6 +58,25 @@
 			} 
 
 			return $user;
+
+		}
+
+		function updateCurrencyAmount($amount) {
+
+			if ($amount == null || $amount < 0) return false;
+			
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_user SET currency_amount = '$amount' WHERE user_id = $this->id;";
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result)
+				return false;
+
+			return true;
 
 		}
 
