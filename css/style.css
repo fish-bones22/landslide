@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face{
+    font-family: 'Proxima Nova';
+    src: url('../css/fonts/proxima-nova-semibold-webfont.ttf');
+    font-weight: Semibold;
+    font-style: normal;
+}
 /*Custom Classes*/
 .no-pad{
     padding: 0;
