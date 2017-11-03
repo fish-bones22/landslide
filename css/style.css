@@ -99,6 +99,12 @@
     font-family: Proxima Nova;
     color: #3a3a3c;
 }
+.f-27{
+    font-size: 27px;
+    font-weight: bold;
+    font-family: Proxima Nova;
+    color: #252525;
+}
 .f-36{
     font-size: 36px;
     font-weight: bold;
@@ -446,6 +452,7 @@ ul.dropdown-menu.show{
     color: red;
 }
 /*End Add to Cart*/
+
 .product_thumbnail {
 	width: 80%;
 }
@@ -474,5 +481,14 @@ ul.dropdown-menu.show{
     color: #000;
 }
 .popover-cart {
+    min-width:100px;
     min-width:100px !important;
+}
+
+/* Start Dev Dashboard */
+.dashboard-product-box{
+    position: relative;
+    background: #bdbec0;
+    padding: 15px;
+    margin: 15px;
 }
