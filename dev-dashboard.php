@@ -83,7 +83,7 @@
 						}
 
 						echo "
-								<div class='row dashboard-product-box bg-gray'>
+								<div class='row dashboard-product-box'>
 									<a href='product.php?id=$prod->id'>
 										<div class='col-md-2 col-xs-2'>
 											<img class='product_thumbnail' src='".$prod->icon_location."' />
