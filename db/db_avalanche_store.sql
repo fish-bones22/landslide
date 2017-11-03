@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 04:26 PM
+-- Generation Time: Nov 03, 2017 at 06:15 PM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -140,7 +140,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `email`, `password`, `type`, `fname`, `lname`, `sex`, `currency_amount`, `timestamp`) VALUES
-(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 1, 230000, '2017-10-28 13:14:10');
+(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 1, 122000, '2017-10-28 13:14:10');
 
 --
 -- Indexes for dumped tables
@@ -191,7 +191,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `tbl_dev_info`
 --
@@ -207,6 +207,11 @@ ALTER TABLE `tbl_product`
 --
 ALTER TABLE `tbl_prod_stat`
   MODIFY `stat_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_transaction`
+--
+ALTER TABLE `tbl_transaction`
+  MODIFY `trans_tbl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
