@@ -83,7 +83,7 @@
                 <?php 
                   if ($user->currency_amount < $total_price || isset($_REQUEST["insuff"])) {
                 ?>
-                <div class="-f-14 text-danger">You do not have anough Avacoins.</div>
+                <div class="f-14 text-danger">You do not have anough Avacoins.</div>
                 <?php
                   } // End if
                 ?>

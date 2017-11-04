@@ -82,12 +82,15 @@
 						
 							} // end else
 						?>
+
                     </div>
                    
 					<div class="form-group col-md-4 col-xs-12" style="margin-top:20px;">
                         <div class="text-muted small">File size: <?php echo round($prod->file_size/1024)."KB"; ?></div>
                         <div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
                         <div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
+                        <div class="lh-15">&nbsp;</div>
+						<a class="btn-landslide" href="checkout.php">Proceed to Checkout</a>
                     </div>
                     
                     <!-- 
