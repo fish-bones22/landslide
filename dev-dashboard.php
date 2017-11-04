@@ -7,7 +7,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 	<?php include 'navbar.php';?>
-<body>
+<body class="bg-gray2">
 	<div class="container">
 		<?php 
 
@@ -22,8 +22,8 @@
 
 		 ?>
 		 <div class="lh-75">&nbsp;</div>
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+		<div class="col-md-2 col-xs-12"></div>
+		<div class="col-md-8 col-xs-12">
 			<div class="f-36">DEVELOPER'S DASHBOARD</div>
 			<div class="f-27"><?php echo $dev->dev_name;?></div>
 			<div><?php echo $dev->dev_description;?></div>
@@ -128,7 +128,7 @@ Create PHP script to update the following information
 
 		</div>
 		</div>
-		<div class="col-md-2"></div>
+		<div class="col-md-2 col-xs-12"></div>
 		<div class="lh-75">&nbsp;</div>
 <?php include 'footer.php'?>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
