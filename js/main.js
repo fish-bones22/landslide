@@ -22,7 +22,8 @@ $(document).ready(function(){
             data: { userid: userId, prodid: prodId },
             dataType: 'json',
             success: function(response) {
-                if (response == 1) {
+                if (response >= 0) {
+                    $("#total-price").text(response);
                     loopDiv.remove();
                 }
             }

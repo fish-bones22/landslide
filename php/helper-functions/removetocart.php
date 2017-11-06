@@ -7,7 +7,12 @@
 	$prod_id = $_REQUEST["prodid"];
 
 	$result = Cart::removeCartItem($user_id, $prod_id);
+    $cart = Cart::getCartByUser($user_id);
 
-	echo $result;
+	if (!$result) { 
+		echo -1;
+	} else {
+		echo $cart->getTotalPrice();
+	}
 
  ?>
