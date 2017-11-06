@@ -40,12 +40,12 @@ $user = User::getUserById($_SESSION["userid"]);
                 </ul>
             </li>
             <li class="popover-cart" >
-                <button type="button" 
+                <button type="button"
                         class="btn-cart"  
                         data-toggle="popover-cart" 
                         title=" Number of Items: <?php echo count($cart->cart_items);?>" 
                         data-content="Total: <?php echo $cart->getTotalPrice();?>">
-                    <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"></i>
+                    <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
                 </button>
             </li>
         </ul>
