@@ -99,7 +99,7 @@
 			<div class="row">
 				<div class="lh-100">&nbsp;</div>
 				<div class="row">
-					<p class="f-24 col-md-3">Top Products</p>
+					<p class="f-24">&emsp;&emsp;Top Products</p>
 				</div>
 				<div class="row">
 				<?php
@@ -117,7 +117,7 @@
 						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
 				?>
-				<div class="col-md-2">
+				<div class="col-md-2 col-sm-4 col-xs-6">
 					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 						<div class="ribbon-top"><span>Top Rated</span></div>
 			          	<div class='product_thumbnail_container'>
@@ -146,7 +146,7 @@
 			<div class="row">
 				<div class="lh-75">&nbsp;</div>
 				<div class="row">
-					<p class="f-24 col-md-3">New Products</p>
+					<p class="f-24">&emsp;&emsp;New Products</p>
 				</div>
 				<div class="row">
 					<?php
@@ -164,7 +164,7 @@
 							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
 					?>
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-4 col-xs-6">
 						<div class="product-box hvr-bob" data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 							<div class="ribbon-new"><span>Newest</span></div>
 							<div class='product_thumbnail_container'>

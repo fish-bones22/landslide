@@ -38,17 +38,16 @@
 
                 ?>
                <div class="loop">
-                   <div class="checkout-box"><!--php name of the product to be replace in id to remove the contents using jquery if click-->
-                       <div class="col-md-4">
+                   <div class="checkout-box">
+                       <div class="col-md-4 col-xs-4">
                            <div class="product-box-sm">
                               <img class="product_thumbnail" src="<?php echo $item[1]->product->icon_location ?>">
-                               <!-- <p class="f-17">Insert photo</p> -->
                            </div>
                        </div>
                        <div class="col-md-5 col-xs-5">
                            <label class="label-price"><?php echo $item[1]->product->name ?></label> 
                        </div>
-                       <div class="col-md-3 col-xs-5">
+                       <div class="col-md-3 col-xs-3">
                            <p class="price"><span><img src="img/Avacoin.svg" style="width:25px; height:25px;" >&nbsp;<?php echo $item[1]->product->price ?></span></p>
                            <button class="btn-close"><i class="fa fa-close"></i></button>
                            <input type="hidden" class="prod-id" value="<?php echo $item[0] ?>" />
@@ -60,25 +59,25 @@
                   } // End while
                ?>
 
-               <div class="col-md-3 col-xs-12"></div>
-               <div class="col-md-9 col-xs-12">
+               <div class="col-md-3 col-xs-3"></div>
+               <div class="col-md-9 col-xs-9">
                    <input type="checkbox" class="f-17">&nbsp;I agree to landslide Terms and Conditions</input>
                </div>
             <div class="lh-15">&nbsp;</div>
             <div class="checkout-box-total">
-                <div class="col-md-5 col-xs-12"></div>
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-5 col-xs-5"></div>
+                <div class="col-md-3 col-xs-3">
                     <label class="f-36">Total:</label>
                 </div>
                 <!--Js function of total later after php loop-->
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-xs-4">
                     <p class="total-price"><span><img src="img/Avacoin.svg" style="width:30px; height:30px;" >&nbsp;<span class="total-price" id="total-price"><?php echo $total_price ?></span></span></p>
                 </div>
             </div>
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-8 col-xs-8">
                 <button class="btn-landslide"><span><img src="img/Avacoin.svg" style="width:30px; height:30px;">&nbsp;Add Avacoins</span></button>
             </div>
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-4 col-xs-4">
               <form method="POST" action="php/helper-functions/checkout.php">
                 <?php 
                   if ($user->currency_amount < $total_price || isset($_REQUEST["insuff"])) {
