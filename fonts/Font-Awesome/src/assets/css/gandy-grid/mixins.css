@@ -1,0 +1,9 @@
+.gg {
+  display: table;
+  width: 100%;
+  vertical-align: middle;
+}
+.gg-col {
+  display: table-cell;
+  vertical-align: inherit;
+}

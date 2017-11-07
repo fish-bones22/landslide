@@ -82,13 +82,15 @@
               <form method="POST" action="php/helper-functions/checkout.php">
                 <?php 
                   if ($user->currency_amount < $total_price || isset($_REQUEST["insuff"])) {
-                ?>
-                <div class="f-14 text-danger">You do not have anough Avacoins.</div>
+                ?>  
+                <input type="submit" class="btn-landslide" value="&nbsp;Check out" disabled />
+                <div class="f-14 alert alert-danger">You do not have anough Avacoins.</div>
+                <?php } else { ?>
+                  <input type="hidden" id="user-id" value="<?php echo $_SESSION["userid"] ?>">
+                  <input type="submit" class="btn-landslide" value="&nbsp;Check out" />
                 <?php
                   } // End if
                 ?>
-                <input type="hidden" id="user-id" value="<?php echo $_SESSION["userid"] ?>">
-                <input type="submit" class="btn-landslide" value="&nbsp;Check out" />
               </form>
             </div>
            </div>

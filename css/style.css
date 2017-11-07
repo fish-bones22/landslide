@@ -11,6 +11,9 @@
     font-style: normal;
 }
 /*Custom Classes*/
+body{
+    overflow-x: hidden;
+}
 .no-pad{
     padding: 0;
 }
@@ -27,6 +30,10 @@
 }
 .bg-gray2{
     background-color: #e7e8e9;
+}
+.bg-tab{
+    background-color: #BBBDC0;
+    min-height: 600px;
 }
 .btn-rad{
     border-radius: 15px;
@@ -72,7 +79,7 @@
 }
 .f-14{
     font-size: 14px;
-    font-weight: bold;
+    font-weight: Semibold;
     font-family: Proxima Nova;
     color: #3a3a3c;
 }
@@ -119,6 +126,9 @@
 }
 .lh-15{
     line-height: 15px;
+}
+.lh-50{
+    line-height: 50px;
 }
 .lh-75{
     line-height: 75px;
@@ -251,6 +261,13 @@ ul.dropdown-menu.show{
     min-width: 500px;
     height: 150px;
     padding: 25px;
+}
+.admin-box{
+    position: relative;
+    background-color: #D1D2D4;
+    border-radius: 20px;
+    height: 150px;
+    padding: 25px 0px 25px 0px; 
 }
 .checkout-box-total{
     position: relative;
@@ -410,7 +427,7 @@ ul.dropdown-menu.show{
     animation-direction: normal, alternate;
 }
 /*End Bob hover*/
-/*Add to Cart*/
+/*Universal button for landslide*/
 .btn-landslide{
     border:0px solid #393B3E;-webkit-box-shadow: #737373 0px 1px 5px ;-moz-box-shadow: #737373 0px 1px 5px ; box-shadow: #737373 0px 1px 5px ; -webkit-border-radius: 25px; -moz-border-radius: 25px;border-radius: 20px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 10px 20px 10px 20px; text-decoration:none; display:inline-block;text-shadow: 0px 1px 0 rgba(10,10,10,0.5);font-weight:bold; color: #8C8C8C;
     background-color: #38B6FF; background-image: -webkit-gradient(linear, left top, left bottom, from(#38B6FF), to(#181540));
@@ -431,6 +448,61 @@ ul.dropdown-menu.show{
     background-image: linear-gradient(to right, #05a3ff, #0a081a);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#05a3ff, endColorstr=#0a081a);
     color: #000;
 }
+/*End Universal button for landslide*/
+/*Button for deny in admin*/
+.btn-landslide-deny {
+    background: #f01616;
+    background-image: -webkit-linear-gradient(left, #f01616, #120b0b);
+    background-image: -moz-linear-gradient(left, #f01616, #120b0b);
+    background-image: -ms-linear-gradient(left, #f01616, #120b0b);
+    background-image: -o-linear-gradient(left, #f01616, #120b0b);
+    background-image: linear-gradient(to right, #f01616, #120b0b);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Proxima Nova;
+    color: #ffffff;
+    padding: 1px 28px 1px 28px;
+    text-decoration: none;
+}
+
+.btn-landslide-deny:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: linear-gradient(to right, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+/*End Button for deny in admin*/
+/*Button for approve in admin*/
+.btn-landslide-approve {
+    background: #0abd16;
+    background-image: -webkit-linear-gradient(left, #0abd16, #120b0b);
+    background-image: -moz-linear-gradient(left, #0abd16, #120b0b);
+    background-image: -ms-linear-gradient(left, #0abd16, #120b0b);
+    background-image: -o-linear-gradient(left, #0abd16, #120b0b);
+    background-image: linear-gradient(to right, #0abd16, #120b0b);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Proxima Nova;
+    color: #ffffff;
+    padding: 1px 16px 1px 16px;
+    text-decoration: none;
+}
+
+.btn-landslide-approve:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(left, #3cb0fd, #3498db);
+    background-image: linear-gradient(to right, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+/*End Button for approve in admin*/
 .btn-close{
     background-color: #bdbec0;
     position: relative;
@@ -451,8 +523,32 @@ ul.dropdown-menu.show{
     background-color: #bdbec0;
     color: red;
 }
-/*End Add to Cart*/
-
+a.btn.btn-lg{
+    background-color: #808284;
+    color: #fff;
+    font-size: 24px;
+    font-family: Proxima Nova;
+    font-weight: normal;
+    min-width: 240px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    padding: 5px;
+}
+a.btn.btn-lg:hover{
+    background-color: #BBBDC0;
+    color: #fff;
+}
+a.btn.btn-lg.active{
+    background-color: #BBBDC0;
+    color: #404041;
+    font-size: 24px;
+    font-family: Proxima Nova;
+    font-weight: normal;
+    min-width: 240px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    padding: 5px;
+}
 .product_thumbnail {
 	width: 80%;
 }
@@ -492,3 +588,50 @@ ul.dropdown-menu.show{
     padding: 15px;
     margin: 15px;
 }
+/*Scrollbar*/
+.scrollbar
+{
+    margin-left: 22px;
+    float: left;
+    height: 600px;
+    width: 1340px;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow
+{
+    min-height: 450px;
+}
+
+#wrapper
+{
+    text-align: center;
+    margin: auto;
+}
+
+/*
+*  STYLE 1
+*/
+
+#style-1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+/*End Scrollbar*/

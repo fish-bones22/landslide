@@ -29,6 +29,11 @@ $(document).ready(function(){
         });
     });
     /*End Remove Function*/
+    /*active tab*/
+    $(".tabmenu").click(function(){
+        $(".active").removeClass("active");
+    });
+    /*End active tab*/
 });
 
 
