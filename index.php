@@ -118,7 +118,7 @@
 
 				?>
 				<div class="col-md-2">
-					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
+					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 						<div class="ribbon-top"><span>Top Rated</span></div>
 			          	<div class='product_thumbnail_container'>
 			              <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
@@ -165,7 +165,7 @@
 
 					?>
 					<div class="col-md-2">
-						<div class="product-box hvr-bob" data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
+						<div class="product-box hvr-bob" data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 							<div class="ribbon-new"><span>Newest</span></div>
 							<div class='product_thumbnail_container'>
 								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
@@ -183,6 +183,7 @@
 					</div>
 
 					<?php
+					// 
 						} // end foreach
 					} // end if-else
 					?>

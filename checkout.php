@@ -72,7 +72,7 @@
                 </div>
                 <!--Js function of total later after php loop-->
                 <div class="col-md-4 col-xs-12">
-                    <p class="total-price"><span><img src="img/Avacoin.svg" style="width:30px; height:30px;" >&nbsp;<?php echo $total_price ?></span></p>
+                    <p class="total-price"><span><img src="img/Avacoin.svg" style="width:30px; height:30px;" >&nbsp;<span class="total-price" id="total-price"><?php echo $total_price ?></span></span></p>
                 </div>
             </div>
             <div class="col-md-8 col-xs-12">
