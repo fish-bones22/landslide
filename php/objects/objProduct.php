@@ -11,6 +11,7 @@
 
 		public $id;
 		public $name;
+		public $shortname;
 		public $description;
 		public $owner;
 		public $owner_name;
@@ -41,6 +42,7 @@
 		{			
 			$this->id = $prod_array["prod_id"];
 			$this->name = $prod_array["name"];
+			$this->shortname = ((strlen($this->name) > 12) ? substr($this->name, 0, 10)."..." : $this->name);
 		 	$this->description = $prod_array["description"];
 		 	$this->owner = $prod_array["owner"];
 		 	$this->owner_name = $prod_array["dev_name"];
@@ -52,7 +54,7 @@
 		 	$this->price = $prod_array["price"];
 		 	$this->approval = $prod_array["approval"];
 		 	$this->timestamp = $prod_array["tmstmp"];
-	}
+		}
 
 		function addToDatabase()
 		{
@@ -60,12 +62,12 @@
 			if ($this->id != null && $this->id != 0) return false;
 
 			// Validations
-			if ($this->name == null || $this->name == "") 									return false;
-			if ($this->description == null || $this->description == "") 		return false;
-			if ($this->owner == null || $this->owner == 0) 									return false;
+			if ($this->name == null || $this->name == "")	return false;
+			if ($this->description == null || $this->description == "")	return false;
+			if ($this->owner == null || $this->owner == 0)	return false;
 			if ($this->file_location== null || $this->file_location == "") 	return false;
 			if ($this->icon_location == null || $this->icon_location == "") return false;
-			if ($this->price == null || $this->price == 0) 									return false;
+			if ($this->price == null || $this->price == 0)	return false;
 
 			$this->conn = connectToDb("db_avalanche_store");
 
@@ -292,7 +294,53 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE name LIKE '%$search%';";
+			WHERE name LIKE '%$search%' ORDER BY NAME;";
+
+
+			if ($search == "ALLPRODUCTS")
+				$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+				FROM tbl_product
+				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id 
+				ORDER BY name;";
+
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$prod_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$prod = new Product();
+				$prod->setValuesByArray($row);
+				$prod_array[$index] = $prod;
+				$index++;
+			}
+
+			return $prod_array;
+
+		}
+
+		static function getUnaprrovedProducts($count) {
+
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			FROM tbl_product
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
+			WHERE approval != 1 ORDER BY approval LIMIT $count;";
+
+
+			if ($count == null || $count == 0)
+				$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+				FROM tbl_product
+				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
+				WHERE approval != 1 ORDER BY approval;";
+
 
 			$result = $conn->query($select_query);
 
@@ -338,6 +386,39 @@
 		}
 
 
+		static function approveProduct($id) {
+
+			if ($id == null || $id == 0) return -1;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_product SET approval = 1 WHERE prod_id = $id;";
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result) return false;
+
+			return true;
+		}
+
+		static function denyProduct($id) {
+
+			if ($id == null || $id == 0) return -1;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_product SET approval = 2 WHERE prod_id = $id;";
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result) return false;
+
+			return true;
+		}
 	}
 
  ?>
