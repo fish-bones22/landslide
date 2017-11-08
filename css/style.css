@@ -670,3 +670,28 @@ form.navbar-form{
 }
 
 /*End Scrollbar*/
+
+/*Start Navbar*/
+.navbar {
+    margin-top: 40px;
+    background: #252525;
+}
+
+.navbar ul {
+    color: #fff;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -40;
+    text-align: center;
+    margin: auto;
+    padding:0;
+}
+
+.navbar-toggle {
+    z-index:1;
+}
+/*End Navbar*/
