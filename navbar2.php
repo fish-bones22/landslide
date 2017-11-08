@@ -16,7 +16,6 @@ $user = User::getUserById($_SESSION["userid"]);
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <nav class="navbar navbar-default" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -27,7 +26,6 @@ $user = User::getUserById($_SESSION["userid"]);
       
     </div>
     <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 140px; height: 140px;"/></a>
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
      
       <ul class="nav navbar-nav navbar-left">
@@ -49,7 +47,7 @@ $user = User::getUserById($_SESSION["userid"]);
         </li>
         <li><a href="#">Cart</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
 </nav>
 
 
