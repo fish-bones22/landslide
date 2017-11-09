@@ -10,8 +10,7 @@ $(document).ready(function(){
         trigger : 'hover'
     });
     /*End Popover*/
-
-    /*Remove function for checkout*/
+    /*Remove function*/
     $(".btn-close").click(function(){
         var loopDiv = this.closest(".loop");
         var prodId = $(loopDiv).find(".prod-id").val();
@@ -31,32 +30,27 @@ $(document).ready(function(){
         });
     });
     /*End Remove Function*/
-
     /*active tab*/
     $(".tabmenu").click(function(){
         $(".active").removeClass("active");
     });
     /*End active tab*/
 });
-
-function updateApprovalOfProduct(id, self, mode_) {
-
-    var loopDiv = self.closest(".product-container");
-
-    $.ajax({  
-        type: 'GET',  
-        url: 'php/helper-functions/updateapproval.php', 
-        data: { prodid: id, mode: mode_ },
-        dataType: 'json',
-        success: function(response) {
-            if (response > 0) {
-                loopDiv.remove();
-            }
+/*See more*/
+function showHide(shID) {
+    if (document.getElementById(shID)) {
+        if (document.getElementById(shID+'-show').style.display != 'none') {
+            document.getElementById(shID+'-show').style.display = 'none';
+            document.getElementById(shID).style.display = 'block';
         }
-    });
-
+        else {
+            document.getElementById(shID+'-show').style.display = 'inline';
+            document.getElementById(shID).style.display = 'none';
+        }
+    }
 }
 
+/*End See more*/
 
 /*Rating Mechanism*/
 (function() {
@@ -84,9 +78,6 @@ function updateApprovalOfProduct(id, self, mode_) {
 
     // Rendering data divs by js
     function buildShopItem(data) {
-
-        if (product === null || product === undefined) return;
-
         var productItem = document.createElement('div');
 
         var html =
@@ -97,13 +88,12 @@ function updateApprovalOfProduct(id, self, mode_) {
         productItem.classList.add('c-shop-item');
         productItem.innerHTML = html;
         product.appendChild(productItem);
+
         return productItem;
     }
 
     // rating callbacks
     function addRatingWidget(productItem, data) {
-        if (productItem === null || productItem === undefined) return;
-
         var ratingElement = productItem.querySelector('.c-rating');
         var currentRating = data.rating;
         var maxRating = 5;
