@@ -66,8 +66,7 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_user, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp
-				JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id WHERE tbl_user.user_id = $id AND status = 1;";
+			$select_query = "SELECT *, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp FROM tbl_user JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id WHERE tbl_user.user_id = $id AND status = 1;";
 
 			$result = $conn->query($select_query);
 

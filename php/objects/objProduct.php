@@ -168,7 +168,7 @@
 			$conn = connectToDb("db_avalanche_store");
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
-			 FROM tbl_product, tbl_dev_info WHERE owner = $user_id AND status = $status
+			 FROM tbl_product, tbl_dev_info WHERE owner = $user_id  AND status = $status
 			 AND tbl_dev_info.user_id = tbl_product.owner;";
 
 			$result = $conn->query($select_query);
@@ -199,7 +199,7 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1
 			ORDER BY downloads DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
@@ -231,7 +231,7 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id 
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id  WHERE status = 1
 			ORDER BY `timestamp` DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
@@ -262,8 +262,8 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id 
-			ORDER BY `downloads` DESC LIMIT $count;";
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1
+			ORDER BY downloads DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
 
@@ -294,13 +294,13 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE name LIKE '%$search%' ORDER BY NAME;";
+			WHERE name LIKE '%$search%' AND status = 1 ORDER BY NAME;";
 
 
 			if ($search == "ALLPRODUCTS")
 				$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 				FROM tbl_product
-				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id 
+				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1 
 				ORDER BY name;";
 
 
@@ -333,7 +333,7 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE name LIKE '$search%' ORDER BY NAME;";
+			WHERE name LIKE '$search%' AND status = 1 ORDER BY NAME;";
 
 			$result = $conn->query($select_query);
 
@@ -363,14 +363,14 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE approval != 1 ORDER BY approval LIMIT $count;";
+			WHERE approval != 1 AND status = 1 ORDER BY approval LIMIT $count;";
 
 
 			if ($count == null || $count == 0)
 				$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 				FROM tbl_product
 				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-				WHERE approval != 1 ORDER BY approval;";
+				WHERE approval != 1 AND status = 1 ORDER BY approval;";
 
 
 			$result = $conn->query($select_query);
@@ -441,6 +441,23 @@
 			$conn = connectToDb("db_avalanche_store");
 
 			$update_query = "UPDATE tbl_product SET approval = 2 WHERE prod_id = $id;";
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result) return false;
+
+			return true;
+		}		
+
+		static function deleteProduct($id) {
+
+			if ($id == null || $id == 0) return -1;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_product SET status = 0 WHERE prod_id = $id;";
 
 			$result = $conn->query($update_query);
 

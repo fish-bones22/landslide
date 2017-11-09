@@ -50,13 +50,6 @@
 					</div>
 				</div>
 
-				<!-- TODO: 
-
--Create PHP script to generate the list below - IN PROGRESS
--Create JS script for filtering product list based on approval
-
--->
-
 				<!-- Products List - alphabetical order -->
 				<?php
 
@@ -94,9 +87,9 @@
 							<strong><a href='product.php?id= <?php echo $prod->id ?>'> <?php echo $prod->name ?></a></strong>
 							<br>	
 							<a href='dev-dashboard-add.php?id= <?php echo $prod->id ?>' class='small text-warning'>Edit</a>
-							<a href='#' class='small text-danger'>Delete</a>
+							<a href='php/helper-functions/deleteproduct.php?id= <?php echo $prod->id ?>'  class='small text-danger'>Delete</a>
 
-							<div class='col-auto small " <?php echo $approval_class ?>"'><?php echo $approval ?></div>
+							<div class='col-auto small approval <?php echo $approval_class ?>"'><?php echo $approval ?></div>
 							<div class='col-auto text-muted small'>Downloads: <?php echo $prod->downloads ?></div>
 							<div class='col-auto text-muted small'><?php echo $prod->timestamp ?></div>
 						</div>
@@ -117,11 +110,9 @@
 
 				<h3 class="f-24">Information</h3>
 				<hr />
-				<!-- TODO:
-Create PHP script to update the following information
--->
-				<div class="f-17">Total Revenue:&emsp;20342 AC</div>
-				<div class="f-17">Total Downloads:&emsp;5525</div>
+
+				<div class="f-17">Total Revenue:&emsp;<?php echo $dev->total_revenue;?> AC</div>
+				<div class="f-17">Total Downloads:&emsp;<?php echo $dev->total_downloads;?></div>
 
 			</div>
 
@@ -130,10 +121,11 @@ Create PHP script to update the following information
 		</div>
 		<div class="col-md-2 col-xs-12"></div>
 		<div class="lh-75">&nbsp;</div>
-<?php include 'footer.php'?>
+	<?php include 'footer.php' ?>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/dev-dashboard.js"></script>
 </body>
 </html>
