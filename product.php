@@ -45,9 +45,10 @@
 				<?php 
 					if ($_SESSION["userid"] == $prod->owner) {
 						echo "<a href='dev-dashboard-add.php?id=$prod->id' class='f-17 text-warning'>Edit</a>";
-					}
+					
 				?>
 				<div class="text-danger"><?php if ($prod->approval != 1) echo "<strong>This product is not yet approved by the admin.</strong> You are able to view this because you are a developer. Normal users will not be able to view this product." ?></div>
+				<?php } ?>
 				<hr style="height:2px;background: #000 url(aa010307.gif) no-repeat scroll center;border:none;">
 			</div>
 		</div>

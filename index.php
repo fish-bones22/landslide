@@ -114,7 +114,7 @@
 					// Foreach
 					foreach ($top_prod as $product) {
 
-						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+						if ($product->approval != 1 && $product->owner != $_SESSION["userid"]) continue;
 
 				?>
 				<div class="col-md-2 col-sm-4 col-xs-6">
@@ -161,7 +161,7 @@
 
 						foreach ($new_prod as $product) {
 
-							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+						if ($product->approval != 1 && $product->owner != $_SESSION["userid"]) continue;
 
 					?>
 					<div class="col-md-2 col-sm-4 col-xs-6">

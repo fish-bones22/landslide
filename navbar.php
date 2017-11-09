@@ -50,6 +50,7 @@ $user = User::getUserById($_SESSION["userid"]);
                 <button type="button"
                         class="btn-cart"  
                         data-toggle="popover-cart" 
+                        onclick="goToCheckout()"
                         title=" Number of Items: <?php echo count($cart->cart_items);?>" 
                         data-content="Total: <?php echo $cart->getTotalPrice();?>">
                     <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>

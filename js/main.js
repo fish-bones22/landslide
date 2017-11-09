@@ -12,6 +12,7 @@ $(document).ready(function(){
         placement : 'bottom',
         trigger : 'hover'
     });
+
     /*End Popover*/
     /*Remove function*/
     $(".btn-close").click(function(){
@@ -100,6 +101,13 @@ function deleteUser(id, self) {
         }
     });
 
+}
+
+function goToCheckout() {
+    if ((+$("#cart-val").val()) > 0) {
+        console.log("ge");
+        window.location.href = "/landslide/checkout.php";
+    }
 }
 
 function searchProduct(search, self, mode_) {
