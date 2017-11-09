@@ -16,7 +16,7 @@
 
 		function __construct()
 		{
-			# code...
+			parent::__construct();
 		}
 
 		function setValuesByArray($array) {
@@ -31,9 +31,10 @@
 		}
 
 		function getTotalDownloads() {
-			if ($this->id == null || $this->$id <= 0) return -1;
 
-			$products = Product::getProductsByOwner($this->id);
+			if ($this->id == null || $this->id <= 0) return -1;
+
+			$products = Product::getProductsByOwner($this->id, 1);
 			$downloads = 0;
 
 			foreach ($products as $prod) {
@@ -45,9 +46,9 @@
 
 
 		function getTotalRevenue() {
-			if ($this->id == null || $this->$id <= 0) return -1;
+			if ($this->id == null || $this->id <= 0) return -1;
 
-			$products = Product::getProductsByOwner($this->id);
+			$products = Product::getProductsByOwner($this->id, 1);
 			$revenue = 0;
 
 			foreach ($products as $prod) {
@@ -65,7 +66,8 @@
 
 			$conn = connectToDb("db_avalanche_store");
 
-			$select_query = "SELECT * FROM tbl_user JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id WHERE tbl_user.user_id = $id;";
+			$select_query = "SELECT * FROM tbl_user, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp
+				JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id WHERE tbl_user.user_id = $id AND status = 1;";
 
 			$result = $conn->query($select_query);
 
@@ -93,8 +95,9 @@
 			$conn = connectToDb("db_avalanche_store");
 
 			$select_query = 
-			$select_query = "SELECT * FROM tbl_user JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id 
-			LIMIT $count;";
+			$select_query = "SELECT * FROM tbl_user, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp
+				JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id  WHERE status = 1
+				LIMIT $count;";
 
 			$result = $conn->query($select_query);
 
@@ -114,6 +117,45 @@
 			
 			return $dev_array;
 
+		}
+
+		static function getTopEarners($count) {
+
+			if ($count == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = 
+			$select_query = "SELECT *, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp FROM tbl_user 
+				JOIN tbl_dev_info ON tbl_user.user_id = tbl_dev_info.user_id WHERE status = 1
+				LIMIT $count;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$dev_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$dev = new Developer();
+				$dev->setValuesByArray($row);
+				$dev_array[$index] = $dev;
+				$index++;
+			}
+			
+			usort($dev_array, array("Developer", "cmp_"));
+			return $dev_array;
+
+		}
+
+		static function cmp_($a, $b) {
+			if ($a->total_revenue == $b->total_revenue)
+				return 0;
+
+			return ($a->total_revenue < $b->total_revenue) ? -1 : 1;
 		}
 	}
  ?>
