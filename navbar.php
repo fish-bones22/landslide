@@ -15,25 +15,35 @@ $user = User::getUserById($_SESSION["userid"]);
 <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <nav class="navbar bg-black" style="margin-top: 60px;">
+    <div class="navbar-header navbar-inverse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <a class="navbar-brand" href="index.php"><img src="img/logo.png" class="logo-position" style="width: 140px; height: 140px;"/></a>
     <div class="container-fluid">
-        <ul class="nav navbar-nav" style="margin-left:120px;">
+     <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
             <li class="active col-md-4"><a href="#" class="f-18">Home</a></li>
             <li class="col-md-4"><a href="#" class="f-18">About</a></li>
             <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
         </ul>
-        <div class="col-sm-3 col-md-3 col-md-offset-2">
+        <div class="col-sm-3 col-md-3 col-md-offset-2 search-position">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
+                    <input type="text" class="form-control" name="search" placeholder="Search">
                     <div class="input-group-btn">
                         <button class="btn bg-gray btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
                     </div>
-                    <input type="text" class="form-control" name="search" placeholder="Search">
                 </div>
             </form>
         </div>
         <ul class="nav navbar-nav">
             <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user icon-x3" style="font-size: 1.5em;"></i> <?php echo $user->name;?></a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" style="background-color: #252525 !important;">
                     <li><a href="#" class="f-18">Settings</a></li>
                     <li class="divider"></li>
                     <li><a href="#" class="f-18">Log out</a></li>
@@ -49,8 +59,9 @@ $user = User::getUserById($_SESSION["userid"]);
                 </button>
             </li>
         </ul>
+      </div>
     </div>
 </nav>
-    <a class="navbar-link" href="index.php"><img src="img/logo.png" style="width:140px; height: 140px; position:relative; margin-top:-115px; margin-left: 580px;"></a> 
 <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>

@@ -107,11 +107,11 @@
                       <div class="col-md-3 col-sm-3 col-xs-3">
                           <form class="navbar-form" role="search" method="get" action="admin.php">
                               <div class="input-group">
+                                  <input type="text" class="form-control" name="search" placeholder="Search" />
                                   <div class="input-group-btn">
                                       <button class="btn bg-search btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
                                   </div>
                                   <input type="hidden" name="tab" value="list-apps" />
-                                  <input type="text" class="form-control" name="search" placeholder="Search" />
                               </div>
                           </form>
                       </div>
@@ -269,10 +269,10 @@
                         <div class="col-md-3 col-sm-5 col-xs-5">
                             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                                 <div class="input-group">
+                                    <input type="text" class="form-control" name="search" placeholder="Search">
                                     <div class="input-group-btn">
                                         <button class="btn bg-search btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
                                     </div>
-                                    <input type="text" class="form-control" name="search" placeholder="Search">
                                 </div>
                             </form>
                         </div>
