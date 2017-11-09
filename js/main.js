@@ -1,3 +1,5 @@
+var openedTab = openedTab || "";
+var searchTerm = searchTerm || "";
 
 $(document).ready(function(){
     /*Popover*/
@@ -33,6 +35,7 @@ $(document).ready(function(){
     /*active tab*/
     $(".tabmenu").click(function(){
         $(".active").removeClass("active");
+
     });
     /*End active tab*/
 });
@@ -48,6 +51,30 @@ function showHide(shID) {
             document.getElementById(shID).style.display = 'none';
         }
     }
+}
+
+function updateApprovalOfProduct(id, self, mode_) {
+
+    var loopDiv = self.closest(".product-container");
+
+    $.ajax({  
+        type: 'GET',  
+        url: 'php/helper-functions/updateapproval.php', 
+        data: { prodid: id, mode: mode_ },
+        dataType: 'json',
+        success: function(response) {
+            if (response > 0) {
+                loopDiv.remove();
+                var url = "admin.php"
+                if (openedTab !== "")
+                    url += "?tab="+openedTab;
+                if (searchTerm !== "") 
+                    url += "&search="+searchTerm;
+                window.location.href = url;
+            }
+        }
+    });
+
 }
 
 /*End See more*/
@@ -78,6 +105,9 @@ function showHide(shID) {
 
     // Rendering data divs by js
     function buildShopItem(data) {
+        
+        if (product === null || product === undefined) return;
+
         var productItem = document.createElement('div');
 
         var html =
@@ -94,6 +124,7 @@ function showHide(shID) {
 
     // rating callbacks
     function addRatingWidget(productItem, data) {
+        if (productItem === null || productItem === undefined) return;
         var ratingElement = productItem.querySelector('.c-rating');
         var currentRating = data.rating;
         var maxRating = 5;
