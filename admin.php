@@ -105,12 +105,13 @@
 
                       <div class="lh-50">&nbsp;</div>
                       <div class="col-md-3 col-sm-3 col-xs-3">
-                          <form class="navbar-form" role="search" method="get" action="product-drawer.php">
+                          <form class="navbar-form" role="search" method="get" action="admin.php">
                               <div class="input-group">
                                   <div class="input-group-btn">
                                       <button class="btn bg-search btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
                                   </div>
-                                  <input type="text" class="form-control" name="search" placeholder="Search">
+                                  <input type="hidden" name="tab" value="list-apps" />
+                                  <input type="text" class="form-control" name="search" placeholder="Search" />
                               </div>
                           </form>
                       </div>
@@ -120,9 +121,15 @@
 
                           <div class="lh-75">&nbsp;</div>
                           <?php 
-            
-                          $allprod = Product::getProducts("ALLPRODUCTS");
+                          $search = "ALLPRODUCTS";
 
+                          if (isset($_REQUEST["search"]))
+                            $search = $_REQUEST["search"];
+
+                          if (isset($_REQUEST["alpha"]))
+                            $search = "Alpha-".$_REQUEST["alpha"];
+
+                          $allprod = Product::getProducts($search);
                           if (!$allprod) {
 
                             echo "<div>No products need approval</div>";
@@ -459,16 +466,21 @@
       <?php 
         $tab = "";
         $search = "";
+        $alpha = "";
 
         if (isset($_REQUEST["tab"]))
           $tab = $_REQUEST["tab"];
 
         if (isset($_REQUEST["search"]))
           $search = $_REQUEST["search"];
+
+        if (isset($_REQUEST["alpha"]))
+          $alpha = $_REQUEST["alpha"];
       ?>
 
       var openedTab = "<?php echo $tab ?>";
       var search = "<?php echo $search ?>";
+      var alpha = "<?php echo $alpha ?>";
       
     </script>
     <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>

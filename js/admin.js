@@ -1,5 +1,6 @@
 var openedTab = openedTab || "";
 var searchTerm = searchTerm || "";
+var alpha = alpha || "";
 
 $("document").ready(function() {
 

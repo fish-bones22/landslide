@@ -1,5 +1,6 @@
 var openedTab = openedTab || "";
 var searchTerm = searchTerm || "";
+var alpha = alpha || "";
 
 $(document).ready(function(){
     /*Popover*/
@@ -65,15 +66,30 @@ function updateApprovalOfProduct(id, self, mode_) {
         success: function(response) {
             if (response > 0) {
                 loopDiv.remove();
-                var url = "admin.php"
+                var url = "admin.php?"
                 if (openedTab !== "")
-                    url += "?tab="+openedTab;
+                    url += "tab="+openedTab + "&";
                 if (searchTerm !== "") 
-                    url += "&search="+searchTerm;
+                    url += "search="+searchTerm + "&";
+                if (alpha !== "") 
+                    url += "alpha="+alpha + "&";
                 window.location.href = url;
             }
         }
     });
+
+}
+
+function searchProduct(search, self, mode_) {
+
+    if (mode = 1) {
+        searchTerm = search;
+        alpha = "";
+    }
+    else if (mode = 2) {
+        alpha = search;
+        searchTerm = "";
+    }
 
 }
 
