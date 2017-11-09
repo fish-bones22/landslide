@@ -15,12 +15,25 @@
 		public $email;
 		public $type;
 		public $currency_amount;
+		public $password;
 		public $timestamp;
+		public $isdev = false;
 
 		function __construct()
 		{
 		}
 
+		function setValues($email, $password, $type, $fname, $lname, $gender) {
+
+			$this->email = $email;
+			$this->password = $password;
+			$this->type = $type;
+			$this->fname = $fname;
+			$this->lname = $lname;
+			$this->sex = $gender;
+
+		}
+		
 		function setValuesByArray($array) {
 
 			$this->id = $array["user_id"];
@@ -60,6 +73,97 @@
 			} 
 
 			return $user;
+
+		}
+
+		static function getUserByEmail($email) {
+
+			if ($email == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT *, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp FROM tbl_user WHERE email = '".$email."';";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if (!$result || $result->num_rows <= 0)
+				return false;
+
+			$user = new User(); 
+
+			while ($row = $result->fetch_assoc()) {
+
+				$user->setValuesByArray($row);
+
+			} 
+
+			return $user;
+
+		}
+
+		static function userLogIn($email, $password) {
+
+			if ($email == null) return false;
+
+			if ($password == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT *, DATE_FORMAT(tbl_user.timestamp, '%b %d, %Y') as tmstmp FROM tbl_user WHERE email = '".$email."' AND password = '".$password."' AND status = 1;";
+
+			$result = $conn->query($select_query) or die($conn->error);
+
+			$conn->close();
+
+			if (!$result || $result->num_rows <= 0)
+				return false;
+
+			$user = new User(); 
+
+			while ($row = $result->fetch_assoc()) {
+
+				$user->setValuesByArray($row);
+
+			}
+
+			return $user;
+
+		}
+
+		function registerToDatabase() {
+			
+			// If user is already defined. Use update instead.
+			if ($this->id != null && $this->id != 0) return false;
+
+			$this->conn = connectToDb("db_avalanche_store");
+
+			$add_query = "INSERT INTO tbl_user 
+			(email, 
+			 password,	
+			 type,	
+			 fname,
+			 lname,	
+			 sex) 
+			VALUES 
+			('$this->email', 
+			 '$this->password',	
+			 '$this->type',	
+			 '$this->fname',	
+			 '$this->lname',	
+			 '$this->sex');";
+
+			$result = $this->conn->query($add_query);
+
+			$this->conn->close();
+
+			if (!$result) return false;
+
+			$email = $this->email;
+			$this->id = User::getUserByEmail($email)->id;
+
+			return true;
 
 		}
 

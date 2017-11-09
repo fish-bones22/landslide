@@ -1,12 +1,8 @@
 <?php
 
+require_once "php/helper-functions/authenticate.php";
 require_once "php/objects/objCart.php";
 require_once "php/objects/objUser.php";
-        
-// Temporary.
-$_SESSION["userid"] = 1;
-$_SESSION["isdev"] = true;
-
 $cart = Cart::getCartByUser($_SESSION["userid"]);
 $user = User::getUserById($_SESSION["userid"]);
 
@@ -46,10 +42,11 @@ $user = User::getUserById($_SESSION["userid"]);
                 <ul class="dropdown-menu" style="background-color: #252525 !important;">
                     <li><a href="#" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
+                    <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
                 </ul>
             </li>
             <li class="popover-cart" >
+                <input type="hidden" id="cart-val" value="<?php echo count($cart->cart_items);?>">
                 <button type="button"
                         class="btn-cart"  
                         data-toggle="popover-cart" 

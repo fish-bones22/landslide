@@ -19,6 +19,13 @@
 			parent::__construct();
 		}
 
+		function setDevValues($id, $dev_name, $dev_desc) {
+			$this->dev_id = $id;
+			$this->dev_name = $dev_name;
+			$this->dev_description = $dev_desc;
+		}
+
+
 		function setValuesByArray($array) {
 			
 			parent::setValuesByArray($array);
@@ -28,6 +35,31 @@
 			$this->total_revenue = $this->getTotalRevenue();
 			$this->total_downloads = $this->getTotalDownloads();
 
+		}
+
+		function registerToDatabase() {
+			
+			// If user is already defined. Use update instead.
+			if ($this->id != null && $this->id != 0) return false;
+
+			$this->conn = connectToDb("db_avalanche_store");
+
+			$add_query = "INSERT INTO tbl_dev_info 
+			(user_id, 
+			 dev_name,	
+			 dev_desc) 
+			VALUES 
+			('$this->dev_id', 
+			 '$this->dev_name',	
+			 '$this->dev_description');";
+
+			$result = $this->conn->query($add_query);
+
+			$this->conn->close();
+
+			if (!$result) return false;
+
+			return true;
 		}
 
 		function getTotalDownloads() {

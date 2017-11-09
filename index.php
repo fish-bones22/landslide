@@ -7,12 +7,12 @@
 </head>
 <body class="bg-gray2">
 	<?php 
+		session_start();
+
 		require_once 'php/objects/objProduct.php';
+		require_once 'php/helper-functions/authenticate.php';
 
 		// Temporary.
-		session_start();
-		$_SESSION["userid"] = 1;
-		$_SESSION["isdev"] = true;
 
 		include'navbar.php';
 
@@ -124,7 +124,7 @@
 			              <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
 			          	</div>
 			          	<div class='prod_info'>
-			              <div><strong><?php echo $product->name ?></strong></div>
+			              <div><strong><?php echo $product->shortname ?></strong></div>
 			              <div class=''><?php echo $product->owner_name ?></div>
 			             	<!--  <div class='row'>
 			              	<div class=' text-muted small'>Downloads:<?php echo $product->downloads ?></div>
@@ -171,7 +171,7 @@
 								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
 							</div>
 							<div class=''>
-								<div><strong><?php echo $product->name ?></strong></div>
+								<div><strong><?php echo $product->shortname ?></strong></div>
 								<div class=''><?php echo $product->owner_name ?></div>
 							<!--  <div class='row'>
 									 <div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>

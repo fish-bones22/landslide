@@ -6,7 +6,12 @@
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
-    <?php include 'navbar.php'; ?>
+    <?php 
+      require_once "php/objects/objCart.php";
+      require_once "php/objects/objUser.php";
+      include 'navbar.php'; 
+
+    ?>
     <body class="bg-gray2">
         <div class="container">
             <div class="lh-100">&nbsp;</div>
@@ -17,30 +22,30 @@
                    <form method="post" action="">
                        <!-- Email -->
                        <div class="form-group">
-                           <div class="f-17"><label class="" for="" >Email:</label></div>
+                           <div class="f-17"><label class="" for="email" >Email:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control" id="" name=""/>
+                               <input type="email" class="form-control" id="email" name="email"/>
                            </div>
                        </div>
                        <!-- Password-->
                        <div class="form-group">
-                           <div class="f-17"><label class="" for="" >Password:</label></div>
+                           <div class="f-17"><label class="" for="password" >Password:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control" id="" name=""/>
+                               <input type="password" class="form-control" id="password" name="password"/>
                            </div>
                        </div>
                        <!-- Fname -->
                        <div class="form-group">
-                           <div class="f-17"><label class="" for="" >First Name:</label></div>
+                           <div class="f-17"><label class="" for="fname" >First Name:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control" id="" name=""/>
+                               <input type="text" class="form-control" id="fname" name="fname"/>
                            </div>
                        </div>
                        <!-- Lname -->
                        <div class="form-group">
-                           <div class="f-17"><label class="" for="" >Last Name:</label></div>
+                           <div class="f-17"><label class="" for="lname" >Last Name:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control" id="" name=""/>
+                               <input type="text" class="form-control" id="lname" name="lname"/>
                            </div>
                        </div>
                        <!--Upgrade to developer-->
