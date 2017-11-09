@@ -126,10 +126,11 @@
                           if (isset($_REQUEST["search"]))
                             $search = $_REQUEST["search"];
 
-                          if (isset($_REQUEST["alpha"]))
-                            $search = "Alpha-".$_REQUEST["alpha"];
-
                           $allprod = Product::getProducts($search);
+
+                          if (isset($_REQUEST["alpha"]))
+                            $allprod = Product::getProductsStartingWith($_REQUEST["alpha"]);
+
                           if (!$allprod) {
 
                             echo "<div>No products need approval</div>";
@@ -226,6 +227,7 @@
                         <div class="lh-50">&nbsp;</div>
                         <div class="f-36 container">Top Earners</div>
                         <div class="scrollbar-earners" id="style-1">
+     
                             <div class="col-md-4 col-xs-12">
                                 <div class="loop-admin">
                                     <div class="admin-box">
@@ -249,78 +251,7 @@
                                     </div> 
                                 </div>
                             </div>
-                            <div class="col-md-4 col-xs-12">
-                                <div class="loop-admin">
-                                    <div class="admin-box">
-                                        <div class="col-md-3 col-xs-1">
-                                            <div class="product-box-sm">
-                                                <p class="f-17">Insert photo</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-xs-2">
-                                            <div class="col-md-12 col-xs-12">
-                                                <label class="f-25">Lorem Ipsum</label>
-                                                <div class="f-12">Total Downloads:</div>
-                                                <div class="f-12">Total Revenue:</div>
-                                            </div>  
-                                            <div class="col-md-9 col-xs-9"></div>
-                                            <div class="col-md-3 col-xs-3">
-                                                <button class="btn-landslide-deny">Delete</button>
-                                            </div>  
-                                        </div>
-                                        <div class="col-md-2 col-xs-2"></div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12">
-                               <div class="loop-admin">
-                                   <div class="more" id="content">
-                                       <div class="admin-box">
-                                           <div class="col-md-3 col-xs-1">
-                                               <div class="product-box-sm">
-                                                   <p class="f-17">Insert photo</p>
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6 col-xs-2">
-                                               <div class="col-md-12 col-xs-12">
-                                                   <label class="f-25">Lorem Ipsum</label>
-                                                   <div class="f-12">Total Downloads:</div>
-                                                   <div class="f-12">Total Revenue:</div>
-                                               </div>  
-                                               <div class="col-md-9 col-xs-9"></div>
-                                               <div class="col-md-3 col-xs-3">
-                                                   <button class="btn-landslide-deny">Delete</button>
-                                               </div>  
-                                           </div>
-                                           <div class="col-md-2 col-xs-2"></div>
-                                       </div> 
-                                   </div>    
-                               </div>
-                               <div class="top-15">
-                                   <div class="read-more-content">
-                                       <div class="loop-admin">
-                                           <div class="admin-box">
-                                               <div class="col-md-3 col-xs-1">
-                                                   <div class="product-box-sm">
-                                                       <p class="f-17">Insert photo</p>
-                                                   </div>
-                                               </div>
-                                               <div class="col-md-6 col-xs-2">
-                                                   <div class="col-md-12 col-xs-12">
-                                                       <label class="f-25">Lorem Ipsum</label>
-                                                       <div class="f-12">Total Downloads:</div>
-                                                       <div class="f-12">Total Revenue:</div>
-                                                   </div>  
-                                                   <div class="col-md-9 col-xs-9"></div>
-                                                   <div class="col-md-3 col-xs-3">
-                                                       <button class="btn-landslide-deny">Delete</button>
-                                                   </div>  
-                                               </div>
-                                               <div class="col-md-2 col-xs-2"></div>
-                                           </div> 
-                                       </div>
-                                   </div>
-                               </div>
+
                           </div>
                       </div>
                   </div>
@@ -346,8 +277,11 @@
                             </form>
                         </div>
                        <div class="scrollbar-earners-alphabet" id="style-1">
-                           <div class="lh-50">&nbsp;</div>
+
+                        <div class="force-overflow">
+
                            <div class="col-md-4 col-xs-12">
+                              <div class="lh-15">&nbsp;</div>
                                <div class="loop-admin">
                                    <div class="admin-box">
                                        <div class="col-md-3 col-xs-1">
@@ -369,6 +303,8 @@
                                        <div class="col-md-2 col-xs-2"></div>
                                    </div> 
                                </div>
+                             </div>
+                             <div class="col-md-4 col-xs-12">
                                <div class="lh-15">&nbsp;</div>
                                <div class="loop-admin">
                                    <div class="admin-box">
@@ -391,6 +327,8 @@
                                        <div class="col-md-2 col-xs-2"></div>
                                    </div> 
                                </div>
+                             </div>
+                             <div class="col-md-4 col-xs-12">
                                <div class="lh-15">&nbsp;</div>
                                <div class="loop-admin">
                                    <div class="admin-box">
@@ -413,6 +351,8 @@
                                        <div class="col-md-2 col-xs-2"></div>
                                    </div> 
                                </div>
+                             </div>
+
                            </div>
                            <div class="col-md-4 col-sm-12 col-xs-4"></div>
                            <div class="col-md-4 col-sm-12 col-xs-4"></div>
@@ -423,33 +363,34 @@
                         <div class="col-md-9" style="margin-left: 75px;">
                             <div class="btn-toolbar">
                                 <div class="btn-group btn-group">
-                                    <a class="btn f-17" href="#">A</a>
-                                    <a class="btn f-17" href="#">B</a>
-                                    <a class="btn f-17" href="#">C</a>
-                                    <a class="btn f-17" href="#">D</a>
-                                    <a class="btn f-17" href="#">E</a>
-                                    <a class="btn f-17" href="#">F</a>
-                                    <a class="btn f-17" href="#">G</a>
-                                    <a class="btn f-17" href="#">H</a>
-                                    <a class="btn f-17" href="#">I</a>
-                                    <a class="btn f-17" href="#">J</a>
-                                    <a class="btn f-17" href="#">K</a>
-                                    <a class="btn f-17" href="#">L</a>
-                                    <a class="btn f-17" href="#">M</a>
-                                    <a class="btn f-17" href="#">N</a>
-                                    <a class="btn f-17" href="#">O</a>
-                                    <a class="btn f-17" href="#">P</a>
-                                    <a class="btn f-17" href="#">Q</a>
-                                    <a class="btn f-17" href="#">R</a>
-                                    <a class="btn f-17" href="#">S</a>
-                                    <a class="btn f-17" href="#">T</a>
-                                    <a class="btn f-17" href="#">U</a>
-                                    <a class="btn f-17" href="#">V</a>
-                                    <a class="btn f-17" href="#">W</a>
-                                    <a class="btn f-17" href="#">X</a>
-                                    <a class="btn f-17" href="#">Y</a>
-                                    <a class="btn f-17" href="#">Z</a>
-                                    <a class="btn f-17" href="#" style="border-right: none;">0-9</a>
+                               <div class="btn-group btn-group">
+                                   <a class="btn f-17 alpha-user-link" href="#">A</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">B</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">C</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">D</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">E</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">F</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">G</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">H</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">I</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">J</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">K</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">L</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">M</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">N</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">O</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">P</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">Q</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">R</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">S</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">T</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">U</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">V</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">W</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">X</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">Y</a>
+                                   <a class="btn f-17 alpha-user-link" href="#">Z</a>
+                                   <a class="btn f-17 alpha-user-link" href="#" style="border-right: none;">0-9</a>
                                 </div>
                             </div>
                         </div>

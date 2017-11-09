@@ -13,4 +13,9 @@ $("document").ready(function() {
 		openedTab = $(this).attr("href").replace("#", "");
 	});
 
+	$(".alpha-link").click(function() {
+		alpha = $(this).text();
+		window.location.href = "admin.php?tab=list-apps&alpha="+alpha;
+	});
+
 });
