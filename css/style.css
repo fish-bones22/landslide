@@ -10,6 +10,18 @@
     font-weight: Semibold;
     font-style: normal;
 }
+@media screen and (max-width : 640px) {    
+    .logo-position{
+        position: absolute;
+        top: -85px !important;
+        left: 0px !important;
+    }
+}
+.logo-position{
+    position: relative;
+    top:-55px;
+    left: 550px;
+}
 /*Custom Classes*/
 body{
     overflow-x: hidden;
@@ -56,7 +68,8 @@ body{
     color: #fff;
 }
 .btn-rad{
-    border-radius: 15px;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
 }
 .label-price{
     color: #000;
@@ -111,7 +124,7 @@ body{
 .f-18{
     font-size: 18px;
     font-weight: Semibold;
-    font-family: Segoe UI;  
+    font-family: Proxima Nova;  
     color: #ffffff !important;
 }
 .f-21{
@@ -587,6 +600,11 @@ a.btn{
 a.btn:hover{
     color: #2a88ad;
 }
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+    background-color: #252525 !important;
+    color: #2a88ad; !important;
+}
+
 .product_thumbnail {
 	width: 80%;
 }

@@ -15,26 +15,38 @@ $user = User::getUserById($_SESSION["userid"]);
 <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header bg-gray">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
     </div>
     <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 140px; height: 140px;"/></a>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-     
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="nav navbar-nav navbar">
+        <li><a href="#" class="f-18">Home</a></li>
+        <li><a href="#" class="f-18">About</a></li>
+        <li><a href="#" class="f-18">Contact</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Search</a></li>
+      <ul class="nav navbar-nav">
+        <li>
+        <a href="#">
+             <div class="col-sm-3 col-md-3 col-md-offset-2">
+              <form class="navbar-form" role="search" method="get" action="product-drawer.php">
+                  <div class="input-group">
+                      <div class="input-group-btn">
+                          <button class="btn bg-gray btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
+                      </div>
+                      <input type="text" class="form-control" name="search" placeholder="Search">
+                  </div>
+              </form>
+            </div>
+        </a>
+        </li>
+        <li><a href="#">Cart</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Name <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -45,7 +57,6 @@ $user = User::getUserById($_SESSION["userid"]);
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-        <li><a href="#">Cart</a></li>
       </ul>
     </div>
 </nav>
