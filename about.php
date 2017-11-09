@@ -7,7 +7,12 @@
   <link href="css/about.css" rel="stylesheet" type="text/css">
  </head>
  <body class="bg-gray2">
-  <?php include 'navbar.php'; ?>
+  <?php
+  session_start();
+   include 'navbar.php';
+
+
+    ?>
   <div class="lh-15">&nbsp;</div>
   <div class="bg-stars">
      <div class="starwars-demo">
