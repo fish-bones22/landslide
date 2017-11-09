@@ -39,6 +39,18 @@ body{
     background-color: #BBBDC0;
     height: 100px;
 }
+.bg-tab-top-earners{
+    background-color: #BBBDC0;
+    height: 200px;
+}
+.bg-tab-seemore{
+    background-color: #BBBDC0;
+    height: 100px;
+}
+.bg-tab-alphabetical{
+    background-color: #BBBDC0;
+    height: 580px;
+}
 .bg-search{
     background-color: #606060;
     color: #fff;
@@ -110,6 +122,12 @@ body{
 }
 .f-24{
     font-size: 24px;
+    font-weight: Semibold;
+    font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-25{
+    font-size: 25px;
     font-weight: bold;
     font-family: Proxima Nova;
     color: #3a3a3c;
@@ -144,7 +162,10 @@ body{
 .lh-100{
     line-height: 100px;
 }
-
+.top-15{
+    position: relative;
+    top: 15px;
+}
 a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
     background-color: #252525 !important;
     color: #2b87ad !important;
@@ -633,7 +654,24 @@ form.navbar-form{
     overflow-y: scroll;
     margin-bottom: 25px;
 }
-
+.scrollbar-earners
+{
+    margin-left: 22px;
+    float: left;
+    height: 160px;
+    width: 1340px;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+.scrollbar-earners-alphabet
+{
+    margin-left: 22px;
+    float: left;
+    height: 440px;
+    width: 1340px;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
 .force-overflow
 {
     min-height: 450px;
@@ -668,30 +706,11 @@ form.navbar-form{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
-
+.more {
+    display: none;
+}
+a.showLink{
+    text-decoration: none;
+    color: #252525;
+}
 /*End Scrollbar*/
-
-/*Start Navbar*/
-.navbar {
-    margin-top: 40px;
-    background: #252525;
-}
-
-.navbar ul {
-    color: #fff;
-}
-
-.navbar-brand {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: -40;
-    text-align: center;
-    margin: auto;
-    padding:0;
-}
-
-.navbar-toggle {
-    z-index:1;
-}
-/*End Navbar*/
