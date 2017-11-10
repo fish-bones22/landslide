@@ -27,8 +27,8 @@ $user = User::getUserById($_SESSION["userid"]);
     <div class="container-fluid">
      <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
-            <li class="active col-md-4"><a href="#" class="f-18">Home</a></li>
-            <li class="col-md-4"><a href="#" class="f-18">About</a></li>
+            <li class="active col-md-4"><a href="index.php" class="f-18">Home</a></li>
+            <li class="col-md-4"><a href="about.php" class="f-18">About</a></li>
             <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
         </ul>
         <div class="col-sm-3 col-md-3 col-md-offset-2 search-position">
@@ -44,7 +44,7 @@ $user = User::getUserById($_SESSION["userid"]);
         <ul class="nav navbar-nav">
             <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->name;?></a>
                 <ul class="dropdown-menu" style="background-color: #252525 !important;">
-                    <li><a href="#" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
+                    <li><a href="accountsettings.php" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
                     <li class="divider"></li>
                     <li><a href="#" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
                 </ul>

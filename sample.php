@@ -62,8 +62,6 @@
     <body>
 
         <h2>Toggle Switch</h2>
-
-
         <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>

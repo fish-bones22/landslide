@@ -127,6 +127,12 @@ body{
     font-family: Proxima Nova;  
     color: #ffffff !important;
 }
+.f-20{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Segoe UI;
+    color: #252525;
+}
 .f-21{
     font-size: 21px;
     font-weight: bold;
@@ -151,6 +157,12 @@ body{
     font-family: Proxima Nova;
     color: #252525;
 }
+.f-30{
+    font-size: 30px;
+    font-family: Segoe UI;
+    font-weight: 100;
+    color: #000;
+}
 .f-36{
     font-size: 36px;
     font-weight: bold;
@@ -174,6 +186,9 @@ body{
 }
 .lh-100{
     line-height: 100px;
+}
+.lh-200{
+    line-height: 200px;
 }
 .top-15{
     position: relative;
@@ -805,5 +820,9 @@ input:checked + .slider:before {
 a.showLink{
     text-decoration: none;
     color: #252525;
+}
+.img-300{
+    height: 300px !important;
+    width: 300px !important;
 }
 /*End Scrollbar*/
