@@ -42,11 +42,11 @@ $user = User::getUserById($_SESSION["userid"]);
             </form>
         </div>
         <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user icon-x3" style="font-size: 1.5em;"></i><?php echo $user->name;?></a>
+            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->name;?></a>
                 <ul class="dropdown-menu" style="background-color: #252525 !important;">
-                    <li><a href="#" class="f-18">Settings</a></li>
+                    <li><a href="#" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" class="f-18">Log out</a></li>
+                    <li><a href="#" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
                 </ul>
             </li>
             <li class="popover-cart" >
