@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2017 at 11:01 AM
+-- Generation Time: Nov 10, 2017 at 04:38 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -37,6 +37,13 @@ CREATE TABLE `tbl_cart` (
   `timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_cart`
+--
+
+INSERT INTO `tbl_cart` (`cart_id`, `prod_id`, `user_id`, `price`, `rating`, `timestamp`) VALUES
+(3, 40, 5, 230, 0, '2017-11-09 23:33:09');
+
 -- --------------------------------------------------------
 
 --
@@ -55,7 +62,8 @@ CREATE TABLE `tbl_dev_info` (
 --
 
 INSERT INTO `tbl_dev_info` (`dev_id`, `user_id`, `dev_name`, `dev_desc`) VALUES
-(1, 1, 'Fishbones', 'Software Developer');
+(1, 1, 'Fishbones', 'Software Developer'),
+(3, 12, 'Developer', 'Developer');
 
 -- --------------------------------------------------------
 
@@ -109,7 +117,8 @@ CREATE TABLE `tbl_prod_stat` (
 INSERT INTO `tbl_prod_stat` (`stat_id`, `prod_id`, `user_id`, `rating`, `timestamp`) VALUES
 (1, 39, 1, 5, '2017-11-04 01:24:19'),
 (2, 41, 1, 5, '2017-11-04 01:24:19'),
-(4, 40, 1, 0, '2017-11-04 01:31:35');
+(4, 40, 1, 0, '2017-11-04 01:31:35'),
+(5, 42, 1, 5, '2017-11-10 11:21:26');
 
 -- --------------------------------------------------------
 
@@ -122,6 +131,7 @@ CREATE TABLE `tbl_transaction` (
   `trans_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `prod_id` int(11) NOT NULL,
+  `prod_name` varchar(255) NOT NULL,
   `price` float NOT NULL,
   `timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -130,15 +140,11 @@ CREATE TABLE `tbl_transaction` (
 -- Dumping data for table `tbl_transaction`
 --
 
-INSERT INTO `tbl_transaction` (`trans_tbl_id`, `trans_id`, `user_id`, `prod_id`, `price`, `timestamp`) VALUES
-(7, 1, 1, 39, 23, '2017-11-04 01:24:19'),
-(8, 1, 1, 41, 231, '2017-11-04 01:24:19'),
-(9, 2, 1, 39, 23, '2017-11-04 01:28:55'),
-(10, 2, 1, 40, 230, '2017-11-04 01:28:55'),
-(11, 3, 1, 39, 23, '2017-11-04 01:31:35'),
-(12, 3, 1, 40, 230, '2017-11-04 01:31:35'),
-(13, 4, 1, 41, 231, '2017-11-04 01:32:36'),
-(14, 5, 1, 39, 23, '2017-11-04 01:33:05');
+INSERT INTO `tbl_transaction` (`trans_tbl_id`, `trans_id`, `user_id`, `prod_id`, `prod_name`, `price`, `timestamp`) VALUES
+(15, 6, 1, 40, 'Product 2', 230, '2017-11-10 11:21:26'),
+(16, 6, 1, 42, 'Yet Another Sample', 231, '2017-11-10 11:21:26'),
+(17, 7, 1, 42, 'Yet Another Sample', 231, '2017-11-10 11:21:43'),
+(18, 8, 1, 42, 'Yet Another Sample', 231, '2017-11-10 11:23:10');
 
 -- --------------------------------------------------------
 
@@ -164,8 +170,11 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `email`, `password`, `type`, `fname`, `lname`, `sex`, `currency_amount`, `status`, `timestamp`) VALUES
-(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 1, 121055, 1, '2017-10-28 13:14:10'),
-(2, 'avalancheteam@gmail.com', '12345', 2, 'Avalanche', 'Team', 1, 210201000000, 1, '2017-11-09 16:22:51');
+(1, 'samuel@gmail.com', '11223344', 2, 'Sam', 'Quinto', 1, 120362, 1, '2017-10-28 13:14:10'),
+(2, 'avalancheteam@gmail.com', '12345', 2, 'Avalanche', 'Team', 1, 210201000000, 1, '2017-11-09 16:22:51'),
+(3, '0101@gmail.com', '1234', 1, 'Neil', 'Armstrong', 1, NULL, 1, '2017-11-09 23:15:33'),
+(5, 'thor@gmail.com', '1234', 1, 'Thor', 'Of Asgard', 1, NULL, 1, '2017-11-09 23:31:29'),
+(12, 'dev@gmail.com', '1234', 2, 'Developer', 'Team', 1, NULL, 1, '2017-11-09 23:55:04');
 
 --
 -- Indexes for dumped tables
@@ -216,12 +225,12 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_dev_info`
 --
 ALTER TABLE `tbl_dev_info`
-  MODIFY `dev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `dev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
@@ -231,17 +240,17 @@ ALTER TABLE `tbl_product`
 -- AUTO_INCREMENT for table `tbl_prod_stat`
 --
 ALTER TABLE `tbl_prod_stat`
-  MODIFY `stat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `stat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_transaction`
 --
 ALTER TABLE `tbl_transaction`
-  MODIFY `trans_tbl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `trans_tbl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

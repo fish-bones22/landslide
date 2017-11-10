@@ -81,7 +81,7 @@
 <div class="copyright">
     <div class="container">
         <div class="col-md-6">
-            <p>© 2017 - All Rights with Avalanche</p>
+            <p>© 2017 - All Rights taken by Avalanche&trade;</p>
         </div>
         <div class="col-md-6">
             <ul class="bottom_ul">
