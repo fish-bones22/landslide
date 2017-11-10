@@ -23,7 +23,7 @@
 				<div class="controls">
 					<input type="text" name="user_email" placeholder="Email" class="form-control" />
 					<div class="lh-15">&nbsp;</div>
-					<input type="text" name="user_password" placeholder="Password" class="form-control" />
+					<input type="password" name="user_password" placeholder="Password" class="form-control" />
 					<div class="lh-15">&nbsp;</div>
 					<button type="submit" name="login" class="btn btn-default btn-block btn-custom">Login</button>
 					<a href="register.php" class='col-md-offset-4' style="text-decoration:none;">&nbsp;Register here</a>

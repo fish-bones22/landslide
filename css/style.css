@@ -169,6 +169,12 @@ body{
     font-weight: 100;
     color: #000;
 }
+.f-34{
+    font-size: 34px;
+    font-family: Proxima Nova;
+    font-weight: Semibold;
+    color: #000;
+}
 .f-36{
     font-size: 36px;
     font-weight: bold;
