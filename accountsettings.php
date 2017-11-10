@@ -50,9 +50,16 @@
                        </div>
                        <!-- Password-->
                        <div class="form-group">
-                           <div class="f-17"><label class="" for="password" >Password:</label></div>
-                           <div class="f-17">
-                               <input type="password" class="form-control" id="password" name="password" value="<?php echo $user->password ?>" />
+                            <div class="f-17">
+                               <input type="button" class="btn-landslide-casual form-control" onclick="togglePassword()" value="Change Password" />
+                           </div>
+                           <div class="f-17 password-toggle" style="display: none;" ><label class="" for="password" >Current Password:</label></div>
+                           <div class="f-17 password-toggle"  style="display: none;" >
+                               <input type="password" class="form-control" id="password" name="password" value="<?php echo $user->password ?>" disabled />
+                           </div>
+                           <div class="f-17 password-toggle" style="display: none;"><label class="" for="newpassword" >New Password:</label></div>
+                           <div class="f-17 password-toggle" style="display: none;">
+                               <input type="password" class="form-control" id="newpassword" name="newpassword" value="<?php echo $user->password ?>" disabled  />
                            </div>
                        </div>
                        <!-- Fname -->
@@ -107,55 +114,80 @@
                            </div>
                        </div>
                        
-                       <div class="col-md-12" align="right">
-                           <button class="btn-landslide-approve" type="submit" href="#">Save</button>
+                       <div class="col-md-12" align="right" id="btn-save">
+                           <button class="btn-landslide-approve" onclick="toggleVerifyPassword()" type="button" href="#">Save</button>
                        </div>
 
-                       <div class="lh-50">&nbsp;</div>
-                       <!-- Add Avacoin -->
-                       <div class="form-group" id="topup">
-                           <div class="f-17"><label class="" for="" ><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Avacoin</label></div>
-                           <div class="form-inline">
-                              <input type="number" class="form-control" id="" name="" />
-                              <button class="btn-landslide-approve">Add</button>
+                       <div class="lh-15">&nbsp;</div>
+                       <div class="form-group card" id="verify-password" style="display: none;">
+                           <button class="close" onclick="toggleVerifyPassword()" data-dismiss="alert" aria-label="close">&times;</button>
+                           <div class="f-17"><label class="" for="" >Verify Password:</label></div>
+                           <div class="f-17">
+                               <input type="password" class="form-control dev-inp" id="" name="verify-password" required />
                            </div>
-                       </div>
-                       <!--Transaction History-->
-                       <label class="f-17" for="">Transaction History</label>
-                       <div class="scrollbar-transaction" id="style-1">
-                           <table class="table table-hover">
-                               <thead class="f-17">
-                                   <tr>
-                                       <th>Product Name</th>
-                                       <th>Price</th>
-                                       <th>Date</th>
-                                   </tr>
-                               </thead>
-                               <tbody class="f-12">
+                           <div class="lh-8">&nbsp;</div>
+                           <div class="f-17"  align="right">
+                               <input type="submit" class="btn-landslide-approve" value="Submit" />
+                           </div>
 
-                                <?php 
-
-                                  if (!$user->transactions || count($user->transactions) <= 0) {
-                                    echo "<tr><td colspan=3>$user->transactions  No transactions</td></tr>";
-                                  } else {
-
-                                    foreach ($user->transactions as $trans) {
-
-                                ?>
-                                   <tr>
-                                       <td><?php echo $trans->prod_name ?></td>
-                                       <td>A$<?php echo $trans->price ?></td>
-                                       <td><?php echo $trans->timestamp ?></td>
-                                   </tr>
-
-                                   <?php 
-                                    }
-                                  }
-                                  ?>
-                               </tbody>
-                           </table>
                        </div>
                    </form>   
+                   <div class="lh-15">&nbsp;</div>
+                   <form action="php/helper-functions/addcurrency.php" method="post">
+                       <!-- Add Avacoin -->
+                       <div class="form-group" id="topup">
+                          <div class="f-17">
+                            <label for="currency">
+                              <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Avacoin
+                            </label>
+                          </div>
+                          <div class="small text-muted">
+                            <label class="" for="currency" >Buy Avacoins using <i>PayDaya</i></label>
+                          </div>
+                           <div class="form-inline">
+                              <input type="number" class="form-control" id="currency" name="currency" max="100000" />
+                              <input type="submit" class="btn-landslide-approve" value="Add">
+                           </div>
+                       </div>
+                   </form>
+                   <div class="lh-15">&nbsp;</div>
+                   <!--Transaction History-->
+                   <div class="form-group">
+                     <label class="f-17" for="">Transaction History</label>
+                     <div class="scrollbar-transaction" id="style-1">
+                         <table class="table table-hover">
+                             <thead class="f-17">
+                                 <tr>
+                                     <th>Product Name</th>
+                                     <th>Price</th>
+                                     <th>Date</th>
+                                 </tr>
+                             </thead>
+                             <tbody class="f-12">
+
+                              <?php 
+
+                                if (!$user->transactions || count($user->transactions) <= 0) {
+                                  echo "<tr><td colspan=3>$user->transactions  No transactions</td></tr>";
+                                } else {
+
+                                  foreach ($user->transactions as $trans) {
+
+                              ?>
+                                 <tr>
+                                     <td><?php echo $trans->prod_name ?></td>
+                                     <td>A$<?php echo $trans->price ?></td>
+                                     <td><?php echo $trans->timestamp ?></td>
+                                 </tr>
+
+                                 <?php 
+                                  }
+                                }
+                                ?>
+                             </tbody>
+                         </table>
+                     </div>
+                   </div>
                </div>
                 <div class="col-md-3"></div>	
             </div>
