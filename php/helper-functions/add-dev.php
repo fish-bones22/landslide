@@ -34,6 +34,6 @@
 
 	$_SESSION["userid"] = $id;
 	$_SESSION["isdev"] = 1;
-	header("Location: /landslide/index.php");
+	header("Location: /landslide/");
 
 ?>

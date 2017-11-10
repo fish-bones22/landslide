@@ -32,7 +32,7 @@
                   $total_price = $cart->getTotalPrice();
 
                   if (count($cart->cart_items) < 0)
-                    header("Location: index.php");
+                    header("Location: /landslide/");
 
                   while ($item = each($cart->cart_items)) {
 

@@ -14,7 +14,7 @@
 
 		$cart = Cart::getCartByUser($_SESSION["userid"]);
 
-		if (!$prod) header("Location: index.php");
+		if (!$prod) header("Location: /landslide/");
 	 ?>
 	 <?php include'navbar.php'; ?>
 	<title><?php echo $prod->name; ?></title>

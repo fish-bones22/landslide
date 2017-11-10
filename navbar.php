@@ -19,16 +19,19 @@ $user = User::getUserById($_SESSION["userid"]);
             <span class="icon-bar"></span>
         </button>
     </div>
-    <a class="navbar-brand" href="index.php"><img src="img/logo.png" class="logo-position" style="width: 140px; height: 140px;"/></a>
+    <a class="navbar-brand" href="/landslide/"><img src="img/logo.png" class="logo-position" style="width: 140px; height: 140px;"/></a>
     <div class="container-fluid">
      <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
             <?php if($user->type == 3) { ?>
             <li class="active col-md-4"><a href="admin.php" class="f-18">Admin</a></li>
             <?php } ?>
-            <li class="active col-md-4"><a href="index.php" class="f-18">Home</a></li>
+            <?php if($user->type == 2) { ?>
+            <li class="active col-md-4"><a href="dev-dashboard.php" class="f-18">Developer</a></li>
+            <?php } ?>
+            <li class="col-md-4"><a href="/landslide/" class="f-18">Home</a></li>
             <li class="col-md-4"><a href="about.php" class="f-18">About</a></li>
-            <?php if($user->type != 3) { ?>
+            <?php if($user->type != 3 && $user->type != 2) { ?>
             <li class="col-md-4"><a href="about.php#contact" class="f-18">Contacts</a></li>
             <?php } ?>
 

@@ -42,7 +42,7 @@
 		$_SESSION["userid"] = $user->id;
 		$_SESSION["user"] = $user->name;
 		$_SESSION["isdev"] = 0;
-		header("Location: /landslide/index.php");
+		header("Location: /landslide/");
 	}
 ?>
 

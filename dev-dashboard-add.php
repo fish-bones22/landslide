@@ -4,7 +4,10 @@
 	<title>Dashboard</title>
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
-<?php include'navbar.php';?>
+<?php 
+session_start();
+include'navbar.php';
+?>
 <body class="bg-gray2">
 	<div class="lh-75">&nbsp;</div>
 	<div class="container" >
@@ -16,9 +19,6 @@
 		require_once "php/objects/objProduct.php";
 		
 		// Temporary.
-		session_start();
-		$_SESSION["userid"] = 1;
-		$_SESSION["isdev"] = true;
 
 		$edit = 0;
 

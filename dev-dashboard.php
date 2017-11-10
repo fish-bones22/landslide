@@ -6,21 +6,17 @@
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-	<?php include 'navbar.php';?>
 <body class="bg-gray2">
+	<?php 
+	session_start();
+	require_once "php/objects/objDeveloper.php";
+	include 'navbar.php';
+
+	$dev = Developer::getDeveloperById($_SESSION["userid"]);
+
+	 ?>
 	<div class="container">
-		<?php 
 
-				require_once "php/objects/objDeveloper.php";
-
-				// Temporary.
-				session_start();
-				$_SESSION["userid"] = 1;
-				$_SESSION["isdev"] = true;
-
-				$dev = Developer::getDeveloperById($_SESSION["userid"]);
-
-		 ?>
 		 <div class="lh-75">&nbsp;</div>
 		<div class="col-md-2 col-xs-12"></div>
 		<div class="col-md-8 col-xs-12">
