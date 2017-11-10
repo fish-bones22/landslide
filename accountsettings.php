@@ -26,7 +26,7 @@
                <div class="col-md-6">
                    <div class="f-45" align="center"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Account Settings</div>
                    <div class="lh-75">&nbsp;</div>
-                   <form method="post" action="">
+                   <form method="post" action="php/helper-functions/updateaccount.php">
                        <!-- Email -->
                        <div class="form-group">
                            <div class="f-17"><label class="" for="email" >Email:</label></div>
@@ -55,11 +55,21 @@
                                <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $user->lname ?>"/>
                            </div>
                        </div>
+                       <!-- Gender -->
+                       <div class="form-group">
+                           <div class="f-17"><label class="" for="lname" >Sex:</label></div>
+                           <div class="f-17">
+                               <select class="form-control" id="sex" name="sex" value="<?php echo $user->sex ?>" required>
+                                <option value="1">Boeing AH-64 Apache Helicopter</option>
+                                <option value="2">Others</option>
+                               </select>
+                           </div>
+                       </div>
                        <!--Upgrade to developer-->
                        <div class="form-group"><!--TODO JQuery to hide and show or change the contents-->
                           <div class="col-md-2">
                               <label class="switch">
-                                  <input id="dev-toggle" type="checkbox" <?php if ($user->type == 2) echo "checked" ?>>
+                                  <input id="dev-toggle" type="checkbox" <?php if ($user->type == 2) echo "checked" ?> name="dev_toggle">
                                   <span class="slider round"></span>
                               </label>
                           </div>

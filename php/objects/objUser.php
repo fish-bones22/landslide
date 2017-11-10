@@ -169,6 +169,41 @@
 
 		}
 
+		function update() {
+			
+			// If user is already defined. Use update instead.
+			if ($this->id != null && $this->id != 0) return false;
+
+			$this->conn = connectToDb("db_avalanche_store");
+
+			$add_query = "UPDATE tbl_user SET
+			(email, 
+			 password,	
+			 type,	
+			 fname,
+			 lname,	
+			 sex) 
+			VALUES 
+			('$this->email', 
+			 '$this->password',	
+			 '$this->type',	
+			 '$this->fname',	
+			 '$this->lname',	
+			 '$this->sex');";
+
+			$result = $this->conn->query($add_query);
+
+			$this->conn->close();
+
+			if (!$result) return false;
+
+			$email = $this->email;
+			$this->id = User::getUserByEmail($email)->id;
+
+			return true;
+
+		}
+
 		function updateCurrencyAmount($amount) {
 
 			if ($amount == null || $amount < 0) return false;

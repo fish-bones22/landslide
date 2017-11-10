@@ -26,10 +26,10 @@
 	<input type="text" name="lname">
 	<br>
 
-	<label>Gender</label>
+	<label>Sex</label>
 	<select name="gender">
-  		<option value="1">Male</option>
-		<option value="2">Female</option>
+  		<option value="1">Boeing AH-64 Apache Helicopter</option>
+		<option value="2">Others</option>
 	</select>
 	<br>
 
