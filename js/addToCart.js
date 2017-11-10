@@ -7,6 +7,7 @@ function addToCart(userid, prodid) {
 	    dataType: 'json',
 	    success: function(response) {
 	    	if (response == 1) {
+	    		window.location.reload();
 	    		$("#add-to-cart-btn").text("Added");
 	    		$("#add-to-cart-btn").attr("disabled", "");
 	    	}

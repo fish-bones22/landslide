@@ -40,6 +40,14 @@ $(document).ready(function(){
 
     });
     /*End active tab*/
+
+    $("#terms").change(function() {
+        if (this.checked) {
+            $("#btn-checkout").removeAttr("disabled");
+        } else {
+            $("#btn-checkout").attr("disabled", "disabled");
+        }
+    });
 });
 /*See more*/
 function showHide(shID) {
@@ -102,6 +110,7 @@ function deleteUser(id, self) {
     });
 
 }
+
 
 function goToCheckout() {
     if ((+$("#cart-val").val()) > 0) {
@@ -174,7 +183,10 @@ function searchProduct(search, self, mode_) {
         var ratingElement = productItem.querySelector('.c-rating');
         var currentRating = data.rating;
         var maxRating = 5;
-        var callback = function(rating) { $("#rating-value").val(rating); };
+        var callback = function(rating) { 
+            $("#rating-value").val(rating);
+            $("#add-to-cart-btn").removeAttr("disabled");
+        };
         var r = rating(ratingElement, currentRating, maxRating, callback);
     }
 

@@ -79,14 +79,12 @@ body{
     line-height: 100px;
 }
 .price{
-    color: blue;
     font-family: Proxima Nova;
     font-size: 18px;
     font-weight: bold;
     line-height: 100px;
 }
 .total-price{
-    color: blue;
     font-family: Proxima Nova;
     font-size: 30px;
     font-weight: bold;
@@ -115,6 +113,11 @@ body{
     font-weight: Semibold;
     font-family: Proxima Nova;
     color: #3a3a3c;
+}
+.f-15{
+    font-size: 15px;
+    font-weight: Semibold;
+    font-family: Segoe UI;  
 }
 .f-17{
     font-size: 17px;
@@ -155,6 +158,12 @@ body{
     font-size: 25px;
     font-weight: bold;
     font-family: Proxima Nova;
+    color: #3a3a3c;
+}
+.f-25-B{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Segoe UI;
     color: #3a3a3c;
 }
 .f-27{
@@ -526,6 +535,14 @@ body{
     background-image: linear-gradient(to right, #05a3ff, #0a081a);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#05a3ff, endColorstr=#0a081a);
     color: #000;
 }
+.btn-landslide:disabled{
+    border:0px solid #393B3E;-webkit-box-shadow: #737373 0px 1px 5px ;-moz-box-shadow: #737373 0px 1px 5px ; box-shadow: #737373 0px 1px 5px ; -webkit-border-radius: 25px; -moz-border-radius: 25px;border-radius: 20px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 10px 20px 10px 20px; text-decoration:none; display:inline-block;text-shadow: 0px 1px 0 rgba(10,10,10,0.5);font-weight:bold; color: #8C8C8C;
+    background: #b9b9b9;
+    color: #fff;
+}
+.btn-link:disabled {
+    color: #777;
+}
 /*End Universal button for landslide*/
 /*Button for deny in admin*/
 .btn-landslide-deny {
@@ -601,8 +618,8 @@ body{
 .btn-close{
     background-color: #bdbec0;
     position: relative;
-    top: -135px;
-    left: 105px;
+    top: -12px;
+    left: 5px;
 }
 .btn-cart{
     background-color: #252525;
@@ -667,7 +684,7 @@ button#add-to-cart-btn.btn-landslide:hover{
     color: #fff;
 }
 a{
-    color: #fff !important;
+    color: #fff;
 }
 a.btn{
     color: #58585B;

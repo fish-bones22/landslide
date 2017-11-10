@@ -87,7 +87,7 @@
             <ul class="bottom_ul">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="about.php#contacts">Contacts</a></li>
+                <li><a href="about.php#contact">Contacts</a></li>
             </ul>
         </div>
     </div>

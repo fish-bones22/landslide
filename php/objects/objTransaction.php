@@ -59,6 +59,37 @@
 
 		}
 
+		static function getTransactionsById($id) {
+
+			if ($id == null || $id == 0) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT *, DATE_FORMAT(tbl_transaction.timestamp, '%b %d, %Y | %l:%i %p') as tmstmp 
+				FROM tbl_transaction WHERE trans_id = $id ORDER BY `timestamp`;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$trans_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$trans = new Transaction();
+				$trans->setValuesByArray($row);
+
+				$trans_array[$index] = $trans;
+
+				$index++;
+			}
+
+			return $trans_array;
+
+		}
+
 
 		static function generateTransactionId() {
 

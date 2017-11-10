@@ -4,6 +4,7 @@
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objCart.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objTransaction.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objUser.php';
+	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objProduct.php';
     
 	$cart = Cart::getCartByUser($_SESSION["userid"]);
 	$user = User::getUserById($_SESSION["userid"]);
@@ -13,6 +14,8 @@
 		header("Location: /landslide/checkout.php?insuff");
 		exit;
 	}
+
+	$file_array = array();
 
 	while ($item = each($cart->cart_items)) {
 
@@ -26,8 +29,14 @@
 
 		$user->updateCurrencyAmount($user->currency_amount - $price);
 
+		array_push($file_array,$_SERVER["DOCUMENT_ROOT"].$item[1]->product->file_location);
+
 	}
 
-	header("Location: /landslide/checkout-landing.php");
+	$_SESSION["files"] = $file_array;
+
+
+	header("Location: /landslide/checkout-landing.php?trans=".$trans_id);
+	exit;
 
  ?>
