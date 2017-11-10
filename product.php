@@ -3,14 +3,11 @@
 
 <head>
 	<?php 
-
+		session_start();
+		require_once "php/helper-functions/authenticate.php";
 		require_once "php/objects/objProduct.php";
 		require_once "php/objects/objCart.php";
 				
-		// Temporary.
-		session_start();
-		$_SESSION["userid"] = 1;
-		$_SESSION["isdev"] = true;
 
 		$id = $_REQUEST["id"];
 		$prod = Product::getProductById($id, 1);
@@ -48,9 +45,10 @@
 				<?php 
 					if ($_SESSION["userid"] == $prod->owner) {
 						echo "<a href='dev-dashboard-add.php?id=$prod->id' class='f-17 text-warning'>Edit</a>";
-					}
+					
 				?>
 				<div class="text-danger"><?php if ($prod->approval != 1) echo "<strong>This product is not yet approved by the admin.</strong> You are able to view this because you are a developer. Normal users will not be able to view this product." ?></div>
+				<?php } ?>
 				<hr style="height:2px;background: #000 url(aa010307.gif) no-repeat scroll center;border:none;">
 			</div>
 		</div>
@@ -68,6 +66,8 @@
 						<div class="f-24">A$<?php echo $prod->price ?></div>
 
 						<?php
+
+						if ($prod->approval == 1)
 							// If not yet added
 							if (!$cart->hasProduct($prod->id)) {
 						?>
@@ -90,7 +90,7 @@
                         <div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
                         <div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
                         <div class="lh-15">&nbsp;</div>
-						<a class="btn-landslide" href="checkout.php">Proceed to Checkout</a>
+						<a class="btn-landslide" href="/landslide/checkout.php">Proceed to Checkout</a>
                     </div>
                     
                     <!-- 

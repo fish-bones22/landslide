@@ -1,12 +1,10 @@
 <?php 
-
-	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/helper-functions/dbconnect.php';
+    session_start();
+    require_once 'php/helper-functions/dbconnect.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objCart.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objTransaction.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objUser.php';
     
-    session_start();
-
 	$cart = Cart::getCartByUser($_SESSION["userid"]);
 	$user = User::getUserById($_SESSION["userid"]);
 	$trans_id = Transaction::generateTransactionId();

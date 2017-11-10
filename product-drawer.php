@@ -7,15 +7,10 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body class="bg-gray2">
-<?php include 'navbar.php'; ?>
 	<?php 
-
-		require_once 'php/objects/objProduct.php';
-
-		// Temporary.
 		session_start();
-		$_SESSION["userid"] = 1;
-		$_SESSION["isdev"] = true;
+		include_once 'navbar.php';
+		require_once 'php/objects/objProduct.php';
 	
 		$search_term = $_REQUEST["search"];
 

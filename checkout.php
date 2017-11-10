@@ -2,7 +2,15 @@
 <html lang="en">
 
     <head>
-        <?php include'navbar.php'; ?>
+        <?php 
+        session_start();
+        require_once 'php/helper-functions/authenticate.php';
+        require_once "php/objects/objCart.php";
+        require_once "php/objects/objUser.php";
+
+        include 'navbar.php'; 
+
+        ?>
         <title>Checkout</title>
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -18,20 +26,12 @@
 
                <?php
 
-                  require_once "php/objects/objCart.php";
-                  require_once "php/objects/objUser.php";
-
-                  // Temporary.
-                  session_start();
-                  $_SESSION["userid"] = 1;
-                  $_SESSION["isdev"] = true;
-
                   $cart = Cart::getCartByUser($_SESSION["userid"]);
                   $user = User::getUserById($_SESSION["userid"]);
 
                   $total_price = $cart->getTotalPrice();
 
-                  if (count($cart->cart_items) <= 0)
+                  if (count($cart->cart_items) < 0)
                     header("Location: index.php");
 
                   while ($item = each($cart->cart_items)) {
