@@ -145,6 +145,12 @@ body{
     font-family: Proxima Nova;
     color: #3a3a3c;
 }
+.f-24-A{
+    font-size: 24px;
+    font-weight: 100;
+    font-family: Segoe UI;
+    color: #fff;
+}
 .f-25{
     font-size: 25px;
     font-weight: bold;
@@ -596,6 +602,9 @@ body{
     left:0;
 
 }
+.search-position{
+    margin-left: 170px;
+}
 input.form-control{
     border-radius: 25px;
     max-height: 28px;
@@ -613,6 +622,9 @@ i.fa.fa-search{
 form.navbar-form{
     position: relative;
     top: 4px;
+}
+a{
+    color: #fff !important;
 }
 a.btn{
     color: #58585B;
@@ -653,7 +665,7 @@ a.btn.btn-lg.active{
     background-color: #252525 !important;
     color: #2a88ad; !important;
 }
-a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
+a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover,a:hover{
     background-color: #252525 !important;
     color: #2b87ad !important;
 }

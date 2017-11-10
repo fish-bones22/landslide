@@ -11,14 +11,11 @@
 		session_destroy(); 
 	?>
 	<form action="php/helper-functions/user-login.php" method="post">
-
-	<label>Email</label>
-	<input type="text" name="user_email">
-
-	<label>Password</label>
-	<input type="password" name="user_password">
-
-	<input type="submit" name="login">
+		<label>Email</label>
+		<input type="text" name="user_email">
+		<label>Password</label>
+		<input type="password" name="user_password">
+		<input type="submit" name="login">
 	</form>
 </div>
 

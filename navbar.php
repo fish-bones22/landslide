@@ -27,7 +27,7 @@ $user = User::getUserById($_SESSION["userid"]);
             <li class="col-md-4"><a href="about.php" class="f-18">About</a></li>
             <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
         </ul>
-        <div class="col-sm-3 col-md-3 col-md-offset-2 search-position">
+        <div class="col-sm-3 col-md-3 search-position">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search">
@@ -38,13 +38,6 @@ $user = User::getUserById($_SESSION["userid"]);
             </form>
         </div>
         <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->name;?></a>
-                <ul class="dropdown-menu" style="background-color: #252525 !important;">
-                    <li><a href="accountsettings.php" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
-                </ul>
-            </li>
             <li class="popover-cart" >
                 <input type="hidden" id="cart-val" value="<?php echo count($cart->cart_items);?>">
                 <button type="button"
@@ -56,6 +49,14 @@ $user = User::getUserById($_SESSION["userid"]);
                     <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
                 </button>
             </li>
+            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->name;?></a>
+                <ul class="dropdown-menu" style="background-color: #252525 !important;">
+                    <li><a href="accountsettings.php" class="f-18"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
+                </ul>
+            </li>
+            <li class="f-24-A"><a class="" href="#"><i class="fa fa-usd" aria-hidden="true"></i>A</a></li>
         </ul>
       </div>
     </div>
