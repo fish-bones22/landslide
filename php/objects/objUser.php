@@ -177,15 +177,13 @@
 			$this->conn = connectToDb("db_avalanche_store");
 
 			$add_query = "UPDATE tbl_user SET
-			(email, 
-			 password,	
-			 type,	
-			 fname,
-			 lname,	
-			 sex) 
+			(email = '$this->email',
+			 type = '$this->type',	
+			 fname = '$this->fname',
+			 lname = '$this->lname',	
+			 sex = '$this->sex') 
 			VALUES 
-			('$this->email', 
-			 '$this->password',	
+			('$this->email',
 			 '$this->type',	
 			 '$this->fname',	
 			 '$this->lname',	
