@@ -35,7 +35,7 @@
 		<div class="row">
 			<div class="col-md-3 col-xs-12">
 				<div class="product-box-lg">
-					<img class="product_thumbnail_lg" src='<?php echo $prod->icon_location; ?>' />
+					<img class="product_thumbnail_lg" src='<?php echo $prod->icon_location; ?>' style="width:300px; height: 300px; border-radius:25px;" />
 				</div>
 			</div>
             <div class="col-md-2 col-xs-12"></div>

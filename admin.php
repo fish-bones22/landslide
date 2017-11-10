@@ -58,7 +58,7 @@
                                            <div class="admin-box">
                                                <div class="col-md-3 col-xs-1">
                                                    <div class="product-box-sm">
-                                                      <img class="product_thumbnail" src="<?php echo $product->icon_location ?>">
+                                                      <img class="product_thumbnail" src="<?php echo $product->icon_location ?>" style="width:100px; height:100px; border-radius:20px;">
                                                    </div>
                                                </div>
                                                <div class="col-md-6 col-xs-2">
@@ -148,7 +148,7 @@
                               <div class="admin-box">
                                 <div class="col-md-3 col-xs-1">
                                   <div class="product-box-sm">
-                                    <img class="product_thumbnail" src="<?php echo $product->icon_location ?>">
+                                      <img class="product_thumbnail" src="<?php echo $product->icon_location ?>" style="width:100px; height:100px; border-radius:20px;">
                                   </div>
                                 </div>
                                 <div class="col-md-6 col-xs-2">
