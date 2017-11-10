@@ -13,7 +13,8 @@
 	<div class="col-md-4 col-xs-8">
 		<div class="row">
 		<div class="lh-50">&nbsp;</div>
-		<div class="f-36" align="center">Register Here</div>
+		<div class="f-34" align="center">Register Here</div>
+		<div class="lh-50">&nbsp;</div>
 			<div class="form-group">
 				<label class="f-17">Email:</label>
 				<input class="f-17 form-control" type="email" name="email">
