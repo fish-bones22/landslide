@@ -80,6 +80,29 @@ function updateApprovalOfProduct(id, self, mode_) {
 
 }
 
+function deleteUser(id, self) {
+
+    var loopDiv = self.closest(".user-container");
+
+    $.ajax({  
+        type: 'GET',  
+        url: 'php/helper-functions/deleteuser.php', 
+        data: { usrid: id },
+        dataType: 'json',
+        success: function(response) {
+            if (response > 0) {
+                loopDiv.remove();
+                var url = "admin.php?"
+                if (openedTab !== "")
+                    url += "tab="+openedTab;
+                window.location.href = url;
+            }
+        }
+    });
+                loopDiv.remove();
+
+}
+
 function searchProduct(search, self, mode_) {
 
     if (mode = 1) {

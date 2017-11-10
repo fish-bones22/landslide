@@ -383,7 +383,7 @@
 			"file": "/C/xampp/htdocs/landslide/admin.php",
 			"settings":
 			{
-				"buffer_size": 20948,
+				"buffer_size": 24212,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -392,7 +392,7 @@
 			"file": "objects/objProduct.php",
 			"settings":
 			{
-				"buffer_size": 9066,
+				"buffer_size": 11053,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -581,7 +581,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -649,15 +649,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20948,
+						"buffer_size": 24212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1283,
-								1283
+								0,
+								0
 							]
 						],
 						"settings":
@@ -679,15 +679,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9066,
+						"buffer_size": 11053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7950,
-								7950
+								0,
+								0
 							]
 						],
 						"settings":
@@ -696,7 +696,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5939.0,
+						"translation.y": 6011.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -707,7 +707,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -744,7 +744,7 @@
 	"project": "Landslide.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":

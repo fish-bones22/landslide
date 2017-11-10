@@ -324,6 +324,37 @@
 
 		}
 
+		static function getProductsStartingWith($search) {
+
+			if ($search == null) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
+			FROM tbl_product
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
+			WHERE name LIKE '$search%' ORDER BY NAME;";
+
+			$result = $conn->query($select_query);
+
+			$conn->close();
+
+			if ($result->num_rows <= 0) return false;
+
+			$prod_array = range(1, $result->num_rows);
+
+			$index = 0;
+			while ($row = $result->fetch_assoc()) {
+				$prod = new Product();
+				$prod->setValuesByArray($row);
+				$prod_array[$index] = $prod;
+				$index++;
+			}
+
+			return $prod_array;
+
+		}
+
 		static function getUnaprrovedProducts($count) {
 
 

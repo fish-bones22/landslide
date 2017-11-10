@@ -11,6 +11,17 @@ $("document").ready(function() {
 
 	$(".tabmenu a").click(function () {
 		openedTab = $(this).attr("href").replace("#", "");
+		window.location.href = "admin.php?tab="+openedTab;
+	});
+
+	$(".alpha-link").click(function() {
+		alpha = $(this).text();
+		window.location.href = "admin.php?tab=list-apps&alpha="+alpha;
+	});
+
+	$(".alpha-user-link").click(function() {
+		alpha = $(this).text();
+		window.location.href = "admin.php?tab=list-users&alpha="+alpha;
 	});
 
 });
