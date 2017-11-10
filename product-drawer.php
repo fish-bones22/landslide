@@ -2,11 +2,12 @@
 <html>
 <head>
 	<title>Landslide</title>
-	<link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
+	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+<?php include 'navbar.php'; ?>
 	<?php 
 
 		require_once 'php/objects/objProduct.php';
@@ -19,68 +20,71 @@
 		$search_term = $_REQUEST["search"];
 
 	?>
-
+<div class="lh-100">&nbsp;</div>
 	<div class="container">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<h1 class="f-45" align="center">Search Results</h1>
+			<div class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+				<form class="navbar-form" role="search" method="get" action="product-drawer.php">
+					<div class="input-group">
+						<input type="text" class="form-control" name="search" placeholder="Search" value="<?php echo($search_term)?>" />
+						<div class="input-group-btn">
+							<button class="btn bg-search btn-rad" type="submit"><i class="fa fa-search" style="font-size: 0.9em;"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+				<!-- Search results -->
+				<div class="lh-100">&nbsp;</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
 
-		<h1>Search Results</h1>
+					<?php
 
-		<div class="form-group">
-			<form action="product-drawer.php" method="get">
-				<input type="text" name="search" value="<?php echo($search_term)?>" />
-				<input type="submit" class="btn btn-primary" value="Search">
-			</form>
-		</div>
+	$prod = Product::getProducts($search_term);
 
-		<div class="row">
+							   if (!$prod) {
 
-			<!-- Search results -->
-			<div class="col-md-6">
+								   echo "<div>No products found</div>";
 
-				<?php
+							   } else {
 
-					$prod = Product::getProducts($search_term);
+								   foreach ($prod as $product) {
 
-					if (!$prod) {
-
-						echo "<div>No products found</div>";
-
-					} else {
-						
-						foreach ($prod as $product) {
-
-							if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+									   if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
 					?>
-				<div class='row'>
-					<a href='product.php?id=$product->id'>
-						<div class='product_thumbnail_container'>
-							<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
-						</div>
-						<div class='col-xs-11'>
-							<div><strong><?php echo $product->name ?></strong></div>
-							<div class=''><?php $product->owner_name ?></div>
-							<div class='row'>
-								<div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
-								<div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
+					<div class='row'>
+						<div class="col-md-6">
+							<div class='product_thumbnail_container'>
+								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
 							</div>
 						</div>
-					</a>
-				</div>
-					
+						<div class="lh-15">&nbsp;</div>
+						<div class='col-md-6'>
+							<div class="f-24"><strong><?php echo $product->name ?></strong></div>
+							<div class=''><?php $product->owner_name ?></div>
+							<div class='col-auto text-muted small f-14'>Downloads: <?php echo $product->downloads ?></div>
+							<div class='col-auto text-muted small f-14'><?php echo $product->timestamp ?></div>
+						</div>
+						<a href='product.php?id=<?php echo $product->id ?>' class="link-overlay"></a>
+					</div>
+
 					<?php
-						} // end foreach
-					} // end if-else
+								   } // end foreach
+							   } // end if-else
 
 					?>
-			</div>
-			<!-- End of Search results -->
+				</div>
+				<!-- End of Search results -->
 
 		</div>
-
 	</div>
-
+<div class="lh-100">&nbsp;</div>
+<?php include 'footer.php'; ?>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
-	<script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

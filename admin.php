@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <title>Dashboard</title>
-        <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
+        <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <?php 
