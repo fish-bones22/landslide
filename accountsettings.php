@@ -82,11 +82,18 @@
                                <input type="text" class="form-control dev-inp" id="" name="dev-desc" value="<?php if ($user->type == 2) echo "$dev->dev_description" ?>" />
                            </div>
                        </div>
+                       
+                       <div class="col-md-12" align="right">
+                           <button class="btn-landslide-approve" type="submit" href="#">Save</button>
+                       </div>
+
+                       <div class="lh-50">&nbsp;</div>
                        <!-- Add Avacoin -->
                        <div class="form-group">
                            <div class="f-17"><label class="" for="" ><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Avacoin</label></div>
-                           <div class="">
-                               <input type="number" class="form-control" id="" name="" />
+                           <div class="form-inline">
+                              <input type="number" class="form-control" id="" name="" />
+                              <button class="btn-landslide-approve">Add</button>
                            </div>
                        </div>
                        <!--Transaction History-->
@@ -101,26 +108,28 @@
                                    </tr>
                                </thead>
                                <tbody class="f-12">
+
+                                <?php 
+
+                                  if (!$user->transactions || count($user->transactions) <= 0) {
+                                    echo "<tr><td colspan=3>$user->transactions  No transactions</td></tr>";
+                                  } else {
+
+                                    foreach ($user->transactions as $trans) {
+
+                                ?>
                                    <tr>
-                                       <td>Product 2</td>
-                                       <td>A$230</td>
-                                       <td>11-09-17</td>
+                                       <td><?php echo $trans->prod_name ?></td>
+                                       <td>A$<?php echo $trans->price ?></td>
+                                       <td><?php echo $trans->timestamp ?></td>
                                    </tr>
-                                   <tr>
-                                       <td>Product 2</td>
-                                       <td>A$230</td>
-                                       <td>11-09-17</td>
-                                   </tr>
-                                   <tr>
-                                       <td>Product 2</td>
-                                       <td>A$230</td>
-                                       <td>11-09-17</td>
-                                   </tr>
+
+                                   <?php 
+                                    }
+                                  }
+                                  ?>
                                </tbody>
                            </table>
-                       </div>
-                       <div class="col-md-12" align="center">
-                           <button class="btn-landslide-approve" type="submit" href="#">Save</button>
                        </div>
                    </form>   
                </div>

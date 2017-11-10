@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require_once 'php/helper-functions/dbconnect.php';
+    require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/helper-functions/dbconnect.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objCart.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objTransaction.php';
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objUser.php';
@@ -17,9 +17,10 @@
 	while ($item = each($cart->cart_items)) {
 
 		$prod_id =  $item[1]->product->id;
+		$prod_name = $item[1]->product->name;
 		$price = $item[1]->product->price;
 
-		Transaction::saveTransaction($_SESSION["userid"], $prod_id, $price, $trans_id, $item[1]->rating);
+		Transaction::saveTransaction($_SESSION["userid"], $prod_id, $prod_name, $price, $trans_id, $item[1]->rating);
 
 		Cart::removeCartItem($_SESSION["userid"], $prod_id);
 
