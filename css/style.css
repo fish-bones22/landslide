@@ -639,6 +639,10 @@ input.form-control{
     border-radius: 25px;
     max-height: 28px;
 }
+select.form-control.f-17{
+    border-radius: 25px;
+    max-height: 39px; 
+}
 button.btn.bg-search.btn-rad{
     max-height: 28px;
 }
@@ -816,7 +820,7 @@ ul.dropdown-menu.show{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ff0000;
+    background-color: #737373;
     -webkit-transition: .4s;
     transition: .4s;
 }
