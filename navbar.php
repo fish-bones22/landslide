@@ -23,9 +23,15 @@ $user = User::getUserById($_SESSION["userid"]);
     <div class="container-fluid">
      <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
+            <?php if($user->type == 3) { ?>
+            <li class="active col-md-4"><a href="admin.php" class="f-18">Admin</a></li>
+            <?php } ?>
             <li class="active col-md-4"><a href="index.php" class="f-18">Home</a></li>
             <li class="col-md-4"><a href="about.php" class="f-18">About</a></li>
-            <li class="col-md-4"><a href="#" class="f-18">Contacts</a></li>
+            <?php if($user->type != 3) { ?>
+            <li class="col-md-4"><a href="about.php#contact" class="f-18">Contacts</a></li>
+            <?php } ?>
+
         </ul>
         <div class="col-sm-3 col-md-3 search-position">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
@@ -51,7 +57,12 @@ $user = User::getUserById($_SESSION["userid"]);
             </li>
             <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
                 <ul class="dropdown-menu" style="background-color: #252525 !important;">
-                    <li><a class="f-18" href="accountsettings.php#topup"><span><img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;<?php echo $user->currency_amount ?></span></a></li>
+                    <li><a class="f-18" href="accountsettings.php#topup">
+                        <span>
+                            <img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;
+                            <?php echo ($user->currency_amount == 0) ? "0" : $user->currency_amount ?>
+                        </span>
+                        </a></li>
                     <li class="divider"></li>
                     <li><a href="accountsettings.php" class="f-18" alt="top-up"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
                     <li class="divider"></li>

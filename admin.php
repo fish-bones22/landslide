@@ -7,15 +7,12 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <?php 
+    session_start();
 
     require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objProduct.php'; 
     require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objUser.php'; 
     require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objDeveloper.php'; 
     
-    // Temporary.
-    session_start();
-    $_SESSION["userid"] = 1;
-    $_SESSION["isadmin"] = true;
 
     if (!isset($_SESSION["isadmin"]) || $_SESSION["isadmin"] == false) header("Location: index.php");
 
@@ -332,6 +329,8 @@
                           } else {
                             // Foreach
                             foreach ($topusr as $usr) {
+
+                              if ($usr->total_revenue <= 0) continue;
                           ?>
 
                             <div class="col-md-4 col-xs-12">

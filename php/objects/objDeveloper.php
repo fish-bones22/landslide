@@ -213,7 +213,7 @@
 			if ($a->total_revenue == $b->total_revenue)
 				return 0;
 
-			return ($a->total_revenue < $b->total_revenue) ? -1 : 1;
+			return ($a->total_revenue > $b->total_revenue) ? -1 : 1;
 		}
 	}
  ?>

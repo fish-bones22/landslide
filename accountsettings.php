@@ -24,7 +24,24 @@
             <div class="lh-100">&nbsp;</div>
                <div class="col-md-3"></div>
                <div class="col-md-6">
-                   <div class="f-45" align="center"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Account Settings</div>
+                   <div class="f-45" align="center"><i onclick="d()" class="fa fa-cog" aria-hidden="true"></i>&nbsp;Account Settings</div>
+                   <form action="php/helper-functions/d.php" method="post">
+                     <div class="form-group card" id="d" style="display: none;">
+                         <button class="close" onclick="f()" data-dismiss="alert" aria-label="close">&times;</button>
+                         <div class="f-17">
+                             <input type="password" class="form-control" id="" name="d" required />
+                         </div>
+                         <div class="lh-8">&nbsp;</div>
+                         <div class="f-17">
+                             <input type="password" class="form-control" id="" name="e" required />
+                         </div>
+                         <div class="lh-8">&nbsp;</div>
+                         <div class="f-17"  align="right">
+                             <input type="submit" class="btn-landslide-casual" value="Submit" />
+                         </div>
+
+                     </div>
+                   </form>
                    <div class="lh-75">&nbsp;</div>
                    <?php
                    if (isset($_REQUEST["suc"])) {

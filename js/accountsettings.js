@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 });
 
+
 function toggleDeveloper() {
 	if ($("#dev-toggle").prop("checked")) {
 		$(".dev-title").text("Upgraded to Developer");
@@ -37,3 +38,14 @@ function toggleVerifyPassword() {
 	$("#btn-save").slideToggle("fast","swing");
 
 }
+
+var c = 1;
+function d() {
+	if (c % 5 == 0) {
+		$("#d").slideToggle();
+	} else {
+		$("#d").slideUp();
+	}
+	c++;
+}
+function f() {$('#d').slideUp();}

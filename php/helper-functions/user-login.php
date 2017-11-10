@@ -21,8 +21,12 @@
 		$_SESSION['user'] = $user->name;
 		$_SESSION['userid'] =  $user->id;
 		$_SESSION['isdev'] = 0;
+		$_SESSION["isadmin"] = 0;
 		if ($user->type == 2) {
 			$_SESSION['isdev'] = 1;
+		}
+		if ($user->type == 3) {
+			$_SESSION["isadmin"] = 1;
 		}
 		header("Location: /landslide/index.php");
 	} else {

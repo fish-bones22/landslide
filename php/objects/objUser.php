@@ -233,6 +233,27 @@
 
 		}
 
+		function updateType($type) {
+
+			if ($type == null || $type < 0) return false;
+			
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_user SET type = '$type' WHERE user_id = $this->id;";
+
+			echo $update_query;
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result)
+				return false;
+
+			return true;
+
+		}
+
 		static function getUsers(int $count) {
 
 			if ($count == null) return false;

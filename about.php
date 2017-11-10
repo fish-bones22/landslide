@@ -147,6 +147,27 @@
                   <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
               </div>
                <!--End Jerome-->
+
+              <!--contact -->
+              <div class="row" id="contact">
+                  <div class="col-md-6 col-xs-6">
+                      <div class="lh-75">&nbsp;</div>
+                      <label class="f-30">Get In-touch</label>
+                      <div class="f-25">Contact Us</div>
+                  </div>
+              </div>
+              <div class="lh-15">&nbsp;</div>
+              <div class="col-md-12 col-xs-12">
+                  <div class="f-20">Want to give feed back? Just give us a call through the following land-line numbers (free of charge):</div>
+                <ul>
+                  <li class="f-20">&emsp;8-7000</li>
+                  <li class="f-20">&emsp;55555</li>
+                  <li class="f-20">&emsp;887-8888</li>
+                  <li class="f-20">&emsp;8-6236</li>
+                  <li class="f-20">&emsp;911 (Express)</li>
+                </ul>
+              </div>
+               <!--End contact-->
     </div>
   <div class="lh-100">&nbsp;</div>
   <?php include 'footer.php'; ?>
