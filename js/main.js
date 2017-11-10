@@ -99,7 +99,6 @@ function deleteUser(id, self) {
             }
         }
     });
-                loopDiv.remove();
 
 }
 
