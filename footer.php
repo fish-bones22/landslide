@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 footerleft ">
                 <div class="logofooter"><img src="img/logo.png" style="width: 100px; height: 100px; margin-left: 80px; margin-top: -40px;"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa obcaecati beatae minima, porro reiciendis eum fuga repudiandae est quia ipsam earum laudantium provident quas tenetur.</p>
+                <p>Landslide&trade; is an online store providing customers with a bucketful of quality products housed in a state-of-the-art web application service. Landslide is part of the ever-growing Disaster&trade; Group of Companies, headed by the umbrella company, Avalanche&trade; Corporation</p>
 
             </div>
             <div class="col-md-2 col-sm-6 paddingtop-bottom">
@@ -69,7 +69,7 @@
             <div class="col-md-3 col-sm-6 paddingtop-bottom">
                 <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                     <div class="fb-xfbml-parse-ignore">
-                        <blockquote>Avalanche</blockquote>
+                        <blockquote>Avalanche&trade;</blockquote>
                     </div>
                 </div>
             </div>
