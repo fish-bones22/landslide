@@ -119,6 +119,9 @@
                                </tbody>
                            </table>
                        </div>
+                       <div class="col-md-12" align="center">
+                           <button class="btn-landslide-approve" type="submit" href="#">Save</button>
+                       </div>
                    </form>   
                </div>
                 <div class="col-md-3"></div>	
