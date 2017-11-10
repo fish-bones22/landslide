@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Landslide</title>
+        <title>Account Settings</title>
         <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
