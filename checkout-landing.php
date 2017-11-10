@@ -2,7 +2,10 @@
 <html lang="en">
 
     <head>
-        <?php include'navbar.php'; ?>
+        <?php 
+        session_start();
+        include'navbar.php'; 
+        ?>
         <title>Checkout</title>
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />

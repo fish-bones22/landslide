@@ -1,6 +1,7 @@
 <?php 
 	
 	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/helper-functions/dbconnect.php';
+	require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objTransaction.php';
 	/**
 	* 
 	*/
@@ -17,7 +18,7 @@
 		public $currency_amount;
 		public $password;
 		public $timestamp;
-		public $isdev = false;
+		public $transactions;
 
 		function __construct()
 		{
@@ -45,6 +46,7 @@
 			$this->type = $array["type"];
 			$this->currency_amount = $array["currency_amount"];
 			$this->timestamp = $array["tmstmp"];
+			$this->transactions = Transaction::getTransactionsByUser($this->id);
 
 		}
 
@@ -212,7 +214,6 @@
 			}
 			
 			return $dev_array;
-
 		}
 
 		static function getUsersBySearchTerm($search) {

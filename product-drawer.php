@@ -37,17 +37,21 @@
 
 					<?php
 
-	$prod = Product::getProducts($search_term);
+					$prod = Product::getProducts($search_term);
 
-							   if (!$prod) {
+					if ($search_term == "") {
 
-								   echo "<div>No products found</div>";
+						echo "<div>No Unicorns here.</div>";
+					
+					} else if (!$prod) {
 
-							   } else {
+						echo "<div>No products found</div>";
 
-								   foreach ($prod as $product) {
+					} else {
 
-									   if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
+						foreach ($prod as $product) {
+
+						if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 
 					?>
 					<div class='row'>
