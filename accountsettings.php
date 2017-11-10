@@ -26,7 +26,21 @@
                <div class="col-md-6">
                    <div class="f-45" align="center"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Account Settings</div>
                    <div class="lh-75">&nbsp;</div>
-                   <form method="post" action="">
+                   <?php
+                   if (isset($_REQUEST["suc"])) {
+                   ?>
+                   <div class="alert alert-success alert-dismissable fade in">Changes Saved<button class="close" data-dismiss="alert" aria-label="close">&times;</button></div>
+                   <?php 
+                    }
+                   ?>
+                   <?php
+                   if (isset($_REQUEST["err"])) {
+                   ?>
+                   <div class="alert alert-danger alert-dismissable fade in">Update Failed<button class="close" data-dismiss="alert" aria-label="close">&times;</button></div>
+                   <?php 
+                    }
+                   ?>
+                   <form method="post" action="php/helper-functions/updateaccount.php">
                        <!-- Email -->
                        <div class="form-group">
                            <div class="f-17"><label class="" for="email" >Email:</label></div>
@@ -55,11 +69,21 @@
                                <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $user->lname ?>"/>
                            </div>
                        </div>
+                       <!-- Gender -->
+                       <div class="form-group">
+                           <div class="f-17"><label class="" for="lname" >Sex:</label></div>
+                           <div class="f-17">
+                               <select class="form-control" id="sex" name="sex" value="<?php echo $user->sex ?>" required>
+                                <option value="1">Boeing AH-64 Apache Helicopter</option>
+                                <option value="2">Others</option>
+                               </select>
+                           </div>
+                       </div>
                        <!--Upgrade to developer-->
                        <div class="form-group"><!--TODO JQuery to hide and show or change the contents-->
                           <div class="col-md-2">
                               <label class="switch">
-                                  <input id="dev-toggle" type="checkbox" <?php if ($user->type == 2) echo "checked" ?>>
+                                  <input id="dev-toggle" type="checkbox" <?php if ($user->type == 2) echo "checked" ?> name="dev_toggle">
                                   <span class="slider round"></span>
                               </label>
                           </div>
@@ -72,14 +96,14 @@
                        <div class="form-group">
                            <div class="f-17"><label class="" for="" >Developer Name:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control dev-inp" id="" name="dev-name" value="<?php if ($user->type == 2) echo "$dev->dev_name" ?>"/>
+                               <input type="text" class="form-control dev-inp" id="" name="dev_name" value="<?php if ($user->type == 2) echo "$dev->dev_name" ?>"/>
                            </div>
                        </div>
                        <!-- Dev Description -->
                        <div class="form-group">
                            <div class="f-17"><label class="" for="" >Developer Description:</label></div>
                            <div class="f-17">
-                               <input type="text" class="form-control dev-inp" id="" name="dev-desc" value="<?php if ($user->type == 2) echo "$dev->dev_description" ?>" />
+                               <input type="text" class="form-control dev-inp" id="" name="dev_desc" value="<?php if ($user->type == 2) echo "$dev->dev_description" ?>" />
                            </div>
                        </div>
                        
@@ -89,7 +113,7 @@
 
                        <div class="lh-50">&nbsp;</div>
                        <!-- Add Avacoin -->
-                       <div class="form-group">
+                       <div class="form-group" id="topup">
                            <div class="f-17"><label class="" for="" ><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Avacoin</label></div>
                            <div class="form-inline">
                               <input type="number" class="form-control" id="" name="" />

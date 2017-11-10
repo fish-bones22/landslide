@@ -62,11 +62,35 @@
 			return true;
 		}
 
+		function update() {
+			
+			// If user is not defined. Use register instead.
+			if ($this->id == null || $this->id == 0) return false;
+
+			$this->conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_dev_info SET
+			 dev_name = '$this->dev_name',
+			 dev_desc = '$this->dev_description' WHERE user_id = '$this->id';";
+
+			$result = $this->conn->query($update_query);
+
+			$this->conn->close();
+
+			if (!$result) return false;
+
+			return true;
+
+		}
+
 		function getTotalDownloads() {
 
 			if ($this->id == null || $this->id <= 0) return -1;
 
 			$products = Product::getProductsByOwner($this->id, 1);
+			
+			if (!$products || count($products) <= 0) return 0;
+
 			$downloads = 0;
 
 			foreach ($products as $prod) {
@@ -81,6 +105,9 @@
 			if ($this->id == null || $this->id <= 0) return -1;
 
 			$products = Product::getProductsByOwner($this->id, 1);
+
+			if (!$products || count($products) <= 0) return 0;
+
 			$revenue = 0;
 
 			foreach ($products as $prod) {

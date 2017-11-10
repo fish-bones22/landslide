@@ -169,6 +169,30 @@
 
 		}
 
+		function update() {
+			
+			// If user is not defined. Use register instead.
+			if ($this->id == null || $this->id == 0) return false;
+
+			$this->conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_user SET
+			email = '$this->email',
+			 type = '$this->type',	
+			 fname = '$this->fname',
+			 lname = '$this->lname',	
+			 sex = '$this->sex' WHERE user_id = '$this->id';";
+
+			$result = $this->conn->query($update_query);
+
+			$this->conn->close();
+
+			if (!$result) return false;
+
+			return true;
+
+		}
+
 		function updateCurrencyAmount($amount) {
 
 			if ($amount == null || $amount < 0) return false;
