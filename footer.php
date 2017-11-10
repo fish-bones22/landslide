@@ -13,7 +13,7 @@
             <div class="col-md-2 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">TOP PRODUCTS</h6>
                 <div class="post">
-            //eto po
+            
             <?php
             require_once 'php/objects/objProduct.php';
 
