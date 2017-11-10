@@ -56,13 +56,13 @@
 
 					?>
 					<div class='row'>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-6">
 							<div class='product_thumbnail_container'>
 								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
 							</div>
 						</div>
 						<div class="lh-15">&nbsp;</div>
-						<div class='col-md-6'>
+						<div class='col-md-6 col-xs-6'>
 							<div class="f-24"><strong><?php echo $product->name ?></strong></div>
 							<div class=''><?php $product->owner_name ?></div>
 							<div class='col-auto text-muted small f-14'>Downloads: <?php echo $product->downloads ?></div>

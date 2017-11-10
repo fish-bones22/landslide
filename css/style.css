@@ -190,6 +190,9 @@ ul.dropdown-menu.show{
     background-color: #252525;
     color: #fff;
 }
+.navbar-collapse.in{
+    overflow-y: hidden !important;
+}
 /*End Custom Classes*/
 /*Carousel*/
 #thumbnail-preview-indicators {
