@@ -13,21 +13,57 @@
             <div class="col-md-2 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">TOP PRODUCTS</h6>
                 <div class="post">
+            //eto po
+            <?php
+            require_once 'php/objects/objProduct.php';
+
+            $top_prod = Product::getTopProducts(5);
+
+            if (!$top_prod) {
+                
+                echo "<div>No Top Products</div>";
+
+            } else {
+                foreach ($top_prod as $product) {
+                    if ($product->approval != 1) continue;
+              
+            ?>
+            
+                    <p><?php echo $product->name?><span><?php echo $product->timestamp?></span></p>
+                    <!--<p>Lorem Ipsum><span>Inser Date</span></p>
                     <p>Lorem Ipsum<span>Inser Date</span></p>
                     <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
+                    <p>Lorem Ipsum<span>Inser Date</span></p>-->
+            <?php
+                } //close foreach 
+            } //close else
+            ?>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">LATEST PRODUCTS</h6>
                 <div class="post">
+            <?php
+            require_once 'php/objects/objProduct.php';
+
+            $new_prod = Product::getNewProducts(5);
+
+            if (!$new_prod) {
+                echo "<div>No Products</div>";
+            } else {
+                foreach ($new_prod as $product) {
+                    if ($product->approval != 1) continue;
+              
+            ?>
+                    <p><?php echo $product->name?><span><?php echo $product->timestamp?></span></p>
+                    <!--<p>Lorem Ipsum<span>Inser Date</span></p>
                     <p>Lorem Ipsum<span>Inser Date</span></p>
                     <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
-                    <p>Lorem Ipsum<span>Inser Date</span></p>
+                    <p>Lorem Ipsum<span>Inser Date</span></p>-->
+            <?php
+                } //close foreach 
+            } //close else
+            ?>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 paddingtop-bottom">
