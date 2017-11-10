@@ -1,4 +1,9 @@
-
+@font-face{
+    font-family: 'Proxima Nova';
+    src: url('../css/fonts/proxima-nova-semibold-webfont.ttf');
+    font-weight: Semibold;
+    font-style: normal;
+}
 
 body, html {
     height: 100%;
@@ -34,14 +39,14 @@ body, html {
     margin-bottom: 0px;
 }
 #login-box .logo .tweak {
-    color: #ff5252;
+    color: #3DC1D0;
 }
 #login-box .controls {
     padding-top: 30px;
 }
 #login-box .controls input {
     border-radius: 0px;
-    background: rgb(98, 66, 66);
+    background: #0D3F57;
     border: 0px;
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -60,7 +65,7 @@ body, html {
 #login-box button.btn-custom {
     border-radius: 2px;
     margin-top: 8px;
-    background: #009900;
+    background: green;
     border-color: rgba(48, 46, 45, 1);
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -71,8 +76,9 @@ body, html {
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
-    background: rgba(48, 46, 45, 1);
-    border-color: green;
+    color:  white;
+    background: transparent;
+    border-color: white;
 }
 #particles-js{
     width: 100%;

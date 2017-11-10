@@ -18,3 +18,22 @@ function toggleDeveloper() {
 		$(".dev-inp").attr("disabled", "disabled");
 	}
 }
+
+function togglePassword() {
+
+	$(".password-toggle").slideToggle();
+
+	if ($(".password-toggle input").prop("disabled")) {
+		$(".password-toggle input").removeAttr("disabled");
+	} else {
+		$(".password-toggle input").attr("disabled", "");
+	}
+
+}
+
+function toggleVerifyPassword() {
+
+	$("#verify-password").slideToggle("fast","swing");
+	$("#btn-save").slideToggle("fast","swing");
+
+}
