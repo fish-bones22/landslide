@@ -140,7 +140,7 @@
                            <button class="close" onclick="toggleVerifyPassword()" data-dismiss="alert" aria-label="close">&times;</button>
                            <div class="f-17"><label class="" for="" >Verify Password:</label></div>
                            <div class="f-17">
-                               <input type="password" class="form-control dev-inp" id="" name="verify-password" required />
+                               <input type="password" class="form-control" id="" name="verify-password" required />
                            </div>
                            <div class="lh-8">&nbsp;</div>
                            <div class="f-17"  align="right">
