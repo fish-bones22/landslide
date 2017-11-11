@@ -14,6 +14,8 @@
 
 		$cart = Cart::getCartByUser($_SESSION["userid"]);
 
+		$owner = $prod->owner;
+
 		if (!$prod) header("Location: /landslide/");
 	 ?>
 	 <?php include'navbar.php'; ?>
@@ -121,7 +123,7 @@
 
 		<div class="row">
 			<?php
-			$prod_array = Product::getProductsByOwner($_SESSION["userid"], 1);
+			$prod_array = Product::getProductsByOwner($owner, 1);
 
 			if (!$prod_array) {
 
