@@ -46,13 +46,18 @@
 				<div class="f-45"><?php echo $prod->name; ?></div>		
 				<div class="f-24"><?php echo $prod->owner_name; ?></div>
 				<?php 
-				if ($_SESSION["userid"] == $prod->owner) {
+				if ($_SESSION["userid"] == $prod->owner && $_SESSION["isdev"]) {
 					echo "<a href='dev-dashboard-add.php?id=$prod->id' class='f-17'>Edit</a>";
 				?>
 				<div class="text-danger"><?php if ($prod->approval != 1) echo "<strong>This product is not yet approved by the admin.</strong> You are able to view this because you are a developer. Normal users will not be able to view this product." ?></div>
-				<?php } ?>
+				<?php } 
+
+				if ($_SESSION["userid"] == $prod->owner && !$_SESSION["isdev"]) {
+					echo "<div class='f-15 text-muted'>Note: Although you own this product, you are not allowed to edit this because your account is not a developer. Please upgrade into a developer account to enable editig.</div>";
+				}
+				?>
 				<hr style="height:2px;background: #000  no-repeat scroll center;border:none;">
-				<div><?php echo $prod->description; ?></div>
+				<div class="f-17"><?php echo $prod->description; ?></div>
 			</div>
 		</div>
 
