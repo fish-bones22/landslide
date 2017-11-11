@@ -45,9 +45,26 @@
 					
 					} else if (!$prod) {
 
-						echo "<div>No products found</div>";
+						?>
+						<div class="f-30"><i class="fa fa-exclamation-triangle"></i>&nbsp;No products found</div>
+						<div class="lh-15">&nbsp;</div>
+						<div class="f-17 text-danger">Your search -<?php echo($search_term)?>- did not match any documents.</div>
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<div class="lh-50">&nbsp;</div>
+								<label class="f-30">Suggestions</label>
+							</div>
+						</div>
+						<div class="lh-15">&nbsp;</div>
+						<div class="col-md-12 col-xs-12">
+							<ul>
+								<li class="f-20">Make sure all words are spelled correctly</li>
+								<li class="f-20">Try different keywords</li>
+								<li class="f-20">Try more General words</li>
+							</ul>
+						</div>
 
-					} else {
+					<?php } else {
 
 						foreach ($prod as $product) {
 

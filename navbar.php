@@ -58,7 +58,7 @@ $user = User::getUserById($_SESSION["userid"]);
                     <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
                 </button>
             </li>
-            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
+            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
                 <ul class="dropdown-menu" style="background-color: #252525 !important;">
                     <li><a class="f-18" href="accountsettings.php#topup">
                         <span>

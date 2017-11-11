@@ -43,10 +43,11 @@
                               $unapproved = Product::getUnaprrovedProducts(0);
 
                               if (!$unapproved) {
+                                  ?>
+                                  <div class="lh-100">&nbsp;</div>
+                                  <div class="f-30" align="center"><i class="fa fa-exclamation-triangle"></i>&nbsp;No products need approval</div>
 
-                                echo "<div>No products need approval</div>";
-
-                              } else {
+                              <?php } else {
                                 // Foreach
                                 foreach ($unapproved as $product) {
 
@@ -134,10 +135,10 @@
                             $allprod = Product::getProductsStartingWith($_REQUEST["alpha"]);
 
                           if (!$allprod) {
+                              ?>
+                            <div class="f-30"><i class="fa fa-exclamation-triangle"></i>&nbsp;No products need approval</div>
 
-                            echo "<div>No products need approval</div>";
-
-                          } else {
+                         <?php } else {
                             // Foreach
                             foreach ($allprod as $product) {
 
@@ -408,33 +409,32 @@
               </div><!--End Tab content for third content-->
 
         </div>
+        <script type="text/javascript">
+
+            <?php 
+            $tab = "";
+            $search = "";
+            $alpha = "";
+
+            if (isset($_REQUEST["tab"]))
+                $tab = $_REQUEST["tab"];
+
+            if (isset($_REQUEST["search"]))
+                $search = $_REQUEST["search"];
+
+            if (isset($_REQUEST["alpha"]))
+                $alpha = $_REQUEST["alpha"];
+            ?>
+
+            var openedTab = "<?php echo $tab ?>";
+            var search = "<?php echo $search ?>";
+            var alpha = "<?php echo $alpha ?>";
+        </script>
         <div class="lh-100">&nbsp;</div>
+        <?php include 'footer.php';?>
+        <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/admin.js"></script>
     </body>              
-    <script type="text/javascript">
-      
-      <?php 
-        $tab = "";
-        $search = "";
-        $alpha = "";
-
-        if (isset($_REQUEST["tab"]))
-          $tab = $_REQUEST["tab"];
-
-        if (isset($_REQUEST["search"]))
-          $search = $_REQUEST["search"];
-
-        if (isset($_REQUEST["alpha"]))
-          $alpha = $_REQUEST["alpha"];
-      ?>
-
-      var openedTab = "<?php echo $tab ?>";
-      var search = "<?php echo $search ?>";
-      var alpha = "<?php echo $alpha ?>";
-      
-    </script>
-    <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/admin.js"></script>
-
 </html>
