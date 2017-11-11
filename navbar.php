@@ -33,7 +33,7 @@ $user = User::getUserById($_SESSION["userid"]);
             <?php } ?>
 
         </ul>
-        <div class="col-sm-3 col-md-3 search-position">
+        <div class="col-sm-3 col-md-3 col-md-offset-2 search-position">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search">

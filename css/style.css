@@ -633,7 +633,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    color:transparent;
+    color:transparent !important;
     top:0;
     left:0;
 
@@ -645,7 +645,7 @@ input.form-control{
     border-radius: 25px;
     max-height: 28px;
 }
-select.form-control.f-17{
+select.form-control.f-17,select#sex.form-control{
     border-radius: 25px;
     max-height: 39px; 
 }
@@ -662,6 +662,9 @@ i.fa.fa-search{
 form.navbar-form{
     position: relative;
     top: 4px;
+}
+button#add-to-cart-btn.btn-landslide:hover{
+    color: #fff;
 }
 a{
     color: #fff !important;
@@ -705,7 +708,7 @@ a.btn.btn-lg.active{
     background-color: #252525 !important;
     color: #2a88ad; !important;
 }
-a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover,a:hover{
+a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
     background-color: #252525 !important;
     color: #2b87ad !important;
 }
@@ -713,7 +716,7 @@ a.dropdown-toggle.bg-black:active{
     background-color: #252525 !important;
 }
 ul.dropdown-menu.show{
-    background-color: #252525;
+    background-color: transparent;
     color: #fff;
 }
 .navbar-collapse.in{

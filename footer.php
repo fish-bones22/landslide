@@ -85,9 +85,9 @@
         </div>
         <div class="col-md-6">
             <ul class="bottom_ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="about.php#contacts">Contacts</a></li>
             </ul>
         </div>
     </div>

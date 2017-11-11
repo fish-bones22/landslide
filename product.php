@@ -90,7 +90,7 @@
                         <div class="text-muted small">Downloads: <?php echo $prod->downloads; ?></div>
                         <div class="text-muted small">Date Uploaded: <?php echo $prod->timestamp; ?></div>
                         <div class="lh-15">&nbsp;</div>
-						<a class="btn-landslide" href="/landslide/checkout.php">Proceed to Checkout</a>
+						<a class="btn-landslide" href="/landslide/checkout.php" style="text-decoration:none;">Proceed to Checkout</a>
                     </div>
                     
                     <!-- 
