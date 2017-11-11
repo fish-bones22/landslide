@@ -45,14 +45,14 @@ include'navbar.php';
 				<div class="form-group">
 					<div class="f-17"><label class="" for="prod-name" >Name</label></div>
 					<div class="f-17">
-						<input type="text" class="form-control" id="prod-name" name="prod_name" <?php if ($edit) echo "value='$prod->name'"; ?>/>
+						<input type="text" class="form-control" id="prod-name" name="prod_name" <?php if ($edit) echo "value=\"$prod->name\""; ?>/>
 					</div>
 				</div>
 				<!-- Description -->
 				<div class="form-group">
 					<div class="f-17"><label class="" for="prod-desc">Description</label></div>
 					<div class="f-17">
-						<textarea class="form-control" id="prod-desc" name="prod_desc"><?php if ($edit) echo "$prod->description"; ?></textarea>
+						<textarea class="form-control" id="prod-desc" name="prod_desc" maxlength="511"><?php if ($edit) echo $prod->description; ?></textarea>
 					</div>
 				</div>
 				<!-- Price -->
