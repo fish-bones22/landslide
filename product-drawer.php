@@ -36,19 +36,17 @@
 				<div class="col-md-10">
 
 					<?php
-
 					$prod = Product::getProducts($search_term);
 
 					if ($search_term == "") {
-
-						echo "<div>No Unicorns here.</div>";
-					
+					?>
+						<div class="f-30" align="center"><img src="img/easter/unic.png" style="width: 30px;height: 30px;"></i>&nbsp;No Unicorns here.</div>
+					<?php
 					} else if (!$prod) {
-
-						?>
-						<div class="f-30"><i class="fa fa-exclamation-triangle"></i>&nbsp;No products found</div>
+					?>
+						<div class="f-30" align="center"><i class="fa fa-exclamation-triangle"></i>&nbsp;No products found</div>
 						<div class="lh-15">&nbsp;</div>
-						<div class="f-17 text-danger">Your search -<?php echo($search_term)?>- did not match any documents.</div>
+						<div class="f-17 text-danger" align="center">&emsp;-<?php echo($search_term)?>- did not match any product.</div>
 						<div class="row">
 							<div class="col-md-6 col-xs-6">
 								<div class="lh-50">&nbsp;</div>
@@ -60,7 +58,8 @@
 							<ul>
 								<li class="f-20">Make sure all words are spelled correctly</li>
 								<li class="f-20">Try different keywords</li>
-								<li class="f-20">Try more General words</li>
+								<li class="f-20">Try more general words</li>
+								<li class="f-20">Try being smarter</li>
 							</ul>
 						</div>
 

@@ -18,8 +18,9 @@ $(document).ready(function(){
     $(".btn-close").click(function(){
         var loopDiv = this.closest(".loop");
         var prodId = $(loopDiv).find(".prod-id").val();
-
         var userId = $("#user-id").val();
+        console.log(userId);
+
         $.ajax({  
             type: 'GET',  
             url: 'php/helper-functions/removetocart.php', 

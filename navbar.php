@@ -9,7 +9,6 @@ $user = User::getUserById($_SESSION["userid"]);
 ?>
 <html>
     <head>
-        <title>navbar example</title>
         <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -52,7 +51,7 @@ $user = User::getUserById($_SESSION["userid"]);
                     </form>
                 </div>
                 <ul class="nav navbar-nav">
-                       <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
+                       <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown" style="cursor: pointer;"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
                            <ul class="dropdown-menu" style="background-color: #252525 !important;">
                                <li><a class="f-18" href="accountsettings.php#topup">
                                    <span>
