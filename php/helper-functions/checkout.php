@@ -23,6 +23,8 @@
 		$prod_name = $item[1]->product->name;
 		$price = $item[1]->product->price;
 
+		$item[1]->product->incrementDownload();
+
 		Transaction::saveTransaction($_SESSION["userid"], $prod_id, $prod_name, $price, $trans_id, $item[1]->rating);
 
 		Cart::removeCartItem($_SESSION["userid"], $prod_id);

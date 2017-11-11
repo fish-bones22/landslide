@@ -449,11 +449,27 @@
 			if (!$result) return false;
 
 			return true;
-		}		
+		}
+
+		function incrementDownload() {
+			if ($this->id == null || $this->id == 0) return false;
+
+			$conn = connectToDb("db_avalanche_store");
+
+			$update_query = "UPDATE tbl_product SET downloads = downloads + 1  WHERE prod_id = $this->id;";
+
+			$result = $conn->query($update_query);
+
+			$conn->close();
+
+			if (!$result) return false;
+
+			return true;
+		}
 
 		static function deleteProduct($id) {
 
-			if ($id == null || $id == 0) return -1;
+			if ($id == null || $id == 0) return false;
 
 			$conn = connectToDb("db_avalanche_store");
 
