@@ -294,9 +294,9 @@ body{
     background: #fff;
     width: 200px;
     height: 200px;
-    border-bottom: 50px solid #bdbec0;
+/*    border-bottom: 50px solid #bdbec0;
     padding: 25px;
-    margin: 25px;
+    margin: 25px;*/
     border-radius: 25px;
 }
 .product-box-sm{

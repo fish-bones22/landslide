@@ -23,6 +23,18 @@
   </div>
   <div class="lh-50">&nbsp;</div>
       <div class="container">
+          <div id="background-wrap">
+              <div class="bubble x1"></div>
+              <div class="bubble x2"></div>
+              <div class="bubble x3"></div>
+              <div class="bubble x4"></div>
+              <div class="bubble x5"></div>
+              <div class="bubble x6"></div>
+              <div class="bubble x7"></div>
+              <div class="bubble x8"></div>
+              <div class="bubble x9"></div>
+              <div class="bubble x10"></div>
+          </div>
           <!--trisha-->
           <div class="f-45" align="center">Company Heads and Board of Directors</div>
               <div class="lh-75">&nbsp;</div>
