@@ -118,7 +118,7 @@
 
 				?>
 				<div class="col-md-2 col-sm-4 col-xs-6">
-					<div class='product-box hvr-bob hvr-float-shadow' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
+					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 						<div class="ribbon-top"><span>Top Rated</span></div>
 			          	<div class='product_thumbnail_container'>
 							<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' style="width:200px; height:200px; border-radius:25px;" />
