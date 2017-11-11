@@ -39,7 +39,7 @@
 				<ol class="carousel-indicators">
 					<li data-target="#thumbnail-preview-indicators" data-slide-to="0" class="active">
 						<div class="thumbnail">
-							<img class="img-responsive" src='<?php echo $rated_prod[0]->icon_location ?>' />
+							<img class="img-responsive" src='<?php echo $rated_prod[0]->icon_location ?>'/>
 						</div>
 					</li>
 					<li data-target="#thumbnail-preview-indicators" data-slide-to="1">
@@ -118,15 +118,15 @@
 
 				?>
 				<div class="col-md-2 col-sm-4 col-xs-6">
-					<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
+					<div class='product-box hvr-bob hvr-float-shadow' data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 						<div class="ribbon-top"><span>Top Rated</span></div>
 			          	<div class='product_thumbnail_container'>
-			              <img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+							<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' style="width:200px; height:200px; border-radius:25px;" />
 			          	</div>
 			          	<div class='prod_info'>
-<!--			              <div><strong><?php echo $product->shortname ?></strong></div>
-			              <div class=''><?php echo $product->owner_name ?></div>
-			             	  <div class='row'>
+			             <!-- <div class="col-md-offset-1"><strong><?php echo $product->shortname ?></strong></div>
+							<div class='col-md-offset-1'><?php echo $product->owner_name ?></div>-->
+			    <!--         	  <div class='row'>
 			              	<div class=' text-muted small'>Downloads:<?php echo $product->downloads ?></div>
 			                <div class='text-muted small'><?php echo $product->timestamp ?></div>
 			              </div> -->
@@ -165,19 +165,19 @@
 
 					?>
 					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="product-box hvr-bob" data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
+						<div class="product-box hvr-bob hvr-float-shadow" data-toggle="popover" title="<?php echo $product->name?>" data-content="<?php echo $product->description ?>">
 							<div class="ribbon-new"><span>Newest</span></div>
 							<div class='product_thumbnail_container'>
-								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' style="width:200px; height:200px; border-radius:25px;"/>
 							</div>
-	<!--						<div class=''>
-								<div><strong><?php echo $product->shortname ?></strong></div>
-								<div class=''><?php echo $product->owner_name ?></div>
-							  <div class='row'>
+							<div class=''>
+								<!--<div><strong><?php echo $product->shortname ?></strong></div>
+								<div class=''><?php echo $product->owner_name ?></div>-->
+<!--							  <div class='row'>
 									 <div class='col-auto text-muted small'>Downloads: <?php echo $product->downloads ?></div>
 									 <div class='col-auto text-muted small'><?php echo $product->timestamp ?></div>
-								  </div> 
-							</div>-->
+								  </div>--> 
+							</div>
 							<a href='product.php?id=<?php echo $product->id ?>' class="link-overlay"></a>
 						</div>
 					</div>

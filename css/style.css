@@ -231,15 +231,6 @@ body{
     border-radius: 25px;
 
 }
-/*#thumbnail-preview-indicators .slides .slide-1 {
-    background-image: url(../img/job11.jpg); 
-}
-#thumbnail-preview-indicators .slides .slide-2 {
-    background-image: url(../img/job13.jpg);
-}
-#thumbnail-preview-indicators .slides .slide-3 {
-    background-image: url(../img/job14.jpg);
-}*/
 #thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
     top: 20%;
     bottom: inherit;
@@ -294,9 +285,9 @@ body{
     background: #fff;
     width: 200px;
     height: 200px;
-/*    border-bottom: 50px solid #bdbec0;
-    padding: 25px;
-    margin: 25px;*/
+/*    border-bottom: 50px solid #bdbec0;*/
+   /* padding: 25px;*/
+    margin: 25px;
     border-radius: 25px;
 }
 .product-box-sm{
@@ -312,7 +303,6 @@ body{
     background: #fff;
     width: 300px;
     height: 300px;
-    margin: 25px;
     border-radius: 25px;
     box-shadow: 10px 10px 5px #888888;
 }
@@ -505,6 +495,49 @@ body{
     animation-direction: normal, alternate;
 }
 /*End Bob hover*/
+/* Float Shadow */
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+/*End Float shadow hover*/
 /*Universal button for landslide*/
 .btn-landslide{
     border:0px solid #393B3E;-webkit-box-shadow: #737373 0px 1px 5px ;-moz-box-shadow: #737373 0px 1px 5px ; box-shadow: #737373 0px 1px 5px ; -webkit-border-radius: 25px; -moz-border-radius: 25px;border-radius: 20px;font-size:14px;font-family:arial, helvetica, sans-serif; padding: 10px 20px 10px 20px; text-decoration:none; display:inline-block;text-shadow: 0px 1px 0 rgba(10,10,10,0.5);font-weight:bold; color: #8C8C8C;
@@ -625,8 +658,6 @@ body{
 .product_thumbnail_lg {
 	position: relative;
     width:128px;
-    top: 50px;
-    left: 80px;
 }
 .link-overlay {
     display: inline-block;
