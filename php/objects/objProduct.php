@@ -41,9 +41,9 @@
 		function setValuesByArray($prod_array) 
 		{			
 			$this->id = $prod_array["prod_id"];
-			$this->name = $prod_array["name"];
+			$this->name = stripslashes($prod_array["name"]);
 			$this->shortname = ((strlen($this->name) > 12) ? substr($this->name, 0, 10)."..." : $this->name);
-		 	$this->description = $prod_array["description"];
+		 	$this->description = stripslashes($prod_array["description"]);
 		 	$this->owner = $prod_array["owner"];
 		 	$this->owner_name = $prod_array["dev_name"];
 		 	$this->downloads = $prod_array["downloads"];

@@ -17,8 +17,8 @@
 	$user_id = $_SESSION["userid"];
 	//$user_id = 1;
 	$dev_name = $_REQUEST["dev_name"];
-	$name = $_REQUEST["prod_name"];
-	$desc = $_REQUEST["prod_desc"];
+	$name = addslashes($_REQUEST["prod_name"]);
+	$desc = addslashes($_REQUEST["prod_desc"]);
 	$price = $_REQUEST["prod_price"];
 
 	$edit = 0;
@@ -102,10 +102,13 @@
 	$product->setValues($name, $desc,	$user_id,	$icon_loc,	$file_loc,	$file_size,	$price);
 
 	if (!$edit && $product->addToDatabase()) {
+		// echo "Add";
 		header("Location: ../../dev-dashboard.php?succ=1");
 	} else if ($edit && $product->updateProduct()) {
+		// echo "Edit";
 		header("Location: ../../dev-dashboard.php?succ=1");
 	} else {
+		// echo "Failed";
 		header("Location: ../../dev-dashboard-add.php?err=b");
 	}
 
