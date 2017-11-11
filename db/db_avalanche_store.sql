@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2017 at 04:38 AM
--- Server version: 10.1.24-MariaDB
--- PHP Version: 7.1.6
+-- Generation Time: Nov 11, 2017 at 06:27 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -63,7 +61,8 @@ CREATE TABLE `tbl_dev_info` (
 
 INSERT INTO `tbl_dev_info` (`dev_id`, `user_id`, `dev_name`, `dev_desc`) VALUES
 (1, 1, 'Fishbones', 'Software Developer'),
-(3, 12, 'Developer', 'Developer');
+(3, 12, 'Developer', 'Developer'),
+(4, 13, 'EjAdev', 'Bida Bida');
 
 -- --------------------------------------------------------
 
@@ -94,7 +93,15 @@ INSERT INTO `tbl_product` (`prod_id`, `name`, `description`, `downloads`, `owner
 (39, 'Sample Product', 'Description Sample product. Description Sample product. Description Sample product. Description Sample product. Description Sample product.Description Sample product. Description Sample product. Description Sample product. Description Sample product.Descr', 54, 1, '/landslide/product-files/icons/Sample Product_Dev Name', '/landslide/product-files/zip/Sample Product_Dev Name.zip', 83921, 23, 2, 0, '2017-10-28 12:39:53'),
 (40, 'Product 2', 'Description', 0, 1, '/landslide/product-files/icons/Product 2_Dev Name', '/landslide/product-files/zip/Product 2_Dev Name.zip', 305447, 230, 1, 1, '2017-10-28 12:41:57'),
 (41, 'Another Sample Product', 'Description of another product', 23, 1, '/landslide/product-files/icons/Another Sample Product_Dev Name', '/landslide/product-files/zip/Another Sample Product_Dev Name.zip', 335944, 231, 2, 1, '2017-10-28 14:12:31'),
-(42, 'Yet Another Sample', 'Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Anothe', 0, 1, '/landslide/product-files/icons/Yet Another Sample_Dev Name', '/landslide/product-files/zip/Yet Another Sample_Dev Name.zip', 954845, 231, 1, 1, '2017-10-28 16:12:10');
+(42, 'Yet Another Sample', 'Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Anothe', 0, 1, '/landslide/product-files/icons/Yet Another Sample_Dev Name', '/landslide/product-files/zip/Yet Another Sample_Dev Name.zip', 954845, 231, 1, 1, '2017-10-28 16:12:10'),
+(43, 'Apollo 11', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Apollo 11_Dev Name', '/landslide/product-files/zip/Apollo 11_Dev Name.zip', 305447, 300, 1, 1, '2017-11-11 09:15:37'),
+(44, 'Blog Designer', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Blog Designer_Dev Name', '/landslide/product-files/zip/Blog Designer_Dev Name.zip', 305447, 431, 1, 1, '2017-11-11 09:17:10'),
+(45, 'Efx Player', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Efx Player_Dev Name', '/landslide/product-files/zip/Efx Player_Dev Name.zip', 305447, 540, 1, 1, '2017-11-11 09:18:51'),
+(46, 'Enigma', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Enigma_Dev Name', '/landslide/product-files/zip/Enigma_Dev Name.zip', 305447, 120, 1, 1, '2017-11-11 09:21:06'),
+(47, 'FilterMail', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/FilterMail_Dev Name', '/landslide/product-files/zip/FilterMail_Dev Name.zip', 305447, 234, 1, 1, '2017-11-11 09:22:12'),
+(48, 'Looper', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Looper_Dev Name', '/landslide/product-files/zip/Looper_Dev Name.zip', 305447, 453, 1, 1, '2017-11-11 09:23:11'),
+(49, 'SliderRevo', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/SliderRevo_Dev Name', '/landslide/product-files/zip/SliderRevo_Dev Name.zip', 305447, 230, 1, 1, '2017-11-11 09:24:41'),
+(50, 'UniVerter', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/UniVerter_Dev Name', '/landslide/product-files/zip/UniVerter_Dev Name.zip', 305447, 272, 1, 1, '2017-11-11 09:25:29');
 
 -- --------------------------------------------------------
 
@@ -174,7 +181,8 @@ INSERT INTO `tbl_user` (`user_id`, `email`, `password`, `type`, `fname`, `lname`
 (2, 'avalancheteam@gmail.com', '12345', 2, 'Avalanche', 'Team', 1, 210201000000, 1, '2017-11-09 16:22:51'),
 (3, '0101@gmail.com', '1234', 1, 'Neil', 'Armstrong', 1, NULL, 1, '2017-11-09 23:15:33'),
 (5, 'thor@gmail.com', '1234', 1, 'Thor', 'Of Asgard', 1, NULL, 1, '2017-11-09 23:31:29'),
-(12, 'dev@gmail.com', '1234', 2, 'Developer', 'Team', 1, NULL, 1, '2017-11-09 23:55:04');
+(12, 'dev@gmail.com', '1234', 2, 'Developer', 'Team', 1, NULL, 1, '2017-11-09 23:55:04'),
+(13, 'drawdej963@gmail.com', '123456', 3, 'Ej', 'Mindanao', 1, NULL, 1, '2017-11-11 09:11:20');
 
 --
 -- Indexes for dumped tables
@@ -230,12 +238,12 @@ ALTER TABLE `tbl_cart`
 -- AUTO_INCREMENT for table `tbl_dev_info`
 --
 ALTER TABLE `tbl_dev_info`
-  MODIFY `dev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `dev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `tbl_prod_stat`
 --
@@ -250,8 +258,7 @@ ALTER TABLE `tbl_transaction`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;COMMIT;
-
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

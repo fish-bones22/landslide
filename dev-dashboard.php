@@ -29,13 +29,13 @@
 				<div class="form-inline">				
 					<h3>Products </h3>
 					<div class="">
-						<a href="dev-dashboard-add.php" class="btn-landslide">+ Add Products</a>
+						<a href="dev-dashboard-add.php" style="text-decoration:none;" class="btn-landslide">+ Add Products</a>
 					</div>
 				</div>
 				<hr />
 
 				<div class="row">
-					<div class="col-auto f-17">Filter:</div>
+					<div class="col-md-1 f-17">Filter:</div>
 					<div class="col-sm-3">
 						<select class="form-control" id="status-filter">
 							<option value="-1">All</option>
@@ -55,7 +55,9 @@
 
 				if (!$prod_array) {
 
-					echo "<div>No Uploads</div>";
+					echo "<label class=\"f-12 col-md-3\">No Uploads</label>
+							<div class=\"lh-50\">&nbsp;</div> 
+					";
 
 				} else {
 
@@ -75,12 +77,12 @@
 				<div class='row dashboard-product-box'>
 					<a href='product.php?id=<?php echo $prod->id ?>'>
 						<div class='col-md-2 col-xs-2'>
-							<img class='product_thumbnail' src='<?php echo $prod->icon_location; ?>' />
+							<img class='product_thumbnail' src='<?php echo $prod->icon_location; ?>' style="width:100px; height:100px; border-radius:20px;" />
 						</div>
 					</a>
 					<div class='col-md-10 col-xs-9'>
 						<div>
-							<strong><a href='product.php?id= <?php echo $prod->id ?>'> <?php echo $prod->name ?></a></strong>
+							<strong><a href='product.php?id= <?php echo $prod->id ?>' style="text-decoration:none;"> <?php echo $prod->name ?></a></strong>
 							<br>	
 							<a href='dev-dashboard-add.php?id= <?php echo $prod->id ?>' class='small text-warning'>Edit</a>
 							<a href='php/helper-functions/deleteproduct.php?id= <?php echo $prod->id ?>'  class='small text-danger'>Delete</a>

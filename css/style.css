@@ -693,7 +693,7 @@ input.form-control{
     border-radius: 25px;
     max-height: 28px;
 }
-select.form-control.f-17,select#sex.form-control{
+select.form-control.f-17,select#sex.form-control,select#status-filter.form-control{
     border-radius: 25px;
     max-height: 39px; 
 }
@@ -736,6 +736,9 @@ a.btn.btn-lg{
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
     padding: 5px;
+}
+a.btn-landslide:hover{
+    color: #fff;
 }
 a.btn.btn-lg:hover{
     background-color: #BBBDC0;

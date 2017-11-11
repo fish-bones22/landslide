@@ -95,8 +95,8 @@ include'navbar.php';
 
 				<div class="form-inline">
 					<div class="">
-						<input type="submit" class="btn btn-primary" id="prod-submit" value="<?php if ($edit) echo "Save"; else echo "+Add"; ?>" />
-						<input type="reset" class="btn btn-secondary" id="prod-cancel" value="Reset" />
+						<input type="submit" class="btn-landslide-casual" id="prod-submit" value="<?php if ($edit) echo "Save"; else echo "+Add"; ?>" />
+						<input type="reset" class="btn-landslide-casual" id="prod-cancel" value="Reset" />
 					</div>
 					</div>
 				</div>

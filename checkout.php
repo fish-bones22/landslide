@@ -37,11 +37,11 @@
                     <div class="row">
                       <div class="col-md-3 col-xs-3">
                         <div class="product-box-sm">
-                          <img class="product_thumbnail" src="<?php echo $item[1]->product->icon_location ?>">
+                          <img class="product_thumbnail" src="<?php echo $item[1]->product->icon_location ?>" style="width:100px; height:100px; border-radius:25px;">
                         </div>
                       </div>
                     <div class="col-md-5 col-xs-5">
-                      <a class="label-price" href="product.php?id=<?php echo $item[1]->product->id ?>" ><?php echo $item[1]->product->name ?></a>
+                      <a class="label-price" style="text-decoration:none;" href="product.php?id=<?php echo $item[1]->product->id ?>" ><?php echo $item[1]->product->name ?></a>
                    </div>
                    <div class="col-md-3 col-xs-3">
                      <p class="price"><span><img src="img/Avacoin.svg" style="width:20px; height:20px;" >&nbsp;<?php echo $item[1]->product->price ?></span></p>
@@ -72,7 +72,7 @@
                  <input type="checkbox" class="f-17" id="terms"/><label class="f-14" for="terms">&nbsp;I agree to landslide Terms and Conditions</label>
              </div>
             <div class="col-md-4 col-xs-4">
-                <a href="accountsettings.php#topup" class="btn-link"><span><img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;Add Avacoins</span></a>
+                <a href="accountsettings.php#topup" style="text-decoration:none;" class="btn-link"><span><img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;Add Avacoins</span></a>
             </div>
             <div class="col-md-8 col-xs-8" align="right">
               <form method="POST" action="php/helper-functions/checkout.php">
