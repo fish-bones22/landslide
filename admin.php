@@ -14,7 +14,7 @@
     require_once $_SERVER["DOCUMENT_ROOT"].'/landslide/php/objects/objDeveloper.php'; 
     
 
-    if (!isset($_SESSION["isadmin"]) || $_SESSION["isadmin"] == false) header("Location: index.php");
+    if (!isset($_SESSION["isadmin"]) || $_SESSION["isadmin"] == false) header("Location: /landslide/");
 
     ?>
     <?php include 'navbar.php'; ?>

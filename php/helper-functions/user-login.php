@@ -28,7 +28,7 @@
 		if ($user->type == 3) {
 			$_SESSION["isadmin"] = 1;
 		}
-		header("Location: /landslide/index.php");
+		header("Location: /landslide/");
 	} else {
 		echo "NO";
 		$_SESSION['error'] = 1;
