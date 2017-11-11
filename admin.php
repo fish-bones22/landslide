@@ -17,9 +17,8 @@
     if (!isset($_SESSION["isadmin"]) || $_SESSION["isadmin"] == false) header("Location: /landslide/");
 
     ?>
-    <?php include 'navbar.php'; ?>
-    <div class="lh-75">&nbsp;</div>
     <body class="bg-gray2">
+       <?php include 'navbar.php'; ?>
        <div class="f-45 container">Administrator Page</div>
        <div class="lh-50">&nbsp;</div>
         <div class="row">

@@ -26,6 +26,7 @@
 			$_SESSION['isdev'] = 1;
 		}
 		if ($user->type == 3) {
+			$_SESSION['isdev'] = 1;
 			$_SESSION["isadmin"] = 1;
 		}
 		header("Location: /landslide/");

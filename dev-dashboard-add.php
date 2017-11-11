@@ -25,7 +25,7 @@ include'navbar.php';
 		if (isset($_REQUEST["id"]) && $_SESSION["isdev"]) {
 			 $edit = 1;
 			 $prod = Product::getProductById($_REQUEST["id"], 1);
-
+			 
 			 // If no product
 			 if (!$prod) $edit = 0;
 
