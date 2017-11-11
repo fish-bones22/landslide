@@ -137,13 +137,13 @@
 					if ($product->approval != 1 && !$_SESSION["isdev"]) continue;
 			?>
 			<div class="col-md-3">
-				<div class='product-box hvr-bob' data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
+				<div class='product-box hvr-bob hvr-float-shadow' data-toggle="popover" title="<?php echo $product->name?>" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate esse magni unde sapiente, perspiciatis iure quos possimus! Quidem, impedit ab?">
 					<div class='product_thumbnail_container'>
-						<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+						<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' style="width:200px; height:200px; border-radius:25px;"/>
 					</div>
 					<div class='prod_info'>
-						<div><strong><?php echo $product->name ?></strong></div>
-						<div class=''><?php echo $product->owner_name ?></div>
+<!--						<div><strong><?php echo $product->name ?></strong></div>
+						<div class=''><?php echo $product->owner_name ?></div>-->
 						<a href='product.php?id=<?php echo $product->id ?>' class="link-overlay"></a>
 					</div>
 				</div>
