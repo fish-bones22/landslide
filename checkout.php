@@ -41,7 +41,7 @@
                         </div>
                       </div>
                     <div class="col-md-5 col-xs-5">
-                      <a class="label-price" style="text-decoration:none;" href="product.php?id=<?php echo $item[1]->product->id ?>" ><?php echo $item[1]->product->name ?></a>
+                      <a class="label-price" style="text-decoration:none;" href="product.php?id=<?php echo $item[1]->product->id ?>" ><?php echo $item[1]->product->midname ?></a>
                    </div>
                    <div class="col-md-3 col-xs-3">
                      <p class="price"><span><img src="img/Avacoin.svg" style="width:20px; height:20px;" >&nbsp;<?php echo $item[1]->product->price ?></span></p>

@@ -45,7 +45,7 @@ include'navbar.php';
 				<div class="form-group">
 					<div class="f-17"><label class="" for="prod-name" >Name</label></div>
 					<div class="f-17">
-						<input type="text" class="form-control" id="prod-name" name="prod_name" <?php if ($edit) echo "value=\"$prod->name\""; ?>/>
+						<input type="text" class="form-control" maxlength="18" id="prod-name" name="prod_name" <?php if ($edit) echo "value=\"$prod->name\""; ?> />
 					</div>
 				</div>
 				<!-- Description -->
