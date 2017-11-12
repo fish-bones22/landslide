@@ -40,11 +40,7 @@
                 } else {
                ?>
                <div class="f-45">Checkout Successful</div>
-               <?php
-                }
-                ?>
-               <div class="f-20">Your download will begin in a moment.</div>
-               <div class="">
+               <div class="f-20">Your download will begin in a moment.</div>               <div class="">
                     <div class="container-fluid card" id="receipt">
                         <div class="row">
                             <div class="col-xs-2 col-xs-offset-3">
@@ -119,6 +115,10 @@
                         class="btn-landslide-approve">Save Receipt as PDF</button>
                     </div>
                </div>
+               <?php
+                }
+                ?>
+
             </div>
           </div>
 
