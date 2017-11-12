@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2017 at 06:27 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.1
+-- Generation Time: Nov 12, 2017 at 04:26 PM
+-- Server version: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -91,7 +93,7 @@ CREATE TABLE `tbl_product` (
 
 INSERT INTO `tbl_product` (`prod_id`, `name`, `description`, `downloads`, `owner`, `icon_location`, `file_location`, `file_size`, `price`, `approval`, `status`, `timestamp`) VALUES
 (39, 'Sample Product', 'Description Sample product. Description Sample product. Description Sample product. Description Sample product. Description Sample product.Description Sample product. Description Sample product. Description Sample product. Description Sample product.Descr', 54, 1, '/landslide/product-files/icons/Sample Product_Dev Name', '/landslide/product-files/zip/Sample Product_Dev Name.zip', 83921, 23, 2, 0, '2017-10-28 12:39:53'),
-(40, 'Product 2', 'Description', 0, 1, '/landslide/product-files/icons/Product 2_Dev Name', '/landslide/product-files/zip/Product 2_Dev Name.zip', 305447, 230, 1, 1, '2017-10-28 12:41:57'),
+(40, 'McDonald\'s', 'Finally, McDonald\'s Source code is finally released Open-Source. Look through the internal workings of the world famous Obesityâ„¢ maker and wonder in its amazing greatness. Soon to be bundled: the popular and to-die-for Schezwan Sauce source code.', 0, 1, '/landslide/product-files/icons/Product 2_Dev Name', '/landslide/product-files/zip/McDonald\'s_Dev Name.zip', 305447, 230, 1, 1, '2017-10-28 12:41:57'),
 (41, 'Another Sample Product', 'Description of another product', 23, 1, '/landslide/product-files/icons/Another Sample Product_Dev Name', '/landslide/product-files/zip/Another Sample Product_Dev Name.zip', 335944, 231, 2, 1, '2017-10-28 14:12:31'),
 (42, 'Yet Another Sample', 'Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Another Sample Product. Description of Anothe', 0, 1, '/landslide/product-files/icons/Yet Another Sample_Dev Name', '/landslide/product-files/zip/Yet Another Sample_Dev Name.zip', 954845, 231, 1, 1, '2017-10-28 16:12:10'),
 (43, 'Apollo 11', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam hic rem officia, cumque animi beatae nemo maiores ab, excepturi odit consequuntur dicta obcaecati fugiat ducimus repellat magni nam sed similique voluptatum sequi! Fugit maiores sint, sequi la', 0, 13, '/landslide/product-files/icons/Apollo 11_Dev Name', '/landslide/product-files/zip/Apollo 11_Dev Name.zip', 305447, 300, 1, 1, '2017-11-11 09:15:37'),
@@ -258,7 +260,8 @@ ALTER TABLE `tbl_transaction`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
