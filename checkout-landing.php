@@ -32,7 +32,17 @@
             <!--convert to php loop every div.loop-->
            <div class="col-md-6 col-xs-12">
                <div class="lh-100">&nbsp;</div>
+                <?php
+                if ($verification != "") {
+                ?>
+               <div class="f-45 text-danger">Checkout Unsuccessful</div>
+               <?php
+                } else {
+               ?>
                <div class="f-45">Checkout Successful</div>
+               <?php
+                }
+                ?>
                <div class="f-20">Your download will begin in a moment.</div>
                <div class="">
                     <div class="container-fluid card" id="receipt">
