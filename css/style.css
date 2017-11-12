@@ -17,13 +17,13 @@
         left: 0px !important;
     }
     div#navbar-collapse-1.navbar-collapse.collapse.in{
-        min-height: 370px;
+        max-height: 470px;
         overflow-x: hidden;
     }
     .cart-position{
-        position: fixed;
-        top: -50px;
-        left: 150px;
+        position: absolute;
+        top: -130px;
+        left: 240px;
     }
 }
 .logo-position{
@@ -655,7 +655,7 @@ body{
 
 }
 .search-position{
-    margin-left: 170px;
+    margin-left: 167px;
 }
 input.form-control{
     border-radius: 25px;
@@ -682,8 +682,17 @@ form.navbar-form{
 button#add-to-cart-btn.btn-landslide:hover{
     color: #fff;
 }
+.bg-nav:hover{
+    background-color: #252525 !important;
+}
 a{
     color: #fff;
+}
+
+a.btn-collapsed{
+    color: #fff !important;
+    font-family: Proxima Nova;
+    font-weight: normal;
 }
 a.btn{
     color: #58585B;
@@ -730,6 +739,9 @@ a.btn.btn-lg.active{
 a.f-18:hover,i.fa.fa-user:hover,a.dropdown-toggle.bg-black:hover,ul.dropdown-menu:hover{
     background-color: #252525 !important;
     color: #2b87ad !important;
+}
+a.col-md-3.col-xs-3.bg-nav.open{
+    background-color: #252525 !important;
 }
 a.dropdown-toggle.bg-black:active{
     background-color: #252525 !important;
