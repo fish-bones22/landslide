@@ -7,9 +7,14 @@ $cart = Cart::getCartByUser($_SESSION["userid"]);
 $user = User::getUserById($_SESSION["userid"]);
 
 ?>
-    <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
-    <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+<html>
+    <head>
+        <title>navbar example</title>
+        <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
+        <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
         <nav class="navbar bg-black" style="margin-top: 60px;">
             <div class="navbar-header navbar-inverse">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
@@ -19,7 +24,7 @@ $user = User::getUserById($_SESSION["userid"]);
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <a class="navbar-brand logo-position" href="/landslide/"><img src="img/logo.png" style="width: 140px; height: 140px;"/></a>
+            <a class="navbar-brand" href="/landslide/"><img src="img/logo.png" class="logo-position" style="width: 140px; height: 140px;"/></a>
             <div class="container-fluid">
              <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
@@ -76,3 +81,8 @@ $user = User::getUserById($_SESSION["userid"]);
               </div>
             </div>
         </nav>
+        <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

@@ -14,7 +14,7 @@
 
 		// Temporary.
 
-		include'sample.php';
+		include'navbar.php';
 
 	?>
 	<div class="container">
