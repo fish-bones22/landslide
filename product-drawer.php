@@ -74,7 +74,7 @@
 					<div class='row'>
 						<div class="col-md-6 col-xs-6">
 							<div class='product_thumbnail_container'>
-								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' />
+								<img class='product_thumbnail' src='<?php echo $product->icon_location ?>' style="width:130px; height:130px; border-radius:20px;   box-shadow: 5px 5px 5px #888888;" />
 							</div>
 						</div>
 						<div class="lh-15">&nbsp;</div>

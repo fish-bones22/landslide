@@ -36,7 +36,7 @@ $user = User::getUserById($_SESSION["userid"]);
             <?php } ?>
 
         </ul>
-        <div class="col-sm-3 col-md-3 col-md-offset-2 search-position">
+        <div class=" col-md-3 col-md-offset-2 col-xs-offset-1 search-position">
             <form class="navbar-form" role="search" method="get" action="product-drawer.php">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search">
@@ -47,31 +47,32 @@ $user = User::getUserById($_SESSION["userid"]);
             </form>
         </div>
         <ul class="nav navbar-nav">
-            <li class="popover-cart" >
-                <input type="hidden" id="cart-val" value="<?php echo count($cart->cart_items);?>">
-                <button type="button"
-                        class="btn-cart"  
-                        data-toggle="popover-cart" 
-                        onclick="goToCheckout()"
-                        title=" Number of Items: <?php echo count($cart->cart_items);?>" 
-                        data-content="Total: <?php echo $cart->getTotalPrice();?>">
-                    <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
-                </button>
-            </li>
-            <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
-                <ul class="dropdown-menu" style="background-color: #252525 !important;">
-                    <li><a class="f-18" href="accountsettings.php#topup">
-                        <span>
-                            <img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;
-                            <?php echo ($user->currency_amount == 0) ? "0" : $user->currency_amount ?>
-                        </span>
-                        </a></li>
-                    <li class="divider"></li>
-                    <li><a href="accountsettings.php" class="f-18" alt="top-up"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
-                </ul>
-            </li>
+         
+               <li class="dropdown"><a class="dropdown-toggle bg-black" data-toggle="dropdown"><i class="fa fa-user-circle-o icon-x3" aria-hidden="true" style="font-size: 1.5em;"></i>&nbsp;<?php echo $user->fname;?></a>
+                   <ul class="dropdown-menu" style="background-color: #252525 !important;">
+                       <li><a class="f-18" href="accountsettings.php#topup">
+                           <span>
+                               <img src="img/Avacoin.svg" style="width:20px; height:20px;">&nbsp;
+                               <?php echo ($user->currency_amount == 0) ? "0" : $user->currency_amount ?>
+                           </span>
+                           </a></li>
+                       <li class="divider"></li>
+                       <li><a href="accountsettings.php" class="f-18" alt="top-up"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Settings</a></li>
+                       <li class="divider"></li>
+                       <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
+                   </ul>
+               </li>
+               <li class="popover-cart cart-position" >
+                   <input type="hidden" id="cart-val" value="<?php echo count($cart->cart_items);?>">
+                   <button type="button"
+                           class="btn-cart"  
+                           data-toggle="popover-cart" 
+                           onclick="goToCheckout()"
+                           title=" Number of Items: <?php echo count($cart->cart_items);?>" 
+                           data-content="Total: <?php echo $cart->getTotalPrice();?>">
+                       <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
+                   </button>
+               </li>
         </ul>
       </div>
     </div>

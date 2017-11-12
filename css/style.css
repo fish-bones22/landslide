@@ -16,6 +16,15 @@
         top: -85px !important;
         left: 0px !important;
     }
+    div#navbar-collapse-1.navbar-collapse.collapse.in{
+        min-height: 370px;
+        overflow-x: hidden;
+    }
+    .cart-position{
+        position: fixed;
+        top: -50px;
+        left: 150px;
+    }
 }
 .logo-position{
     position: relative;
