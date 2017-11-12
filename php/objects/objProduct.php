@@ -111,7 +111,6 @@
 			if ($this->icon_location == null || $this->icon_location == "") return false;
 			if ($this->price == null || $this->price == 0) 									return false;
 
-			echo "HELLO";
 
 			$this->conn = connectToDb("db_avalanche_store");
 
@@ -199,7 +198,7 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1 AND approval = 1
 			ORDER BY downloads DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
@@ -231,7 +230,7 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id  WHERE status = 1
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id  WHERE status = 1  AND approval = 1
 			ORDER BY `timestamp` DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
@@ -262,7 +261,7 @@
 
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
-			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1
+			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1  AND approval = 1
 			ORDER BY downloads DESC LIMIT $count;";
 
 			$result = $conn->query($select_query);
@@ -294,13 +293,13 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE name LIKE '%$search%' AND status = 1 ORDER BY NAME;";
+			WHERE name LIKE '%$search%' AND status = 1 AND approval = 1 ORDER BY NAME;";
 
 
 			if ($search == "ALLPRODUCTS")
 				$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 				FROM tbl_product
-				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1 
+				JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id WHERE status = 1 AND approval = 1 
 				ORDER BY name;";
 
 
@@ -333,7 +332,7 @@
 			$select_query = "SELECT *, DATE_FORMAT(tbl_product.timestamp, '%b %d, %Y') as tmstmp
 			FROM tbl_product
 			JOIN tbl_dev_info ON tbl_product.owner = tbl_dev_info.user_id
-			WHERE name LIKE '$search%' AND status = 1 ORDER BY NAME;";
+			WHERE name LIKE '$search%' AND status = 1  AND approval = 1 ORDER BY NAME;";
 
 			$result = $conn->query($select_query);
 
