@@ -73,7 +73,7 @@ INSERT INTO `tbl_dev_info` (`dev_id`, `user_id`, `dev_name`, `dev_desc`) VALUES
 CREATE TABLE `tbl_product` (
   `prod_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(511) NOT NULL,
   `downloads` int(11) NOT NULL DEFAULT '0',
   `owner` int(11) NOT NULL,
   `icon_location` varchar(255) NOT NULL,

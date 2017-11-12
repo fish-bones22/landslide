@@ -52,7 +52,7 @@
               </div>
               <div class="lh-15">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                  <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                  <div class="f-20">No words for her. She's the boss.</div>
               </div>
               <!--End Trisha-->
               <!--sam-->
@@ -72,7 +72,7 @@
               </div>
               <div class="lh-50">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                    <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                    <div class="f-20">He makes things. He unmakes them too.</div>
               </div>
                <!--End Sam-->
                <!--jdsour-->
@@ -93,7 +93,7 @@
               </div>
               <div class="lh-15">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                  <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                  <div class="f-20">Special Skill: He can sleepkajsflkakdsjnfjkdsljfm...</div>
               </div>
                <!--End jdsour-->
                <!--ej-->
@@ -114,7 +114,7 @@
               </div>
               <div class="lh-15">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                  <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                  <div class="f-20">Specializes in designing user interfaces by deveoping functional and smooth, easy to operate and eye cathing websites. Wrties webpages by a combination of different language, performs website maintenance and enhancements and providing assistance to the back-end developers in troubleshooting and development.</div>
               </div>
                <!--End Ej-->
                <!--Marx-->
@@ -135,7 +135,7 @@
               </div>
               <div class="lh-15">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                  <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                  <div class="f-20">He makes sure everything is user-friendly. He is critical on balancing aesthetics and functionality of a certain product. He's also user-friendly.</div>
               </div>
                <!--End Marx-->
                <!--jerome-->
@@ -156,7 +156,7 @@
               </div>
               <div class="lh-15">&nbsp;</div>
               <div class="col-md-12 col-xs-12">
-                  <div class="f-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate necessitatibus culpa voluptas, id optio. Totam aspernatur dicta officiis sunt nam dolore placeat. Culpa aspernatur illum mollitia tempora quia eum reprehenderit.50</div>
+                  <div class="f-20">Specializes in quality assurance, which tests out every app's function, app's non-functional function, and everything else that functional and non-functional.</div>
               </div>
                <!--End Jerome-->
 
