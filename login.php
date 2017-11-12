@@ -12,7 +12,7 @@
 	?>
 	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/login.min.css">
 	<form action="php/helper-functions/user-login.php" method="post">
 		<div class="container">
 			<div id="login-box">

@@ -4,7 +4,7 @@
   <title>Landslide</title>
   <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
   <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/about.css" rel="stylesheet" type="text/css">
+  <link href="css/about.min.css" rel="stylesheet" type="text/css">
  </head>
  <body class="bg-gray2">
   <?php
@@ -185,6 +185,6 @@
   <?php include 'footer.php'; ?>
   <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/about.js"></script>
+  <script type="text/javascript" src="js/about.min.js"></script>
  </body>
 </html>

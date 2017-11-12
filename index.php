@@ -3,7 +3,7 @@
 <head>
 	<title>Landslide</title>
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="bg-gray2">
 	<?php 
@@ -196,6 +196,6 @@
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap/js/popper.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>

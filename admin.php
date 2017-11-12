@@ -4,7 +4,7 @@
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
         <link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/style.min.css" rel="stylesheet" type="text/css">
     </head>
     <?php 
     session_start();
@@ -433,7 +433,7 @@
         <?php include 'footer.php';?>
         <script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/admin.js"></script>
+        <script type="text/javascript" src="js/main.min.js"></script>
+        <script type="text/javascript" src="js/admin.min.js"></script>
     </body>              
 </html>

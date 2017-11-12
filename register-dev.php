@@ -4,7 +4,7 @@
 <title>Register</title>
 	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="bg-gray2">
 <form action="/landslide/php/helper-functions/add-dev.php" method="post">
@@ -30,8 +30,5 @@
 	</div>
 	<div class="col-md-4 col-xs-2"></div>
 </form>
-	<script type="text/javascript" src="vendors/particle/particles.js"></script>
-	<script type="text/javascript" src="vendors/particle/particles.min.js"></script>
-	<script type="text/javascript" src="vendors/particle/app.js"></script>
 </body>
 </html>

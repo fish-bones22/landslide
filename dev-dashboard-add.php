@@ -115,6 +115,6 @@ include'navbar.php';
 	<?php include'footer.php'; ?>
 	<script type="text/javascript" src="vendors/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="vendors/bootstrap3/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>
