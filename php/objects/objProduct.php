@@ -12,6 +12,7 @@
 		public $id;
 		public $name;
 		public $shortname;
+		public $midname;
 		public $description;
 		public $owner;
 		public $owner_name;
@@ -43,6 +44,7 @@
 			$this->id = $prod_array["prod_id"];
 			$this->name = stripslashes($prod_array["name"]);
 			$this->shortname = ((strlen($this->name) > 12) ? substr($this->name, 0, 10)."..." : $this->name);
+			$this->midname = ((strlen($this->name) > 18) ? substr($this->name, 0, 16)."..." : $this->name);
 		 	$this->description = stripslashes($prod_array["description"]);
 		 	$this->owner = $prod_array["owner"];
 		 	$this->owner_name = $prod_array["dev_name"];
