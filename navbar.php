@@ -65,7 +65,7 @@ $user = User::getUserById($_SESSION["userid"]);
                                <li><a href="/landslide/login.php" class="f-18"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out</a></li>
                            </ul>
                        </li>
-                       <li class="popover-cart cart-position" >
+             <!--          <li class="popover-cart cart-position" >
                            <input type="hidden" id="cart-val" value="<?php echo count($cart->cart_items);?>">
                            <button type="button"
                                    class="btn-cart"  
@@ -75,7 +75,7 @@ $user = User::getUserById($_SESSION["userid"]);
                                    data-content="Total: <?php echo $cart->getTotalPrice();?>">
                                <i  class="fa fa-shopping-cart" aria-hidden="true" style="font-size:2.0em;"><span class="badge"><?php echo count($cart->cart_items);?></span></i>
                            </button>
-                       </li>
+                       </li>-->
                 </ul>
               </div>
             </div>
