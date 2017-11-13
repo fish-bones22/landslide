@@ -20,7 +20,7 @@
 	while ($item = each($cart->cart_items)) {
 
 		$prod_id =  $item[1]->product->id;
-		$prod_name = $item[1]->product->name;
+		$prod_name = addslashes($item[1]->product->name);
 		$price = $item[1]->product->price;
 
 		$item[1]->product->incrementDownload();

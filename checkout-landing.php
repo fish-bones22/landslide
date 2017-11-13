@@ -12,9 +12,12 @@
         }
 
         $transactions = Transaction::getTransactionsById($_REQUEST["trans"]);
+        $verification = "";
 
-        if (!$transactions || count($transactions) <= 0) 
-            header("Location: /landslide/");
+        if (!$transactions || count($transactions) <= 0) {
+            $transactions = array(new Transaction);
+            $verification = "NO TRANSACTION";
+        }
 
         $user = User::getUserById($_SESSION["userid"]);
 
@@ -29,15 +32,28 @@
             <!--convert to php loop every div.loop-->
            <div class="col-md-6 col-xs-12">
                <div class="lh-100">&nbsp;</div>
+                <?php
+                if ($verification != "") {
+                ?>
+               <div class="f-45 text-danger">Checkout Unsuccessful</div>
+               <?php
+                } else {
+               ?>
                <div class="f-45">Checkout Successful</div>
-               <div class="f-20">Your download will begin in a moment.</div>
-               <div class="">
+               <div class="f-20">Your download will begin in a moment.</div>               <div class="">
                     <div class="container-fluid card" id="receipt">
                         <div class="row">
                             <div class="col-xs-2 col-xs-offset-3">
                                 <img src="img/logo_hc.png" style="width: 60px;height: 60px;">
                             </div>
                             <div class="col-xs-5">
+                                <?php
+                                if ($verification != "") {
+                                ?>
+                                <div class="f-40 text-danger"><?php echo $verification?></div>
+                                <?php
+                                }
+                                ?>
                                 <div class="f-30">Landslide&trade;</div>
                                 <div class="f-14">Avalanche&trade; Corporation</div>
                             </div>
@@ -91,9 +107,18 @@
                     <div class="lh-15">&nbsp;</div>
                     <div class="form-group" align="right">
                         <button onclick="downloadZips()" class="btn-link">Click here if the download had not started...</button>
-                        <button id="btn-create" class="btn-landslide-approve">Save Receipt as PDF</button>
+                        <button
+                        <?php 
+                        if ($verification != "") { echo "disabled=''";}
+                        ?>
+                        id="btn-create" 
+                        class="btn-landslide-approve">Save Receipt as PDF</button>
                     </div>
                </div>
+               <?php
+                }
+                ?>
+
             </div>
           </div>
 
@@ -107,7 +132,13 @@
         <script type="text/javascript" src="vendors/html2canvas/html2canvas.min.js"></script>
         <script type="text/javascript" src="vendors/jsPdf/jspdf.debug.js"></script>
         <script type="text/javascript" src="js/main.min.js"></script>
+        <?php 
+        if ($verification == "") {
+        ?>
         <script type="text/javascript" src="js/checkout-landing.min.js"></script>
+        <?php
+        }
+        ?>
 
     </body>
 </html>
