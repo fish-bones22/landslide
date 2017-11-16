@@ -7,8 +7,11 @@
 <div>
 	<?php
 	session_start();
+	require_once 'php/helper-functions/dbconnect.php';
+	require_once 'php/helper-functions/authenticate_.php';
+	
 	if (isset($_SESSION["userid"]))
-		session_destroy(); 
+		session_destroy();
 	?>
 	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">

@@ -162,7 +162,7 @@
                             <label class="" for="currency" >Buy Avacoins using <i>PayDaya</i></label>
                           </div>
                            <div class="form-inline">
-                              <input type="number" class="form-control" id="currency" name="currency" max="100000" />
+                              <input type="number" class="form-control" id="currency" name="currency" min="0" max="100000" />
                               <input type="submit" class="btn-landslide-approve" value="Add">
                            </div>
                        </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php require_once 'php/helper-functions/authenticate_.php'; ?>
 	<title>Register Page</title>
 	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -17,23 +18,23 @@
 		<div class="lh-50">&nbsp;</div>
 			<div class="form-group">
 				<label class="f-17">Email:</label>
-				<input class="f-17 form-control" type="email" name="email">
+				<input class="f-17 form-control" type="email" name="email" required>
 			</div>
 			<div class="form-group">
 				<label class="f-17">Password:</label>
-				<input type="password" name="password" class="form-control f-17">
+				<input type="password" name="password" class="form-control f-17" required>
 			</div>
 			<div class="form-group">
 				<label class="f-17">Confirm Password:</label>
-				<input type="password" name="confirmPw" class="form-control f-17">	
+				<input type="password" name="confirmPw" class="form-control f-17" required>	
 			</div>
 			<div class="form-group">
 				<label class="f-17">First Name:</label>
-				<input type="text" name="fname" class="form-control f-17">
+				<input type="text" name="fname" class="form-control f-17" required>
 			</div>
 			<div class="form-group">
 				<label class="f-17">Last Name:</label>
-				<input type="text" name="lname" class="form-control f-17">
+				<input type="text" name="lname" class="form-control f-17" required>
 			</div>
 			<div class="form-group">
 				<div class="col-md-6 col-xs-6">
@@ -53,8 +54,9 @@
 			</div>
 			<div class="lh-50">&nbsp;</div>
 			<div class="col-md-offset-5 col-xs-offset-5">
-				<input type="submit" name="register" class="btn-landslide-approve">
+				<input type="submit" name="register" class="btn-landslide-approve" required>
 			</div>
+			<div class="lh-100">&nbsp;</div>
 		</div>
 	</div>
 	<div class="col-md-4 col-xs-2"></div>

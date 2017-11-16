@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php require_once 'php/helper-functions/authenticate_.php';?>
 <title>Register</title>
 	<link rel="stylesheet" href="fonts/Font-Awesome/css/font-awesome.css">
 	<link href="vendors/bootstrap3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
